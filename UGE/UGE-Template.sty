@@ -1,0 +1,399 @@
+%% Université Gustave Eiffel
+%%
+%% TEMPLATE
+%%
+%% contact jorge.mariano@univ-eiffel.fr
+
+
+%%%% UGE Template == . +  UGE-Col
+%%%% +=  UGE-Col
+%%%% +=  UGE-Fontes
+
+%%%% MOTEUR / ENGINE
+
+\RequirePackage{etoolbox}
+% \RequirePackage{ifxetex}
+% \RequirePackage{ifluatex}
+
+%% LuaLateX only
+%\ifx\directlua\@undefined\ClassError{myclass}{Compile this document with lualatex only!}{}\stop\fi
+
+\RequirePackage[left=3cm, right=3cm, top=2cm, bottom=2cm]{geometry}
+
+%% UGE Bib(latex)
+\RequirePackage{UGE/UGE-Bib}
+
+%\setdefaultlanguage{french}
+
+\RequirePackage{UGE/UGE-Col}
+
+%%%% GRAPH/TIKZ
+
+% \RequirePackage{tikz}
+
+%%%% FONTES
+% >
+\RequirePackage{UGE/UGE-Fontes}
+
+% Première lettre
+%\usepackage{lettrine}
+%\renewcommand{\LettrineTextFont}{\normalfont}
+
+\usepackage{verse}
+
+% Paragraphe
+\usepackage[skip=8pt plus1pt, indent=20pt]{parskip}
+\raggedbottom
+
+%%%% INDEX
+%\RequirePackage{makeidx}
+
+%%%% Cases
+%\RequirePackage{fancybox}
+
+
+% Format
+%\RequirePackage{changepage}
+%\RequirePackage{glossaries}
+%\RequirePackage{listings}
+
+%\RequirePackage{textcomp}
+%\RequirePackage{pgfplots}
+%\pgfplotsset{width=10cm,compat=1.9}
+
+\RequirePackage{subcaption}
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{2}
+\RequirePackage{multirow}
+\RequirePackage{adjustbox}
+
+\usepackage{wrapfig}
+
+% \RequirePackage{algorithm2e}
+% \RestyleAlgo{boxruled}
+% \RequirePackage{pdfpages}
+% \RequirePackage{ulem}
+
+% \NoNewPageAfterParts
+
+%%
+%% TEMPLATE %% Ce qui relève fondamentalement du template UGE
+%%
+
+% footnote same page
+%\interfootnotelinepenalty=10000
+
+%%%% TOC
+
+%
+\RequirePackage{etoc}%req%
+
+%%%% ENTETES / PIEDS / HEAD / FOOT
+
+\RequirePackage[fit]{truncate}
+%
+\RequirePackage{fancyhdr}
+\RequirePackage{ragged2e}
+
+
+% Définitions pour les titres personnalisés
+\newcommand{\chapterheader}[1]{\gdef\@chapterheader{#1}}
+\newcommand{\sectionheader}[1]{\gdef\@sectionheader{#1}}
+\newcommand{\bibheader}[1]{\gdef\@bibheader{#1}}
+
+% Initialisation des titres personnalisés
+\chapterheader{}
+\sectionheader{}
+\bibheader{}
+
+% Configuration de fancyhdr
+\pagestyle{fancy}
+\fancyhf{} % Efface les en-têtes et pieds de page par défaut
+
+% Personnalisation des en-têtes
+\fancyhead[LE,RO]{\small \leftmark} % Chapitre à gauche sur les pages paires, à droite sur les pages impaires
+\fancyhead[RE,LO]{\small \rightmark} % Section à droite sur les pages paires, à gauche sur les pages impaires
+
+% Redéfinition des commandes de marquage
+\renewcommand{\chaptermark}[1]{\markboth{\small Chapitre~\thechapter{} : \@chapterheader}{}}
+\renewcommand{\sectionmark}[1]{\markright{\small Section~\thesection{} : \@sectionheader}}
+
+% Redéfinir une commande pour la sous-bibliographie
+\newcommand{\subbibmark}[1]{\markboth{\small #1}{\small #1}}
+
+
+%\renewcommand{\chaptermark}[1]{\markboth{{\partname~\thepart{} :} #1}{}}%rightmark?
+%\renewcommand{\chaptermark}[1]{\markboth{{\chaptername~\thechapter{} :} #1}{}}%rightmark?
+%\renewcommand{\chaptermark}[1]{\markboth{{Chapitre~\thechapter{} :} #1}{}}%rightmark?
+%\renewcommand{\sectionmark}[1]{\markright{{Section~\thesection{} :} #1}{}}%leftmark?
+
+\fancypagestyle{UGEfancy}{%%
+
+\newcommand{\UGEpagenum}{% Pour redéfinir facilement
+\color{blue}\textbf{\thepage}/\pageref{LastPage}%
+}
+% Tête Impaire Droite % Ch
+%
+\newcommand{\TID}{\color{UGEcolBlue} \textbf{\truncate{1\headwidth}{\rightmark}}}
+
+% Tête Paire Gauche % Sect
+%\newcommand{\TPG}{\color{UGEcolBlue} %\textbf{\truncate{1\headwidth}{\leftmark}}}
+
+%\newcommand{\PPG}{\UGEpagenum{}}% Pied Paire Gauche
+
+%\newcommand{\PID}{\UGEpagenum{}}% Pied Impaire Droite
+
+%\newcommand{\PPC}{\textsl{\footnotesize{Le Transit-Oriented Development revisité par la mobilité individuelle légère}}}
+
+%\renewcommand{\headrulewidth}{0.25pt}
+%\renewcommand{\footrulewidth}{0.25pt}
+
+%\fancyhead[]{}\fancyfoot[]{}% Reset
+
+%\fancyfoot[LE]{\PPG{}}% Pied Paire Gauche
+%\fancyfoot[RO]{\PID{}}% Pied Impaire Droite
+%\fancyfoot[C]{\PPC{}}% Pied Centre
+
+
+% Commandes de pied de page et tête de page
+\newcommand{\TPG}{\color{UGEcolBlue} \textbf{\truncate{1\headwidth}{\leftmark}}}
+\newcommand{\PPG}{\UGEpagenum{}} % Pied Paire Gauche
+\newcommand{\PID}{\UGEpagenum{}} % Pied Impaire Droite
+\newcommand{\PPC}{\textsl{\footnotesize{Le Transit-Oriented Development revisité par la mobilité individuelle légère émergente}}}
+
+\renewcommand{\headrulewidth}{0.25pt}
+\renewcommand{\footrulewidth}{0.25pt}
+
+\fancyhead{} % Réinitialiser les têtes de page
+\fancyfoot{} % Réinitialiser les pieds de page
+
+% Pieds de page conditionnels
+\fancyfoot[LE,RO]{\PID} % Numéro de page à droite sur pages impaires et à gauche sur pages paires
+\fancyfoot[LO,RE]{\PPC} % Titre à gauche sur pages impaires et à droite sur pages paires
+
+% Têtes de page conditionnelles
+\fancyhead[RO]{\TID{}} % Tête impaire droite
+\fancyhead[LE]{\TPG{}} % Tête paire gauche
+
+
+}%% UGEfancy page
+
+%% set the gap between header and text
+% \setlength{\headsep}{0.1in}
+
+
+%%%% TEMPLATE ESPACEMENT LIGNES
+% >\RequirePackage{setspace}
+% \setstretch{1.3}
+
+\RequirePackage{pdfpages}
+%
+\RequirePackage{multirow}
+
+
+%%%% TEMPLATE  MINITOC/CHAPTER %%
+\RequirePackage{xpatch}
+
+%%UGEcol rule haut de page
+\xpretocmd\headrule{\color{UGEcolBlue}}{}{\PatchFailed}
+%%UGEcol rule pied de page
+\xpretocmd\footrule{\color{UGEcolBlue}}{}{\PatchFailed}
+
+% %\xpretocmd\@chapter{\AddToShipoutPictureBG*{\includegraphics[width=\paperwidth,height=\paperheight]{background.jpg}}}{}{\PatchFailed}
+% \xpretocmd\@part{\AddToShipoutPictureBG*{\includegraphics[width=\paperwidth,height=\paperheight]{background.jpg}}}{}{\PatchFailed}
+
+% % Ajout de local toc
+% pour chapter
+%\xapptocmd\@chapter{\localtableofcontents}{}{\PatchFailed}
+% pour part
+%\xapptocmd\@part{\localtableofcontents{}}{}{\PatchFailed}
+
+%%%% CHAPTER COLOR
+\RequirePackage[immediate]{silence}
+\WarningFilter[temp]{latex}{Command \underbar  has changed.} % silence the warning
+\WarningFilter[temp]{latex}{Command \underline  has changed.} % silence the warning
+\RequirePackage{sectsty}
+\DeactivateWarningFilters[temp] % So nothing unrelated gets silenced
+
+\partfont{\color{UGEcolBlue}}
+\chapterfont{\color{UGEcolBlue}}
+\sectionfont{\color{UGEcolBlue}}
+\subsectionfont{\color{UGEcolBlue}}
+\subsubsectionfont{\color{UGEcolBlue}}
+
+
+\newcommand{\Frame}{%debug% tikz
+  \begin{tikzpicture}[remember picture,overlay]
+    \foreach \bound in {north,south,west,east,north east,north west,south east, south west} {
+       \draw ([xshift=0cm,yshift=0cm] current page.\bound) circle [radius=2mm];
+     }
+  \end{tikzpicture}
+}
+
+%\RequirePackage{UGE/UGE-Thesis}
+
+%%%% SECTION SPACE
+
+%>
+\RequirePackage{titlesec}
+%\titleformat{\part}[display]{\normalfont\huge\bfseries\color{blue}\justifying}{\parttitlename \ \thepart}{20pt}{\Huge}
+\titleformat{\part}[display]{\normalfont\huge\bfseries\color{blue}\justifying}{\partname \ \thepart}{20pt}{\Huge}
+
+\titleformat{\chapter}[display]{\normalfont\huge\bfseries\color{blue}\justifying}{\chaptertitlename \ \thechapter}{20pt}{\Huge}
+
+\titleformat{\section}[hang]{\normalfont\Large\bfseries\color{blue}\justifying}{\thesection}{1em}{}
+
+\titleformat{\subsection}[hang]{\normalfont\large\bfseries\color{blue}\justifying}{\thesubsection}{1em}{}
+
+%\RequirePackage{polyglossia}
+%\setdefaultlanguage{french}
+
+% Espacement entre les titres
+% 1er ligne / avant / après
+\titlespacing{\chapter}{0pt}{0pt}{20pt}
+\titlespacing{\section}{0pt}{15pt}{15pt}
+\titlespacing{\subsection}{0pt}{17pt}{12pt}
+\titlespacing{\subsubsection}{0pt}{12pt}{8pt}
+
+%%%% DRAFT
+%\SetWatermarkLightness{.2}
+%\SetWatermarkColor{UGEcolPink}
+
+% Index Auteurs
+\usepackage{makeidx}
+
+    \begin{filecontents*}{\jobname.mst}
+        headings_flag 1
+        heading_prefix "{\\textbf{\\Large "
+        heading_suffix "}}\\nopagebreak\n"
+    \end{filecontents*}
+\usepackage{imakeidx}
+
+\makeindex
+\AtBeginDocument{\renewcommand\indexname{Index des auteur·rice·s}}
+%    \newcommand{\pagebf}[1]{\textbf{\hyperpage{#1}}}
+ %   \newcommand{\pageit}[1]{\textit{\hyperpage{#1}}}
+
+\usepackage[font=footnotesize]{idxlayout}
+
+%%% DOCUMENT
+
+\input{./doc-form}
+
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{adjustbox}
+\usepackage{graphicx}
+\usepackage{tabularray}
+
+% Numérotation figure
+\usepackage{chngcntr}
+\counterwithin{figure}{chapter}
+
+\usepackage{eurosym}
+
+%\usepackage{minitoc} % Package pour créer les minitocs
+%\renewcommand{\mtctitle}{Table des matières du chapitre
+%\smallskip}
+
+\usepackage{enumitem} % itemize environment
+\usepackage{pifont}   % Fournit la commande \ding
+
+% Définit un nouvel environnement de liste avec les paramètres souhaités
+% \newlist{customitemize}{itemize}{1} % Définit un niveau de profondeur
+% \setlist[customitemize,1]{
+%     label=\ding{228}, % Utilise le symbole souhaité
+%     font=\scriptsize, % Taille de la police
+%     after=\vspace{1em} % Ajoute un espacement après la liste
+% }
+
+\usepackage{longtable} % Multipage table
+
+% French Babel
+\DefineBibliographyExtras{french}{\restorecommand\mkbibnamefamily}
+
+\defbibheading{subbibliography}{
+    \section*{References for Chapter
+    \ref{refsegment:
+     \therefsection
+     \therefsegment}}
+     \tiny
+}
+
+% Bibliographie Zotero
+\addbibresource[glob]{DM.bib}
+
+%\makeindex{}
+
+\usepackage{etoc}
+\usepackage{titlesec}
+\usepackage{nameref}
+
+% Renommer figures et tableaux
+\captionsetup[figure]{name=Illustration}
+\captionsetup[table]{name=Tableau}
+
+%%____________________________
+
+% Taille police
+\renewcommand{\normalsize}{\fontsize{10}{12}\selectfont} % Ratio interligne 1,2 taille de la police
+
+% Bas de page
+\usepackage[bottom,hang,flushmargin]{footmisc} % Tout sur la même page
+\renewcommand{\footnoterule}{%
+    \noindent\rule{\textwidth}{0.01pt} % Épaisseur de la ligne et sa largeur
+}
+
+% Bas de page sur une page
+%\interfootnotelinepenalty=10000
+
+% Définir la taille du bas de page
+\renewcommand{\footnotesize}{\scriptsize}
+
+% Espacements
+\setlength{\footnotesep}{0.5cm}
+%\setlength{\skip\footins}{2cm}
+
+%%____________________________
+
+% Images arrière-plan
+\usepackage{eso-pic}
+
+%%____________________________
+% Glossaire
+\usepackage[acronym]{glossaries}
+\makeglossaries
+\input{src/Corps/Glossaire}
+
+%%____________________________
+% Différence de pages
+\usepackage{refcount}
+%% ????? \usepackage{pageslts}
+
+\newcommand{\pagedifference}[2]{%
+\number\numexpr\getpagerefnumber{#2}-\getpagerefnumber{#1}\relax}
+
+%%____________________________
+% No double pages
+%\let\cleardoublepage\clearpage
+
+%%____________________________
+% Sections sans numéro de chapitre
+\counterwithout{section}{chapter}
+
+% Titres non vides en bas de page
+\usepackage{needspace}
+
+\usepackage{subfiles}
+
+%%%%%%% A placer en dernier %%%%%%%%%%
+\RequirePackage{hyperref}
+\hypersetup{%% UGE %%
+  colorlinks=true,
+  linkcolor=UGEcolBlue,
+  filecolor=UGEcolBlue,
+  citecolor=UGEcolBlue,
+  urlcolor=UGEcolBlue,
+}

@@ -1,0 +1,221 @@
+% Préambule
+\pagestyle{fancy}
+
+%% ______________________________ %%
+% GUIDE DE LECTURE
+\include{src/Corps/Guide-lecture}
+
+%% ______________________________ %%
+% REMERCIEMENTS
+\include{src/Corps/Remerciements}
+
+%% ______________________________ %%
+% TABLE DES MATIERES
+    \cleardoublepage
+    \setcounter{tocdepth}{1}
+\tableofcontents{}
+    \markboth{Table des matières}{}
+    \markright{Préambule}{}
+    %\addcontentsline{toc}{part}{Table des matières}
+    \noindent\makebox[\textwidth]{\hrulefill}
+
+%% ______________________________ %%
+% TABLE DES FIGURES
+\listof{figure}{Table des illustrations}
+    \markboth{Table des illustrations}{}
+    \markright{Préambule}{}
+    \addcontentsline{toc}{part}{Table des illustrations}
+    \noindent\makebox[\textwidth]{\hrulefill}
+
+%% ______________________________ %%
+% TABLE DES CARTES
+\listof{carte}{Table des cartes}
+    \markboth{Table des cartes}{}
+    \markright{Préambule}{}
+    \addcontentsline{toc}{part}{Table des cartes}
+    \noindent\makebox[\textwidth]{\hrulefill}
+
+%% ______________________________ %%
+% LISTE DES TABLEAUX
+\listof{table}{Liste des tableaux}
+    \markboth{Liste des tableaux}{}
+    \markright{Préambule}{}
+    \addcontentsline{toc}{part}{Liste des tableaux}
+    \noindent\makebox[\textwidth]{\hrulefill}
+
+%% ______________________________ %%
+% CITER
+\include{src/Corps/Citer-document}
+
+%% ______________________________ %%
+% AVANT-PROPOS
+\include{src/Corps/Avant-propos}
+
+%% ______________________________ %%
+% CAPTATIO BENEVOLENTIAE
+\include{src/Corps/Captatio-benevolentiae}
+
+%% ______________________________ %%
+% INTRODUCTION GENERALE
+\include{src/Corps/0-Introduction-generale}
+
+%% ______________________________ %%
+% PARTIE 1
+
+% Introduction de la partie 1
+\include{src/Corps/Part-1-Introduction}
+
+%% ______________________________ %%
+% CHAPITRE 1
+\include{src/Corps/Chap-1-Cadre-theorique}
+
+%% ______________________________ %%
+% CHAPITRE 2
+\include{src/Corps/Chap-2-Revue-systematique}
+
+%% ______________________________ %%
+% CHAPITRE 3
+\include{src/Corps/Chap-3-Methodologie}
+
+% Conclusion de la partie 1
+\include{src/Corps/Part-1-Conclusion}
+
+%% ______________________________ %%
+% PARTIE 2
+
+% Introduction de la partie 2
+\include{src/Corps/Part-2-Introduction}
+
+%% ______________________________ %%
+% CHAPITRE 4
+\include{src/Corps/Chap-4-Profil-voyageurs}
+
+%% ______________________________ %%
+% CHAPITRE 5
+\include{src/Corps/Chap-5-Distances-detours}
+
+% Conclusion de la partie 2
+\include{src/Corps/Part-2-Conclusion}
+
+%% ______________________________ %%
+% PARTIE 3
+
+% Introduction de la partie 3
+\include{src/Corps/Part-3-Introduction}
+
+%% ______________________________ %%
+% CHAPITRE 6
+\include{src/Corps/Chap-6-Modelisation-NPART}
+
+% Conclusion de la partie 3
+\include{src/Corps/Part-3-Conclusion}
+
+%% ______________________________ %%
+% CONCLUSION GENERALE
+\include{src/Corps/0-Conclusion-generale}
+
+%% ______________________________ %%
+% INDEX AUTEURS
+\twocolumn
+    \addcontentsline{toc}{part}{Index des auteur·rice·s}
+\printindex
+    \markboth{Index des auteur·rice·s}{}
+    \markright{Index des auteur·rice·s}{}       
+\onecolumn
+
+%% ______________________________ %%
+% SIGLES ET ACRONYMES
+    \cleardoublepage
+    \phantomsection
+    \hypertarget{acronymes}{}
+    \addcontentsline{toc}{part}{Liste des sigles et des acronymes}
+\renewcommand{\glsnamefont}[1]{\textbf{#1}} % Met les acronymes en gras
+\printglossary[type=\acronymtype, title=Sigles et acronymes, style=long]
+    %\markboth{Sigles et acronymes}{}
+    %\markright{Sigles et acronymes}{}
+    \label{sec:acronymes}
+
+%% ______________________________ %%
+% GLOSSAIRE
+    \cleardoublepage
+    \phantomsection
+    \hypertarget{glossaire}{}
+    \addcontentsline{toc}{part}{Glossaire}
+\printglossary[title=Glossaire, style=long]
+    %\markboth{Glossaire}{}
+    %\markright{Glossaire}{}
+    \label{sec:glossaire}
+
+    % ___________________________________________
+    % Sous-bibliographie glossaire
+    \newpage
+    \begingroup
+    \renewcommand{\bibfont}{\scriptsize}
+\printbibliography[segment=\therefsegment, heading=subbibintoc, title={Sous-bibliographie du glossaire}, label=glossaire:bibliographie]
+    \endgroup
+
+%% ______________________________ %%
+% ANNEXES
+\afterpage{%
+\afterpage{%
+
+    % Arrière-plan annexes
+    \AddToShipoutPictureBG*{%
+\includegraphics[width=\paperwidth,height=\paperheight]{src/Figures/Arriere_plan/Arriere_plan_Annexes.jpg}
+    }
+
+% Rectangle
+\AddToShipoutPictureBG*{
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[fill=white, opacity=0.75, text width=\paperwidth, minimum height=5cm, anchor=north] 
+    at ([yshift=-9cm]current page.north) {};
+  \end{tikzpicture}
+}
+
+% Source
+\AddToShipoutPictureFG*{
+  \AtPageLowerRight{
+    \raisebox{1cm}{
+      \hspace{16cm}
+      \begin{tikzpicture}
+        \node[fill=white, rounded corners=5pt, inner sep=5pt, align=center] {
+          \tiny{Photographie~: \textcolor{blue}{Dylan Moinse (2021)}}
+        };
+      \end{tikzpicture}
+    }
+  }
+}
+}}
+
+    \cleardoublepage
+    \part*{Annexes}
+    \markboth{Annexes}{}
+    %\addcontentsline{toc}{part}{Annexes}
+    \label{annexes:titre}
+    %\renewcommand{\thechapter}{\Alph{chapter}}
+    \renewcommand{\thesection}{\thechapter.\arabic{section}}
+
+    \appendix
+    %\needspace{1\baselineskip} % Réserve de l'espace
+    %\addcontentsline{toc}{part}{Annexes}
+
+    % ___________________________________________
+    % Mini-sommaire
+    \cleardoublepage
+    \setcounter{tocdepth}{1}
+    % Redéfinir le titre de la table des matières locale
+    \renewcommand{\localcontentsname}{Table des matières des annexes}
+\localtableofcontents
+
+\include{src/Corps/Annexes/annexes-rsl}
+\include{src/Corps/Annexes/annexes-observation}
+\include{src/Corps/Annexes/annexes-questionnaire-usagers}
+\include{src/Corps/Annexes/annexes-parcours-commentes}
+\include{src/Corps/Annexes/annexes-questionnaire-fub}
+\include{src/Corps/Annexes/annexes-ols}
+\include{src/Corps/Annexes/annexes-detours}
+\include{src/Corps/Annexes/annexes-npart}
+
+%% ______________________________ %%
+% RESUME
+\include{src/Corps/Resume}

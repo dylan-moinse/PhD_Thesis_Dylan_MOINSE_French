@@ -1,0 +1,41 @@
+% Résultats de la régression OLS
+%%Rédigé%%
+    \begin{table}[h!]
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \resizebox{\columnwidth}{!}{
+    \begin{tabular}{p{0.07\columnwidth}p{0.39\columnwidth}p{0.09\columnwidth}p{0.07\columnwidth}p{0.08\columnwidth}p{0.07\columnwidth}p{0.07\columnwidth}p{0.09\columnwidth}p{0.07\columnwidth}}
+        %\hline
+    \rule{0pt}{15pt} \small{\textcolor{blue}{\textbf{ID}}} & \small{\textcolor{blue}{\textbf{Variables indépendantes}}} & \small{\textcolor{blue}{\textbf{$\hat{\beta}$}}} & \small{\textcolor{blue}{\textbf{$\sigma$}}} & \small{\textcolor{blue}{\textbf{\(t_{stat}\)}}} & \small{\textcolor{blue}{\textbf{$p$}}} & \small{\textcolor{blue}{\textbf{\(VIF\)}}} & \small{\textcolor{blue}{\textbf{\(IC_{inf}\)}}} & \small{\textcolor{blue}{\textbf{\(IC_{sup}\)}}}\\
+        \hline
+\(T_{1}\) & \underline{\small{Part modale du vélo}} & \small{0,37} & \small{0,17} & \small{2,12} & \small{0,04} & \small{4,73} & \small{0,02} & \small{0,72} \\
+\(T_{2}\) & \small{Densité de population} & \small{-0,17} & \small{0,14} & \small{-1,16} & \small{0,25} & \small{3,28} & \small{-0,46} & \small{0,13} \\
+\(T_{3}\) & \underline{\small{Réseau cyclable}} & \small{0,60} & \small{0,22} & \small{2,72} & \small{0,01} & \small{7,56} & \small{0,15} & \small{1,04} \\
+\(T_{4}\) & \small{Proportion de zones~30} & \small{-0,12} & \small{0,16} & \small{-0,76} & \small{0,45} & \small{3,94} & \small{-0,44} & \small{0,20} \\
+\(T_{5}\) & \underline{\small{\textsl{Ressenti général}}} & \small{0,96} & \small{0,54} & \small{1,78} & \small{0,05} & \small{5,89} & \small{-0,14} & \small{2,05} \\
+\(T_{6}\) & \small{\textsl{Sécurité}} & \small{-0,75} & \small{0,60} & \small{-1,25} & \small{0,22} & \small{6,99} & \small{-1,97} & \small{0,47} \\
+\(T_{7}\) & \small{\textsl{Confort}} & \small{-0,65} & \small{0,36} & \small{-1,83} & \small{0,08} & \small{4,03} & \small{-1,37} & \small{0,07} \\
+\(T_{8}\) & \underline{\small{\textsl{Efforts de la ville}}} & \small{0,58} & \small{0,26} & \small{2,19} & \small{0,04} & \small{2,94} & \small{0,04} & \small{1,11} \\
+\(T_{9}\) & \small{\textsl{Services et stationnement}} & \small{-0,22} & \small{0,34} & \small{-0,65} & \small{0,52} & \small{8,57} & \small{-0,92} & \small{0,47} \\
+\(Q_{16}\) & \small{Conflits avec les piéton·ne·s} & \small{-0,31} & \small{0,17} & \small{-1,86} & \small{0,07} & \small{4,35} & \small{-0,65} & \small{0,03} \\
+\(Q_{30}\) & \small{Rues cyclables à sens unique} & \small{0,22} & \small{0,20} & \small{1,12} & \small{0,27} & \small{5,97} & \small{-0,18} & \small{0,61} \\
+\(Q_{34}\) & \small{Véhicules sur les voies} & \small{0,07} & \small{0,23} & \small{0,29} & \small{0,77} & \small{8,51} & \small{-0,40} & \small{0,54} \\
+\(Q_{37}\) & \small{Facilité de location} & \small{0,32} & \small{0,24} & \small{1,36} & \small{0,18} & \small{8,86} & \small{-0,16} & \small{0,80} \\
+\(Q_{38}\) & \small{Facilité d'accès à un atelier} & \small{-0,22} & \small{0,19} & \small{-1,20} & \small{0,24} & \small{5,37} & \small{-0,60} & \small{0,15} \\
+\(Q_{39}\) & \small{Vols de vélos} & \small{0,07} & \small{0,18} & \small{0,38} & \small{0,70} & \small{5,11} & \small{-0,30} & \small{0,43} \\
+        \hline
+        \end{tabular}}
+    \caption{Caractérisation des relations entre la participation des femmes au vélo et les variables indépendantes définies dans le modèle de régression des moindres carrés ordinaires.}
+    \label{table-chap4:regression-genre-barometre-fub}
+        \vspace{5pt}
+        \begin{flushleft}\scriptsize{
+        \textcolor{blue}{Note~:} la colonne~$\hat{\beta}$~représente le coefficient de régression, $\sigma$ l'erreur standard, \(t_{stat}\) la statistique $t$ ($\hat{\beta}/\sigma$), $p$ la valeur~$p$ (\underline{significative} lorsqu'elle est inférieure ou égale à 0,05), \(VIF\) le facteur d'inflation de la variance, \(IC_{inf}\) et \(IC_{sup}\) les intervalles de confiance.
+        \\
+        \textcolor{blue}{Lecture~:} la modélisation nous permet d'affirmer que la part modale du vélo, la densité du réseau cyclable et les efforts de la ville ont un effet significatif et positif sur la participation féminine au vélo. La sécurité et le confort, dont les coefficients sont non significatifs, suggèrent une influence moins claire sur le choix modal du vélo par les femmes.
+        }\end{flushleft}
+        \begin{flushright}\scriptsize{
+        Jeux de données~: \textsl{Baromètre des Villes Cyclables} \textcolor{blue}{\autocite{fub_barometre_2021}} et \textsl{OpenStreetMap} \textcolor{blue}{\autocite{openstreetmap_openstreetmap_2023}}
+        \\
+        Auteur~: \textcolor{blue}{Dylan Moinse (2023)}
+        }\end{flushright}
+        \end{table}

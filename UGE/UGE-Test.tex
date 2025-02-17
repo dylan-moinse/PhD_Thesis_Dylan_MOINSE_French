@@ -1,0 +1,47 @@
+\section{Tests}
+
+\subsection*{Couleurs UGE}
+\label{sec:tes-couleurs}
+
+
+%% # couleur # échelle # x # y #  r
+\newcommand{\UGEGrid}[5][UGEcolBlue]{%
+  \fbox{
+  \begin{tikzpicture}[scale=#2]
+\foreach \x in {0,...,#3}
+\foreach \y in {0,...,#4} {\fill[#1] (\x,\y) circle (#5); }
+\draw (4,4) node[fill=white] {#1};
+\end{tikzpicture}%
+}}
+
+%\vfill{}\UGEGrid[]{1}{16}{3}{0.1cm}
+%\vfill{}\UGEGrid[]{.5}{16}{3}{0.1cm}
+
+\noindent{}\UGEGrid[UGEcolGreenLight]{.5}{8}{8}{0.55cm}~\UGEGrid[UGEcolGreen]{.5}{8}{8}{0.55cm} %
+\UGEGrid[UGEcolBlueLight]{.5}{8}{8}{0.55cm}~\UGEGrid[UGEcolBlue]{.5}{8}{8}{0.55cm} %
+\UGEGrid[UGEcolOrangeLight]{.5}{8}{8}{0.55cm}~\UGEGrid[UGEcolOrange]{.5}{8}{8}{0.55cm} %
+\UGEGrid[UGEcolPink]{.5}{8}{8}{0.55cm}~\UGEGrid[UGEcolPurple]{.5}{8}{8}{0.55cm} %
+\UGEGrid[UGEcolBlack]{.5}{8}{8}{0.55cm}~\UGEGrid[UGEcolCyan]{.5}{8}{8}{0.55cm} %
+
+%\vfill{}\UGEGrid[UGEcolBlueLight]{.2}{40}{30}{0.55cm}\UGEGrid{.2}{40}{30}{0.1cm}
+
+\subsection*{Icones}
+\begin{itemize}
+\item \faIcon{file}~
+\item \faIcon*{file}~
+\item \color{UGEcolGreen}\faIcon*[regular]{file}.
+\item \Huge\faIcon[regular]{file}~
+\end{itemize}
+
+\subsection*{Figures}
+
+\newcommand{\Image}[2][1.0]{%
+\setlength{\fboxsep}{2pt}\setlength{\fboxrule}{5pt}
+{\color{UGEcolGreenLight}\fbox{\includegraphics[width=#1\columnwidth]{#2}}}
+}
+
+%\Image{UGE-Template.drawio.png}
+
+\Image{example-image-a}
+
+\noindent{}\Image[.4]{example-image-4x3}\hfill{}\Image[.4]{example-image-16x10}

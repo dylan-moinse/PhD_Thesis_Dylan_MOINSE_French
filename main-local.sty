@@ -1,0 +1,190 @@
+%\usepackage[T1]{fontenc}
+%\usepackage[french]{babel}
+
+%% https://faq.gutenberg-asso.fr/3_composition/texte/symboles/caracteres/guillemets.html
+\frenchsetup{og=«, fg=»} 
+
+%\usepackage{times}
+
+\usepackage{atbegshi} % 4e couverture
+
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{eso-pic}
+\usepackage{needspace}
+\usepackage{biblatex}
+\usepackage{tcolorbox}
+
+% Glossaire
+\usepackage{glossaries}
+\makeglossaries
+\setlength{\glsdescwidth}{0.8\linewidth} % Ajuste la largeur des descriptions
+\renewcommand*{\glspostdescription}{} % Supprime l'espace inutile après la description
+
+\usepackage{hyperref}
+\usepackage{pifont}
+\usepackage{makeidx}
+
+\usepackage{arydshln}
+
+\usepackage{multirow}
+
+\usepackage{eso-pic}
+
+\usepackage{lettrine}
+\usepackage{fontspec}
+\newfontfamily\lettrinefont{TeX Gyre Bonum}
+
+\usepackage{afterpage}
+
+\usepackage{amssymb}
+
+%debug%\usepackage{showframe}
+
+% Définir une nouvelle commande pour utiliser la police TeX Gyre Bonum
+\newfontfamily\bonumfont{TeX Gyre Bonum}
+% Définir une commande pour appliquer cette police à un mot spécifique
+\newcommand{\latexword}[1]{{\bonumfont #1}}
+
+%%____________________________
+% Liste des cartes
+\usepackage{float}
+\usepackage{newfloat}
+
+\floatstyle{plain}
+\newfloat{carte}{htbp}{loc}[chapter]
+\floatname{carte}{Carte}
+
+\DeclareFloatingEnvironment[
+    fileext=loc,
+    name=Carte,
+    within=chapter
+]{carte}
+
+\counterwithin{carte}{chapter}
+
+% Glossaire
+\setlength{\glsdescwidth}{0.8\linewidth} % Ajuste la largeur des descriptions
+\renewcommand*{\glspostdescription}{} % Supprime l'espace inutile après la description
+
+%% ___________________________
+% Commandes
+\newcommand{\Guillemets}[1]{«~{#1}~»} % Guillemets français
+\newcommand{\Marque}[1]{\textsl{#1}\texttrademark} % Marques TM
+\newcommand{\PM}[1]{·} % Guillemets
+
+\usepackage{enumitem}
+
+% Définit un nouvel environnement de liste avec les paramètres souhaités
+\newlist{customitemize}{itemize}{1} % Définit un niveau de profondeur
+\setlist[customitemize,1]{
+    label=\ding{228}, % Utilise le symbole souhaité
+    font=\scriptsize, % Taille de la police
+    after=\vspace{1em} % Ajoute un espacement après la liste
+  }
+
+\RequirePackage{etoc}
+
+
+
+% Table des matières
+%\usepackage{tocloft}  % Permet de modifier la table des matières et les listes
+% \renewcommand{\contentsname}{\textcolor{blue}{Table des matières}}
+
+% % ======================
+% % 1. Alignement et espacements pour la TOC
+% % ======================
+
+% \renewcommand{\cftdotsep}{2} % Évite que les points débordent
+% \setlength{\cftpartnumwidth}{2.5em} 
+% \setlength{\cftchapnumwidth}{3em} 
+% \setlength{\cftsecnumwidth}{3.5em} 
+% \setlength{\cftsubsecnumwidth}{4em} 
+% \setlength{\cftsubsubsecnumwidth}{4.5em} 
+
+% % Ajout d'espace après le numéro pour éviter le collage avec le titre
+% \renewcommand{\cftpartaftersnum}{\hspace{0.5em}}
+% \renewcommand{\cftchapaftersnum}{\hspace{0.5em}}
+% \renewcommand{\cftsecaftersnum}{\hspace{0.5em}}
+% \renewcommand{\cftsubsecaftersnum}{\hspace{0.5em}}
+% \renewcommand{\cftsubsubsecaftersnum}{\hspace{0.5em}}
+
+% % ======================
+% % 2. Correction des numéros des figures et tables dans la TOC
+% % ======================
+
+% \setlength{\cftfignumwidth}{4em} % Réserve assez d'espace pour les numéros X.10+
+% \renewcommand{\cftfigaftersnum}{\hspace{1em}}
+
+% \setlength{\cfttabnumwidth}{4em} % Même correction pour les tables
+% \renewcommand{\cfttabaftersnum}{\hspace{1em}}
+
+% ======================
+% 3. Mise en page des titres pour éviter les chevauchements
+% ======================
+
+%\usepackage{titlesec}
+
+
+
+% Définitions pour les titres personnalisés
+%\newcommand{\chapterheader}[1]{\gdef\@chapterheader{#1}}
+%\newcommand{\sectionheader}[1]{\gdef\@sectionheader{#1}}
+%\newcommand{\bibheader}[1]{\gdef\@bibheader{#1}}
+
+% Initialisation des titres personnalisés
+%\chapterheader{}
+%\sectionheader{}
+%\bibheader{}
+
+% \setmainfont{verdana}[
+% Path=./UGE/Fonts/, % Chemin relatif au fichier LaTeX
+% BoldFont={verdana-bold.ttf},
+% ItalicFont={verdana-italic.ttf},
+% BoldItalicFont={verdana-bold-italic.ttf},
+% Extension = .ttf,
+% %UprightFont = {*-Regular},
+% %BoldFont = {*-Bold},
+% %ItalicFont = {*-Italic},
+% %BoldItalicFont = {*-BoldItalic},
+% %SlantedFont = {*-Italic},
+% %SlantedBoldFont = {*-BoldItalic},
+% % FontFace = {c}{sc}{*Caps},
+% % FontFace = {cx}{sc}{*Caps},
+% %SmallCapsFont = {*-Regular},
+% %SmallCapsFeatures = {Letters=SmallCaps}
+% ]
+
+%% $ <= $ 
+\newcommand{\Geq}[1]{\ensuremath{\geqslant #1}}
+
+
+\newcommand{\pagebf}[1]{\textbf{\hyperpage{#1}}}
+
+\newcommand{\pageit}[1]{\textit{\hyperpage{#1}}}
+
+% Style pour pages spéciales
+\fancypagestyle{plain}{
+  \fancyhead{} % Pas d'en-tête
+  \fancyfoot{} % Pas de pied
+  \renewcommand{\headrulewidth}{0pt} % Pas de ligne d'en-tête
+  \renewcommand{\footrulewidth}{0pt} % Pas de ligne de pied
+}
+  
+\usepackage[font=footnotesize]{idxlayout}
+
+\setlength{\headheight}{13.60492pt}
+
+%% Espacement des sectionnements
+
+\titlespacing*{\subsection}{10pt}{1ex plus 0ex minus .0ex}{0ex plus 0ex}
+\titlespacing{\subsection}{20pt}{\parskip}{-\parskip}
+
+\titlespacing*{\subsubsection}{0pt}{1ex plus 0ex minus .0ex}{0ex plus 0ex}
+\titlespacing{\subsubsection}{0pt}{\parskip}{-\parskip}
+
+
+%% JMR / Annulation bug
+%
+\newcommand{\AtPageLowerRight}[1]{#1}
+

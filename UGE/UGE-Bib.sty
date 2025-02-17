@@ -1,0 +1,41 @@
+%%%% BIB BIBLATEX
+
+\usepackage[
+  backend=biber,
+  style=authoryear, % Style de bibliographie
+  citestyle=authoryear, % Style de citation
+  hyperref=true,
+  url=true,
+  isbn=true,
+  doi=true,
+  giveninits=false, % Désactiver les initiales
+  maxcitenames=2,
+  maxbibnames=50,
+  backref=true,
+  natbib=true,
+  refsection=chapter,
+]{biblatex}
+
+\AtEveryBibitem{\clearfield{month}\clearfield{day}}
+
+% Afficher DOI, ou l'URL par défaut
+\renewbibmacro*{doi+eprint+url}{%
+  \iftoggle{bbx:doi}
+    {\iffieldundef{doi}{ % Si le DOI est non défini
+       \iftoggle{bbx:url}
+         {\usebibmacro{url+urldate}} % Afficher l'URL
+         {}
+     }{ % Si le DOI est défini
+       \printfield{doi} % Afficher le DOI
+     }}
+    {}
+}
+
+% Renvois pages des citations
+\DefineBibliographyStrings{french}{%
+  backrefpage = {citation à la page},
+  backrefpages = {citations aux pages},
+}
+
+% Bibliographie
+\addbibresource{DM.bib}

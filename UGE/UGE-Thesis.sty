@@ -1,0 +1,68 @@
+%%%% FRONT PAGE / FP
+
+%%%% FPTitreThese
+%\newcommand{\FPTitreThese}[1]{
+  %\begin{flushleft}
+      %{\Huge \textcolor{UGEcolBlack}{\textsc{\@title}}}
+  %\end{flushleft}
+%}
+
+%\newcommand{\FPSousTitre}{
+%{\LARGE\textcolor{UGEcolPink}{\textsc{Et pourquoi pas un sous-titre ?}}}
+%}
+
+%%%% FPLogo
+
+\newcommand{\FPLogo}{%
+  \begin{tikzpicture}[remember picture,overlay]
+%    \Frame{}
+    \node[anchor=north east, align=left, inner sep=0] at (current page.north east){
+      \includegraphics[height=2.5cm]{logoGE}
+    };
+  \end{tikzpicture}
+}
+
+% Un membre de jury
+% # Nom # Role # Affiliation
+\newcommand{\Jury}[3]{%
+  \textbf{#1} & \multirow{2}{*}{\footnotesize \hspace{-0cm} #2}\\
+  \footnotesize \textsl{#3} & \\
+}
+
+
+\newcommand{\FPCandidat}{%
+{\LARGE \textcolor{UGEcolBlue}{\textsc{\textbf{\@author}}}}
+}
+
+
+\newenvironment{FPComposition}[1]{%
+  \large
+  \textbf{#1}\bigskip{}
+
+  \small
+  \hspace{2.6cm}
+  % \begin{tabular}{|p{.25\columnwidth} p{.45\columnwidth}|}
+  \begin{tabular}{p{.3\columnwidth} l}
+    }{%
+  \end{tabular}
+}
+
+
+\input{UGE/UGE-Thesis-FP}
+
+%% Espacement paragraphes
+%> \RequirePackage{parskip}
+
+%%%% TEMPLATE ESPACEMENT LIGNES
+% >\RequirePackage{setspace}
+%
+\setstretch{1.3}
+%\doublespacing  % or
+%\onehalfspacing %for 1.5
+
+
+%%____________________________
+% Commandes
+%\newcommand{\Guillemets}[1]{\og {#1} \fg{}} % Guillemets français
+%\newcommand{\Marque}[1]{\textsl{#1}\texttrademark} % Marques TM
+%\newcommand{\PM}[1]{·} % Guillemets français

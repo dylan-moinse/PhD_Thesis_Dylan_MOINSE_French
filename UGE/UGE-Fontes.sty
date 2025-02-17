@@ -1,0 +1,82 @@
+%%%% FONTES / POLICES
+
+\ifluatex
+\RequirePackage{fontspec}
+% TTF MicroSoft
+% Arial § Courier New / Georgia / Impact / Times New Roman  / Trebuchet MS
+% Comic Sans MS / Bitstream Vera Serif / Arial Black /
+% Ubuntu
+
+% Ligatures et fontspec
+% \defaultfontfeatures{
+%  Ligatures={
+%     NoCommon,
+%     NoRequired,   NoContextual,   NoHistoric,    NoDiscretionary,
+%     TeX
+%   }
+% }
+
+%\setmainfont{TTNorms}[Path = ./TT-Norms-Fonts/,Extension = .ttf]
+%\setmainfont{TTNorms-Medium}[Path = ./TT-Norms-Fonts/,Extension = .ttf]
+
+%  \setmainfont{EBGaramond}%
+%   [Extension = .otf ,
+%   UprightFont       = *-Regular,
+%   ItalicFont        = *-Italic,
+%   BoldFont          = *-Bold,
+%   BoldItalicFont    = *-BoldItalic,
+%   Numbers = Lowercase,
+% %  Ligatures = Discretionary,   % ou
+% %  RawFeature = +dlig, -ctlig%, st),
+%   Style = Swash                % Q-long
+%  ]
+
+%\IfFontExistsTF{TTNorms}{% System
+  %\setmainfont{TTNorms}
+%}{% Local
+  % \setmainfont{TTNorms}[%
+  % Path = ./UGE/TT-Norms-Fonts/,
+  % Extension = .ttf,
+  % BoldFont = TTNorms-Bold,
+  % ItalicFont = TTNorms-Italic,
+  % UprightFont       = *-Regular,
+  % ItalicFont        = *-Italic,
+  % BoldFont          = *-Bold,
+  % BoldItalicFont    = *-BoldItalic,
+  % Numbers = Lowercase
+  % ]
+%  \setmainfont{FreeSans}
+  \setmainfont{FreeSerif}
+%}
+
+% >\setmainfont{Ubuntu}%SOS%
+% >\setmainfont{FreeSerif}%SOS%
+%\else
+%  \RequirePackage{lmodern}
+
+%\setmainfont{SegoeUI.ttf}[
+%Path=UGE/Fonts/, % Chemin relatif au fichier LaTeX
+%BoldFont={SegoeUIBold.ttf},
+%ItalicFont={SegoeUIItalic.ttf},
+%BoldItalicFont={SegoeUIBoldItalic.ttf}
+%]
+
+\setmainfont{verdana}[
+Path=./UGE/Fonts/, % Chemin relatif au fichier LaTeX
+BoldFont={verdana-bold.ttf},
+ItalicFont={verdana-italic.ttf},
+BoldItalicFont={verdana-bold-italic.ttf},
+Extension = .ttf,
+%UprightFont = {*-Regular},
+%BoldFont = {*-Bold},
+%ItalicFont = {*-Italic},
+%BoldItalicFont = {*-BoldItalic},
+%SlantedFont = {*-Italic},
+%SlantedBoldFont = {*-BoldItalic},
+% FontFace = {c}{sc}{*Caps},
+% FontFace = {cx}{sc}{*Caps},
+%SmallCapsFont = {*-Regular},
+%SmallCapsFeatures = {Letters=SmallCaps}
+]
+
+\fi

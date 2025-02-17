@@ -1,0 +1,78 @@
+%------------------------------%
+%% ✎ Dylan (V1) %%%%%%%%% ✅ %%
+%% ✎ Alain (V2) %%%%%%%%% ❌ %%
+%% ✎ Dylan (V3) %%%%%%%%% ❌ %%
+%------------------------------%
+
+%% ______________________________ %%
+% 4E DE COUVERTURE (DERNIÈRE PAGE)
+\AtEndDocument{
+  \cleardoublepage
+  \phantomsection
+  \ifodd\value{page}
+    \null
+    \clearpage % Page paire
+  \fi
+
+\thispagestyle{empty}
+  
+    % Arrière-plan résumé
+    \AddToShipoutPictureBG*{%
+\includegraphics[width=\paperwidth,height=\paperheight]{src/Figures/Arriere_plan/Arriere_plan_Resume.jpg}
+    }
+
+% Rectangle
+\AddToShipoutPictureBG*{
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[fill=white, opacity=0.75, text width=0.8\paperwidth, minimum height=23.3cm, anchor=north] 
+    at ([yshift=-1.3cm]current page.north) {};
+  \end{tikzpicture}
+}
+
+% Source
+% \AddToShipoutPictureFG*{
+%   \AtPageLowerRight{
+%     \raisebox{1cm}{
+%       \hspace{16cm}
+%       \begin{tikzpicture}
+%         \node[fill=white, rounded corners=5pt, inner sep=5pt, align=center] {
+%           \tiny{Photographie~: \textcolor{blue}{Dylan Moinse (2024)}}
+%         };
+%       \end{tikzpicture}
+%     }
+%   }
+% }
+
+\section*{Résumé de la thèse de doctorat
+    \label{body:resume-these-français}
+    }
+    \needspace{1\baselineskip} % Réserve de l'espace
+    \addcontentsline{toc}{part}{Résumé de la thèse}
+    \markboth{Résumé de la thèse de doctorat}{}
+    \markright{Résumé de la thèse de doctorat}{}
+
+\footnotesize{Le regain d’intérêt pour le vélo et la micro-mobilité s’inscrit dans une transformation plus large des pratiques de mobilité, intégrées dans des chaînes de déplacement intermodales. Dans ce contexte, cette recherche interroge l’intégration de la mobilité individuelle légère dans les stratégies de Transit-Oriented Development, en explorant son potentiel à répondre aux défis des \Guillemets{premiers et derniers kilomètres} du transport public, et ainsi à renforcer le modèle urbain sous-jacent. L’objectif central de cette recherche doctorale est d’identifier les dynamiques d’usage de ces stratégies de mobilité, d’en analyser les facteurs déterminants et d’évaluer leurs effets sur l’accessibilité des quartiers de gare, à différentes échelles spatiales. À cette fin, elle propose une extension du concept d’aménagement, en intégrant la mobilité individuelle légère à l'urbanisme ferroviaire. Cette déclinaison, désignée sous le terme de \textsl{Micromobility-friendly Transit-Oriented Development}, vise à enrichir les cadres théoriques et opérationnels existants, en prenant en compte les évolutions récentes du paysage de la mobilité. Ce travail repose sur un dispositif méthodologique mixte, appliqué au périmètre régional des Hauts-de-France. Il combine une revue systématique de la littérature~; une enquête de terrain auprès des cyclo-voyageur·se·s en gare, incluant des séances d’observation quantitative, l’administration d’un questionnaire et la réalisation de parcours commentés~; ainsi qu'une modélisation géostatistique revisitant l’outil \Guillemets{nœud-lieu}, à la lumière des (nouvelles) proximités géographiques. Les principaux résultats mettent en évidence le caractère émergent des pratiques intermodales en gare, en grande partie impulsé par l’essor de la trottinette électrique. Ces combinaisons modales, encore largement sous-évaluées, permettent de tripler la couverture d’accessibilité aux populations et aux destinations. Par ailleurs, cette investigation révèle des inégalités de genre marquées dans les pratiques intermodales, exacerbées lorsque les environnements urbains se révèlent hostiles à la mobilité active. En établissant une classification des gares de la région, elle démontre que l’intégration de la mobilité individuelle légère possède un potentiel considérable pour stimuler la fréquentation des nœuds, sans nécessiter de reconfiguration ou d'investissement lourds. En somme, le développement du \Guillemets{système vélo}, en tant que catalyseur de l'intermodalité, contribue à consolider l'articulation entre le réseau de transport public et le système urbain.%%Rédigé%%
+    }
+
+% --- %
+    \needspace{1\baselineskip} % Réserve de l'espace
+\subsection*{Mots-clés}
+
+\noindent
+Accessibilité~; Intermodalité~; Micro-mobilité~; Mobilité individuelle légère~; Proximités~; Quartiers de gare~; Réseau~; \textit{Transit-Oriented Development}~; Urbanisme
+
+%% ______________________________ %%
+    % Résumé anglais
+    \needspace{1\baselineskip} % Réserve de l'espace
+\section*{Thesis Abstract}
+
+\footnotesize{\textsl{The resurgence of interest in cycling is part of a broader transformation in mobility practices, increasingly integrated into intermodal travel chains. Within this context, this research examines the role of micromobility in Transit-Oriented Development strategies, exploring its potential to address first- and last-mile connectivity challenges in public transport and thereby reinforce the underlying urban model. The primary objective of this doctoral research is to identify the dynamics of these mobility strategies, analyze their determining factors, and assess their impacts on station-area accessibility across different spatial scales. To this end, the study extends the traditional urban model framework by incorporating micromobility, introducing the concept of Micromobility-friendly Transit-Oriented Development. This approach aims to enrich existing theoretical and operational paradigms by incorporating recent developments in the mobility landscape. Methodologically, the research adopts a mixed-methods approach applied to the Hauts-de-France region. It combines a systematic literature review; fieldwork conducted among intermodal travelers at railway stations, including quantitative observations, a questionnaire survey, and ride-along interviews; and a geostatistical modeling approach revisiting the Node-Place model, reinterpreted through the lens of (new) geographical proximities. The main findings underscore the emerging nature of intermodal practices at railway stations, largely driven by the rise of electric scooters. These modal combinations, still widely underestimated, triple accessibility coverage to both populations and destinations. Moreover, this investigation highlights significant gender disparities in intermodal mobility, which are exacerbated when urban environments are hostile to active travel. By establishing a classification of railway stations in the region, this research demonstrates that integrating micromobility can significantly enhance station usage without requiring major infrastructure overhauls or heavy investments. Ultimately, the development of a "bicycle system" as a catalyst for intermodality strengthens the integration between the public transport network and the broader urban fabric.
+    }}
+
+% --- %
+    \needspace{1\baselineskip} % Réserve de l'espace
+\subsection*{Keywords}
+
+\noindent
+\textsl{Accessibility; Cycling; Intermodality; Micromobility; Network; Proximities; Station Areas; Transit-Oriented Development; Urban Planning}
+}

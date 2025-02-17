@@ -1,0 +1,632 @@
+%------------------------------%
+%% ✎ Dylan (V1) %%%%%%%%% ✏️ %%
+%% ✎ Alain (V2) %%%%%%%%% ❌ %%
+%% ✎ Dylan (V3) %%%%%%%%% ❌ %%
+%% ✎ Rapporteurs (V4) %%% ❌ %%
+%% ✎ Dylan (V5) %%%%%%%%% ❌ %%
+%------------------------------%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Sigles et acronymes
+
+\newacronym[description={Sept principaux aspects du \textsl{Transit-Oriented Development}.}]{7Ds}{7Ds}{sept principaux aspects du \textsl{Transit-Oriented Development}}
+
+\newacronym[description={Aires d'attraction des villes.}]{AAV}{AAV}{aires d'attraction des villes}
+
+\newacronym[description={Analyse économétrique coût-bénéfice.}]{ACB}{ACB}{analyse économétrique coût-bénéfice}
+
+\newacronym[description={\textsl{Accessibility and Connectivity knowledge hub for Urban Transformation in Europe}.}]{ACUTE}{ACUTE}{\textsl{Accessibility and Connectivity knowledge hub for Urban Transformation in Europe}}
+
+\newacronym[description={Communauté d'Agglomération de Creil Sud Oise.}]{ACSO}{ACSO}{Communauté d'Agglomération de Creil Sud Oise}
+
+\newacronym[description={Association Française de Normalisation.}]{AFNOR}{AFNOR}{Association Française de Normalisation}
+
+\newacronym[description={Communauté d'Agglomération Béthune Bruay Artois Lys Romane.}]{CABBALR}{CABBALR}{Communauté d'Agglomération Béthune Bruay Artois Lys Romane}
+
+\newacronym[description={\textsl{AGglomerative NESting}.}]{AGNES}{AGNES}{\textsl{AGglomerative NESting}}
+
+\newacronym[description={Analyse multicritère.}]{AMC}{AMC}{analyse multicritère}
+
+\newacronym[description={\textsl{Artificial Neural Networks}.}]{ANN}{ANN}{\textsl{Artificial Neural Networks}}
+
+\newacronym[description={\textsl{Application Programming Interface}.}]{API}{API}{\textsl{Application Programming Interface}}
+
+\newacronym[description={\textsl{Bicycle-based Transit-Oriented Development}.}]{B-TOD}{B-TOD}{\textsl{Bicycle-based Transit-Oriented Development}}
+
+\newacronym[description={\textsl{Average Proportionate Reduction in Error}.}]{APRE}{APRE}{\textsl{Average Proportionate Reduction in Error}}
+
+\newacronym[description={\textsl{Bay Area Rapid Transit}.}]{BART}{BART}{\textsl{Bay Area Rapid Transit}}
+
+\newacronym[description={Brevet d'études professionnelles.}]{BEP}{BEP}{Brevet d'études professionnelles}
+
+\newacronym[description={Bus à haut niveau de service.}]{BHNS}{BHNS}{bus à haut niveau de service}
+
+\newacronym[description={Base permanente des équipements.}]{BPE}{BPE}{Base permanente des équipements}
+
+\newacronym[description={Brevet de technicien supérieur.}]{BTS}{BTS}{Brevet de technicien supérieur}
+
+\newacronym[description={Bachelor universitaire de technologie.}]{BUT}{BUT}{Bachelor universitaire de technologie}
+
+\newacronym[description={\textsl{Best Worst Method}.}]{BWM}{BWM}{Best Worst Method}
+
+\newacronym[description={Communauté d'Agglomération.}]{CA}{CA}{Communauté d'Agglomération}
+
+\newacronym[description={Certificat d'aptitude professionnelle.}]{CAP}{CAP}{Certificat d'aptitude professionnelle}
+
+\newacronym[description={\textsl{Central Business District}.}]{CBD}{CBD}{\textsl{Central Business District}}
+
+\newacronym[description={Communauté de Communes.}]{CC}{CC}{Communauté de Communes}
+
+\newacronym[description={\textsl{Centre for Direct Scientific Communication}.}]{CCSD}{CCSD}{\textsl{Centre for Direct Scientific Communication}}
+
+\newacronym[description={Centre d'études et d'expertise sur les risques, l'environnement, la mobilité et l'aménagement.}]{Cerema}{Cerema}{Centre d'études et d'expertise sur les risques, l'environnement, la mobilité et l'aménagement}
+
+\newacronym[description={Chlorofluorocarbures.}]{CFC}{CFC}{chlorofluorocarbures}
+
+\newacronym[description={Méthane.}]{CH4}{CH4}{méthane}
+
+\newacronym[description={Centre Hospitalier Universitaire.}]{CHU}{CHU}{Centre Hospitalier Universitaire}
+
+\newacronym[description={Dioxyde de carbone.}]{CO2}{CO2}{dioxyde de carbone}
+
+\newacronym[description={Collectivités d'Outre-Mer.}]{COM}{COM}{Collectivités d'Outre-Mer}
+
+\newacronym[description={Commission nationale de l'informatique et des libertés.}]{CNIL}{CNIL}{Commission nationale de l'informatique et des libertés}
+
+\newacronym[description={Centre National de la Recherche Scientifique.}]{CNRS}{CNRS}{Centre National de la Recherche Scientifique}
+
+\newacronym[description={Communauté Urbaine de Dunkerque.}]{CUD}{CUD}{Communauté Urbaine de Dunkerque}
+
+\newacronym[description={Communauté Urbaine.}]{CU}{CU}{Communauté Urbaine}
+
+\newacronym[description={Chaussée à voie centrale banalisée.}]{CVCB}{CVCB}{chaussée à voie centrale banalisée}
+
+\newacronym[description={Diplôme d'études universitaires générales.}]{DEUG}{DEUG}{Diplôme d'études universitaires générales}
+
+\newacronym[description={Diplôme d'études universitaires scientifiques et techniques.}]{DEUST}{DEUST}{Diplôme d'études universitaires scientifiques et techniques}
+
+\newacronym[description={Délégués à la Protection des Données.}]{DPO}{DPO}{Délégués à la Protection des Données}
+
+\newacronym[description={Document de Référence des Gares.}]{DRG}{DRG}{Document de Référence des Gares}
+
+\newacronym[description={Départements et Régions d'Outre-Mer.}]{DROM}{DROM}{Départements et Régions d'Outre-Mer}
+
+\newacronym[description={Départements, Régions et Collectivités d'Outre-Mer.}]{DROM-COM}{DROM-COM}{Départements, Régions et Collectivités d'Outre-Mer}
+
+\newacronym[description={Diplôme universitaire de technologie.}]{DUT}{DUT}{Diplôme universitaire de technologie}
+
+\newacronym[description={\textsl{Equitable-TOD}.}]{e-TOD}{e-TOD}{\textsl{Equitable-TOD}}
+
+\newacronym[description={\textsl{Extended Transit-Oriented Development}.}]{E-TOD}{E-TOD}{\textsl{Extended Transit-Oriented Development}}
+
+\newacronym[description={\textsl{Corridor Transit-Oriented Development}.}]{C-TOD}{C-TOD}{\textsl{Corridor Transit-Oriented Development}}
+
+\newacronym[description={\textsl{Escaping Transit Voronoi Station}.}]{E-TVS}{E-TVS}{\textsl{Escaping Transit Voronoi Station}}
+
+\newacronym[description={Engin de Déplacement Personnel.}]{EDP}{EDP}{Engin de Déplacement Personnel}
+
+\newacronym[description={Engin de Déplacement Personnel Motorisé.}]{EDPM}{EDPM}{Engin de Déplacement Personnel Motorisé}
+
+\newacronym[description={École d'Urbanisme de Paris.}]{EUP}{EUP}{École d'Urbanisme de Paris}
+
+\newacronym[description={Architecture Recherche Engagement Post-carbone.}]{AREP}{AREP}{Architecture Recherche Engagement Post-carbone}
+
+\newacronym[description={Établissement Public de Coopération Intercommunale.}]{EPCI}{EPCI}{Établissement Public de Coopération Intercommunale}
+
+\newacronym[description={\textsl{Fundacion para la Educacion y el Desarrollo Social}.}]{FES}{FES}{\textsl{Fundacion para la Educacion y el Desarrollo Social}}
+
+\newacronym[description={Fédération des Professionnels de la Micro-Mobilité.}]{FP2M}{FP2M}{Fédération des Professionnels de la Micro-Mobilité}
+
+\newacronym[description={\textsl{General Bikeshare Feed Specification}.}]{GBFS}{GBFS}{\textsl{General Bikeshare Feed Specification}}
+
+\newacronym[description={Gaz à effet de serre.}]{GES}{GES}{gaz à effet de serre}
+
+\newacronym[description={\textsl{Gaussian Mixture Model}.}]{GMM}{GMM}{Gaussian Mixture Model}
+
+\newacronym[description={\textsl{Geographical Route Directness Index}.}]{GRDI}{GRDI}{Geographical Route Directness Index}
+
+\newacronym[description={\textsl{General Transit Feed Specification}.}]{GTFS}{GTFS}{\textsl{General Transit Feed Specification}}
+
+\newacronym[description={Habilitation à diriger des recherches.}]{HDR}{HDR}{Habilitation à diriger des recherches}
+
+\newacronym[description={Intelligence artificielle.}]{IA}{IA}{intelligence artificielle}
+
+\newacronym[description={Institut d'Aménagement, d'Urbanisme et de Géographie de Lille.}]{IAUGL}{IAUGL}{Institut d'Aménagement, d'Urbanisme et de Géographie de Lille}
+
+\newacronym[description={Inspection Commune Préalable.}]{ICP}{ICP}{Inspection Commune Préalable}
+
+\newacronym[description={\textsl{Information Entropy Weight}.}]{IEW}{IEW}{Information Entropy Weight}
+
+\newacronym[description={Indice bibliométrique \textsl{Hirsch}.}]{indice~h}{indice~h}{indice bibliométrique \textsl{Hirsch}}
+
+\newacronym[description={\textsl{k-Nearest Neighbors}.}]{KNN}{KNN}{k-Nearest Neighbors}
+
+\newacronym[description={Ligne à grande vitesse.}]{LGV}{LGV}{ligne à grande vitesse}
+
+\newacronym[description={Laboratoire Ville Mobilité Transport.}]{LVMT}{LVMT}{Laboratoire Ville Mobilité Transport}
+
+\newacronym[description={\textsl{Micromobility-friendly Transit-Oriented Development}.}]{M-TOD}{M-TOD}{\textsl{Micromobility-friendly Transit-Oriented Development}}
+
+\newacronym[description={\textsl{Mobility as a Service}.}]{MaaS}{MaaS}{\textsl{Mobility as a Service}}
+
+\newacronym[description={Métropole Européenne de Lille.}]{MEL}{MEL}{Métropole Européenne de Lille}
+
+\newacronym[description={\textsl{Multiple Linear Regression}.}]{MLR}{MLR}{Multiple Linear Regression}
+
+\newacronym[description={Erreur quadratique moyenne.}]{MSE}{MSE}{erreur quadratique moyenne}
+
+\newacronym[description={Oxyde nitreux.}]{N2O}{N2O}{oxyde nitreux}
+
+\newacronym[description={Dioxyde d'azote.}]{NO2}{NO2}{dioxyde d'azote}
+
+\newacronym[description={Oxydes d'azote.}]{NOx}{NOx}{oxydes d'azote}
+
+\newacronym[description={\textsl{Node Place Accessibility Ridership per Time}.}]{NPART}{NPART}{\textsl{Node Place Accessibility Ridership per Time}}
+
+\newacronym[description={\textsl{Node-Place Model}.}]{NPM}{NPM}{Node-Place Model}
+
+\newacronym[description={Nouvelles Technologies de l'Information et de la Communication.}]{NTIC}{NTIC}{Nouvelles Technologies de l'Information et de la Communication}
+
+\newacronym[description={Nouveaux Véhicules Électriques Individuels.}]{NVEI}{NVEI}{Nouveaux Véhicules Électriques Individuels}
+
+\newacronym[description={Véhicules Légers Électriques Unipersonnels.}]{VLEU}{VLEU}{Véhicules Légers Électriques Unipersonnels}
+
+\newacronym[description={Véhicules Légers Électriques Personnels.}]{VLEP}{VLEP}{Véhicules Légers Électriques Personnels}
+
+\newacronym[description={Ozone.}]{O3}{O3}{ozone}
+
+\newacronym[description={Occupation du Sol en 2~Dimensions.}]{OCS2D}{OCS2D}{Occupation du Sol en 2~Dimensions}
+
+\newacronym[description={Objectifs de Développement Durable.}]{ODD}{ODD}{Objectifs de Développement Durable}
+
+\newacronym[description={\textsl{Ordinary Least Squares}.}]{OLS}{OLS}{Ordinary Least Squares}
+
+\newacronym[description={\textsl{Onderzoek Verplaatsingen in Nederland}.}]{OViN}{OViN}{\textsl{Onderzoek Verplaatsingen in Nederland}}
+
+\newacronym[description={Parkings relais.}]{P+R}{P+R}{parkings relais}
+
+\newacronym[description={Professions et Catégories Socioprofessionnelles.}]{PCS}{PCS}{Professions et Catégories Socioprofessionnelles}
+
+\newacronym[description={Points d'intérêt.}]{POIs}{POIs}{points d'intérêt}
+
+\newacronym[description={Communauté d'Agglomération de la Porte du Hainaut.}]{Porte du Hainaut}{Porte du Hainaut}{Communauté d'Agglomération de la Porte du Hainaut}
+
+\newacronym[description={Revenu disponible brut.}]{RDB}{RDB}{revenu disponible brut}
+
+\newacronym[description={Route Directness Index}]{RDI}{RDI}{Route Directness Index}
+
+\newacronym[description={Plan de Mobilité.}]{PDM}{PDM}{Plan de Mobilité}
+
+\newacronym[description={Réseau Express Régional.}]{RER}{RER}{Réseau Express Régional}
+
+\newacronym[description={Règlement Général sur la Protection des Données.}]{RGPD}{RGPD}{Règlement Général sur la Protection des Données}
+
+\newacronym[description={Répertoire des Logements Locatifs des Bailleurs Sociaux.}]{RPLS}{RPLS}{Répertoire des Logements Locatifs des Bailleurs Sociaux}
+
+\newacronym[description={Répertoire National des Certifications Professionnelles.}]{RNCP}{RNCP}{Répertoire National des Certifications Professionnelles}
+
+\newacronym[description={Revue systématique de la littérature.}]{RSL}{RSL}{revue systématique de la littérature}
+
+\newacronym[description={\textsl{Multi-Agent Transport Simulation Toolkit}.}]{MATSim}{MATSim}{\textsl{Multi-Agent Transport Simulation Toolkit}}
+
+\newacronym[description={Recherche bibliographique prenant appui sur les citations en cascade.}]{Recherche CC}{Recherche CC}{recherche bibliographique prenant appui sur les citations en cascade}
+
+\newacronym[description={Recherche bibliographique prenant appui sur le classement des revues scientifiques.}]{Recherche CR}{Recherche CR}{recherche bibliographique prenant appui sur le classement des revues scientifiques}
+
+\newacronym[description={Recherche bibliographique en anglais.}]{Recherche EN}{Recherche EN}{recherche bibliographique en anglais}
+
+\newacronym[description={Recherche bibliographique en français.}]{Recherche FR}{Recherche FR}{recherche bibliographique en français}
+
+\newacronym[description={Schéma de Cohérence Territoriale.}]{SCoT}{SCoT}{Schéma de Cohérence Territoriale}
+
+\newacronym[description={Services express régionaux métropolitains.}]{SERM}{SERM}{Services express régionaux métropolitains}
+
+\newacronym[description={Sciences Humaines et Sociales.}]{SHS}{SHS}{Sciences Humaines et Sociales}
+
+\newacronym[description={Système national d'identification et du répertoire des entreprises et de leurs établissements.}]{Sirene}{Sirene}{Système national d'identification et du répertoire des entreprises et de leurs établissements}
+
+\newacronym[description={Système d'Information Géographique.}]{SIG}{SIG}{Système d'Information Géographique}
+
+\newacronym[description={Dioxyde de soufre.}]{SO2}{SO2}{dioxyde de soufre}
+
+\newacronym[description={Trioxyde de soufre.}]{SO3}{SO3}{trioxyde de soufre}
+
+\newacronym[description={Oxydes de soufre.}]{SOx}{SOx}{oxydes de soufre}
+
+\newacronym[description={Société Publique Locale.}]{SPL}{SPL}{Société Publique Locale}
+
+%\newacronym[description={Machines à vecteurs de support.}]{SVM}{SVM}{machines à vecteurs de support}
+
+\newacronym[description={Contrat d'Objectifs et de Performance.}]{COP}{COP}{Contrat d'Objectifs et de Performance}
+
+\newacronym[description={\textsl{Transit-Adjacent Development}.}]{TAD}{TAD}{\textsl{Transit-Adjacent Development}}
+
+\newacronym[description={Trottinette électrique en libre-service sans station ou en \textsl{free-floating}.}]{TEFF}{TEFF}{trottinette électrique en libre-service sans station ou en \textsl{free-floating}}
+
+\newacronym[description={Trottinette électrique personnelle.}]{TEP}{TEP}{trottinette électrique personnelle}
+
+\newacronym[description={Transport Express Régional.}]{TER}{TER}{Transport Express Régional}
+
+\newacronym[description={Transport Express Régional à Grande Vitesse.}]{TERGV}{TERGV}{Transport Express Régional à Grande Vitesse}
+
+\newacronym[description={Train à Grande Vitesse.}]{TGV}{TGV}{Train à Grande Vitesse}
+
+\newacronym[description={Théorie économique, modélisation et applications.}]{ThéMA}{ThéMA}{Théorie économique, modélisation et applications}
+
+\newacronym[description={\textsl{Transit-Oriented Development}.}]{TOD}{TOD}{\textsl{Transit-Oriented Development}}
+
+\newacronym[description={\textsl{University College Dublin}.}]{UCD}{UCD}{\textsl{University College Dublin}}
+
+\newacronym[description={Vélo à assistance électrique.}]{VAE}{VAE}{vélo à assistance électrique}
+
+\newacronym[description={Vélo en libre-service sans station ou en \textsl{free-floating}.}]{VFF}{VFF}{vélo en libre-service sans station ou en \textsl{free-floating}}
+
+\newacronym[description={Vélo en libre-service avec station.}]{VLS}{VLS}{vélo en libre-service avec station}
+
+\newacronym[description={Voiture de Transport avec Chauffeur.}]{VTC}{VTC}{Voiture de Transport avec Chauffeur}
+
+\newacronym[description={\textsl{Within-Cluster Sum of Squares}.}]{WCSS}{WCSS}{Within-Cluster Sum of Squares}
+
+\newacronym[description={Zéro artificialisation nette.}]{ZAN}{ZAN}{zéro artificialisation nette}
+
+\newacronym[description={\textsl{World Geodetic System 1984}.}]{WGS84}{WGS84}{\textsl{World Geodetic System 1984}}
+
+\newacronym[description={\textsl{Groupe d’experts intergouvernemental sur l’évolution du climat}.}]{GIEC}{GIEC}{\textsl{Groupe d’experts intergouvernemental sur l’évolution du climat}}
+
+\newacronym[description={Zone d'Aménagement Concerté.}]{ZAC}{ZAC}{Zone d'Aménagement Concerté}
+
+\newacronym[description={Zones urbaines fonctionnelles.}]{ZUF}{ZUF}{zones urbaines fonctionnelles}
+
+\newacronym[description={Loi d’Orientation des Transports Intérieurs.}]{LOTI}{LOTI}{Loi d’Orientation des Transports Intérieurs}
+
+\newacronym[description={Nouvelle Organisation Territoriale de la République.}]{NOTRe}{NOTRe}{Nouvelle Organisation Territoriale de la République}
+
+\newacronym[description={Loi d’Orientation des Mobilités.}]{LOM}{LOM}{Loi d’Orientation des Mobilités}
+
+\newacronym[description={Autorité Organisatrice de Transport.}]{AOT}{AOT}{Autorité Organisatrice de Transport}
+
+\newacronym[description={Autorité Organisatrice de la Mobilité.}]{AOM}{AOM}{Autorité Organisatrice de la Mobilité}
+
+\newacronym[description={Schéma Régional d’Aménagement, de Développement Durable et d’Égalité des Territoires.}]{SRADDET}{SRADDET}{Schéma Régional d’Aménagement, de Développement Durable et d’Égalité des Territoires}
+
+\newacronym[description={Loi de Modernisation de l'Action Publique Territoriale et d'Affirmation des Métropoles.}]{MAPTAM}{MAPTAM}{loi de Modernisation de l'Action Publique Territoriale et d'Affirmation des Métropoles}
+
+\newacronym[description={Loi d’Orientation pour l’Aménagement et le Développement du Territoire.}]{LOADT}{LOADT}{Loi d’Orientation pour l’Aménagement et le Développement du Territoire}
+
+\newacronym[description={Loi d’Orientation pour l’Aménagement et le Développement Durable du Territoire.}]{LOADDT}{LOADDT}{Loi d’Orientation pour l’Aménagement et le Développement Durable du Territoire}
+
+\newacronym[description={Loi relative à la Solidarité et au Renouvellement Urbains.}]{SRU}{SRU}{loi relative à la Solidarité et au Renouvellement Urbains}
+
+\newacronym[description={Schéma Régional de l’Intermodalité.}]{SRI}{SRI}{Schéma Régional de l’Intermodalité}
+
+\newacronym[description={Groupement Européen de Coopération Territoriale.}]{GECT}{GECT}{Groupement Européen de Coopération Territoriale}
+
+\newacronym[description={Chambre de Commerce et d'Industrie.}]{CCI}{CCI}{Chambre de Commerce et d'Industrie}
+
+\newacronym[description={Produit Intérieur Brut.}]{PIB}{PIB}{Produit Intérieur Brut}
+
+\newacronym[description={Enquête nationale sur la Mobilité des Personnes.}]{EMP}{EMP}{Enquête nationale sur la Mobilité des Personnes}
+
+\newacronym[description={Droit au Vélo.}]{ADAV}{ADAV}{Droit au Vélo}
+
+\newacronym[description={Schéma Régional des Véloroutes et Voies Vertes.}]{SR3V}{SR3V}{Schéma Régional des Véloroutes et Voies Vertes}
+
+\newacronym[description={Club des villes et territoires cyclables et marchables.}]{CVTCM}{CVTCM}{Club des villes et territoires cyclables et marchables}
+
+\newacronym[description={Fédération française des Usagers de la Bicyclette.}]{FUB}{FUB}{Fédération française des Usagers de la Bicyclette}
+
+\newacronym[description={Analyse de cycle de vie.}]{ACV}{ACV}{Analyse de cycle de vie}
+
+\newacronym[description={\textsl{SCImago Journal Rank}.}]{SJR}{SJR}{\textsl{SCImago Journal Rank}}
+
+\newacronym[description={\textsl{GPS Exchange Format}.}]{GPX}{GPX}{\textsl{GPS Exchange Format}}
+
+\newacronym[description={\textsl{SiChuan University}.}]{SCU}{SCU}{\textsl{SiChuan University}}
+
+\newacronym[description={\textsl{What You See Is What You Get}.}]{WYSIWYG}{WYSIWYG}{\textsl{What You See Is What You Get}}
+
+\newacronym[description={\textsl{Sichuan University of Science \& Engineering}.}]{SUSE}{SUSE}{\textsl{Sichuan University of Science \& Engineering}}
+
+\newacronym[description={Institut pour la Transition Énergétique.}]{ITE}{ITE}{Institut pour la Transition Énergétique}
+
+\newacronym[description={\textsl{Global Positioning System}.}]{GPS}{GPS}{\textsl{Global Positioning System}}
+
+\newacronym[description={Enquête Nationale Transports et Déplacements.}]{ENDT}{ENDT}{Enquête Nationale Transports et Déplacements}
+
+\newacronym[description={Enquête Ménages Déplacements.}]{EMD}{EMD}{Enquête Ménages Déplacements}
+
+\newacronym[description={Planification Régionale de l'Intermodalité.}]{PRI}{PRI}{Planification Régionale de l'Intermodalité}
+
+\newacronym[description={Planification Régionale des Infrastructures de Transports.}]{PRIT}{PRIT}{Planification Régionale des Infrastructures de Transports}
+
+\newacronym[description={Contrat de Plan État-Région.}]{CPER}{CPER}{Contrat de Plan État-Région}
+
+\newacronym[description={Agence de l'environnement et de la maîtrise de l'énergie.}]{ADEME}{ADEME}{Agence de l'environnement et de la maîtrise de l'énergie}
+
+\newacronym[description={Schéma Directeur d'Urbanisme Commercial.}]{SDUC}{SDUC}{Schéma Directeur d'Urbanisme Commercial}
+
+\newacronym[description={Périmètre de Transport Urbain.}]{PTU}{PTU}{Périmètre de Transport Urbain}
+
+\newacronym[description={Schéma Régional des Véloroutes.}]{SRV}{SRV}{Schéma Régional des Véloroutes}
+
+\newacronym[description={Schéma Régional du Climat, de l'Air et de l'Énergie.}]{SRCAE}{SRCAE}{Schéma Régional du Climat, de l'Air et de l'Énergie}
+
+\newacronym[description={Enseignement supérieur et de la recherche.}]{ESR}{ESR}{Enseignement supérieur et de la recherche}
+
+\newacronym[description={Institut National de l'Information Géographique et Forestière.}]{IGN}{IGN}{Institut National de l'Information Géographique et Forestière}
+
+\newacronym[description={Schéma Directeur des Infrastructures de Transports.}]{SDIT}{SDIT}{Schéma Directeur des Infrastructures de Transports}
+
+\newacronym[description={Plan de Déplacements Urbains.}]{PDU}{PDU}{Plan de Déplacements Urbains}
+
+\newacronym[description={Lille Métropole Communauté Urbaine.}]{LMCU}{LMCU}{Lille Métropole Communauté Urbaine}
+
+\newacronym[description={Établissement Public Foncier.}]{EPF}{EPF}{Établissement Public Foncier}
+
+\newacronym[description={Zones d'Accessibilité Piétonne.}]{ZAP}{ZAP}{Zones d'Accessibilité Piétonne}
+
+\newacronym[description={Zones d'Accessibilité Vélo.}]{ZAV}{ZAV}{Zones d'Accessibilité Vélo}
+
+\newacronym[description={\textsl{Sport utility vehicle}.}]{SUV}{SUV}{\textsl{Sport utility vehicle}}
+
+\newacronym[description={Véhicule automatique léger.}]{VAL}{VAL}{Véhicule automatique léger}
+
+\newacronym[description={LAboratoire de Géographie et d’Aménagement de Montpellier.}]{LAGAM}{LAGAM}{LAboratoire de Géographie et d’Aménagement de Montpellier}
+
+\newacronym[description={\textsl{Google Popular Times}.}]{GPT}{GPT}{\textsl{Google Popular Times}}
+
+\newacronym[description={Europe ENvironnement Ville Aménagement Réseau.}]{ENVAR}{ENVAR}{Europe ENvironnement Ville Aménagement Réseau}
+
+\newacronym[description={Congrès International de l’Architecture Moderne.}]{CIAM}{CIAM}{Congrès International de l’Architecture Moderne}
+
+\newacronym[description={\textsl{Traditional Neighbourhood Design}.}]{TND}{TND}{\textsl{Traditional Neighbourhood Design}}
+
+\newacronym[description={Partenariat Public-Privé.}]{PPP}{PPP}{Partenariat Public-Privé}
+
+\newacronym[description={Établissement Public d'Aménagement.}]{EPA}{EPA}{Établissement Public d'Aménagement}
+
+\newacronym[description={Plan Local d'Urbanisme intercommunal.}]{PLUi}{PLUi}{Plan Local d'Urbanisme intercommunal}
+
+\newacronym[description={Plan Local d'Urbanisme.}]{PLU}{PLU}{Plan Local d'Urbanisme}
+
+\newacronym[description={Programme Local de l'Habitat.}]{PLH}{PLH}{Programme Local de l'Habitat}
+
+\newacronym[description={\textsl{Transit Related Development}.}]{TRD}{TRD}{\textsl{Transit Related Development}}
+
+\newacronym[description={\textsl{Transportation Systems Management}.}]{TSM}{TSM}{\textsl{Transportation Systems Management}}
+
+\newacronym[description={\textsl{Transportation Demand Management}.}]{TDM}{TDM}{\textsl{Transportation Demand Management}}
+
+\newacronym[description={Schéma Directeur de la Région Île-de-France.}]{SDRIF}{SDRIF}{Schéma Directeur de la Région Île-de-France}
+
+\newacronym[description={Disques de Valorisation des Axes de Transport.}]{DIVAT}{DIVAT}{Disques de Valorisation des Axes de Transport}
+
+\newacronym[description={\textsl{Development-Oriented Transit}.}]{DOT}{DOT}{\textsl{Development-Oriented Transit}}
+
+\newacronym[description={Transport Personnel Automatisé.}]{PRT}{PRT}{Transport Personnel Automatisé}
+
+\newacronym[description={\textsl{Feeder-Distributor-Circulator Network}.}]{F-D-C}{F-D-C}{\textsl{Feeder-Distributor-Circulator Network}}
+
+\newacronym[description={\textsl{Mass Rapid Transit}.}]{MRT}{MRT}{\textsl{Mass Rapid Transit}}
+
+\newacronym[description={\textsl{Housing Development Board}.}]{HDB}{HDB}{\textsl{Housing Development Board}}
+
+\newacronym[description={Vélo tout terrain.}]{VTT}{VTT}{vélo tout terrain}
+
+\newacronym[description={Haut Conseil de l'évaluation de la recherche et de l'enseignement supérieur.}]{Hcéres}{Hcéres}{Haut Conseil de l'évaluation de la recherche et de l'enseignement supérieur}
+
+\newacronym[description={Nickel-hydrure métallique.}]{NiCd}{NiCd}{nickel-hydrure métallique}
+
+\newacronym[description={Nickel-hydrure métallique.}]{NiMH}{NiMH}{nickel-hydrure métallique}
+
+\newacronym[description={Lithium-ion.}]{Li-ion}{Li-ion}{lithium-ion}
+
+\newacronym[description={Organisation de coopération et de développement économiques.}]{OCDE}{OCDE}{Organisation de coopération et de développement économiques}
+
+\newacronym[description={Institut français des sciences et technologies des transports, de l'aménagement et des réseaux.}]{IFSTTAR}{IFSTTAR}{Institut français des sciences et technologies des transports, de l'aménagement et des réseaux}
+
+\newacronym[description={Établissement public à caractère scientifique, culturel et professionnel.}]{EPSCP}{EPSCP}{Établissement public à caractère scientifique, culturel et professionnel}
+
+\newacronym[description={Université Paris-Est Marne-la-Vallée.}]{UPEM}{UPEM}{Université Paris-Est Marne-la-Vallée}
+
+\newacronym[description={Unité mixte de recherche.}]{UMR}{UMR}{Unité mixte de recherche}
+
+\newacronym[description={École nationale des ponts et chaussées.}]{ENPC}{ENPC}{École nationale des ponts et chaussées}
+
+\newacronym[description={\textsl{Nederlandse Spoorwegen}.}]{NS}{NS}{\textsl{Nederlandse Spoorwegen}}
+
+\newacronym[description={Monoxyde d'azote.}]{NO}{NO}{monoxyde d'azote}
+
+\newacronym[description={Services de Transports Partagés.}]{STP}{STP}{Services de Transports Partagés}
+
+\newacronym[description={Union européenne.}]{UE}{UE}{Union européenne}
+
+\newacronym[description={\textsl{Internet of Things}.}]{IoT}{IoT}{\textsl{Internet of Things}}
+
+\newacronym[description={\textsl{New Urbanist Memes for Transit-Oriented Teens}.}]{NUMTOT}{NUMTOT}{\textsl{New Urbanist Memes for Transit-Oriented Teens}}
+
+\newacronym[description={Transport à la Demande.}]{TaD}{TaD}{Transport à la Demande}
+
+\newacronym[description={Aménagement de l’espace URbain et mobilités à Faible impact Environnemental.}]{URFé}{URFé}{Aménagement de l’espace URbain et mobilités à Faible impact Environnemental}
+
+\newacronym[description={Union internationale des transports publics.}]{UITP}{UITP}{Union internationale des transports publics}
+
+\newacronym[description={Monoxyde de carbone.}]{CO}{CO}{monoxyde de carbone}
+
+\newacronym[description={Institut français d'opinion publique.}]{IFOP}{IFOP}{Institut français d'opinion publique}
+
+\newacronym[description={\textsl{Quoi, Qui, Où, Quand, Comment, Combien, Pourquoi}.}]{QQOQCCP}{QQOQCCP}{\textsl{Quoi, Qui, Où, Quand, Comment, Combien, Pourquoi}}
+
+\newacronym[description={Maîtrise d'usage.}]{MUS}{MUS}{maîtrise d'usage}
+
+\newacronym[description={Maîtrise d'œuvre.}]{MOE}{MOE}{maîtrise d'œuvre}
+
+\newacronym[description={Maîtrise d'ouvrage.}]{MOU}{MOU}{maîtrise d'ouvrage}
+
+%%____________________________
+% Glossaire
+    \begin{refsegment}
+
+\newglossaryentry{accessibilité}{
+    name={Accessibilité~:},
+    text={accessibilité},
+description={\scriptsize{\Guillemets{\textsl{La possibilité d'accès à un lieu ou à partir d'un lieu. L'accessibilité caractérise le niveau de desserte et influe fortement sur le niveau des valeurs foncières. On peut mesurer l'accessibilité à partir d'un point (lieu de résidence) de plusieurs façons~: par \Guillemets{tout ou rien}} [\dots] \textsl{par des courbes isochrones} [\dots] \textsl{par une moyenne des coûts généralisés de déplacements aux différentes destinations} [\dots] \textsl{en fonction de l'offre de transport et du système d'activités} [\dots] \textsl{Cette dernière formulation est la plus satisfaisante. On peut pondérer les accessibilités pour différents types d'opportunités (emplois, lieux d'achats, lieux de loisirs\dots).}} \textcolor{blue}{\autocite[5]{merlin_accessibilite_2023}}\index{Merlin, Pierre|pagebf}\index{Choay, Françoise|pagebf}. \Guillemets{\textsl{Ainsi, la notion se rapporte toujours au type de lieu à atteindre, autrement dit à quoi a-t-on accès en ce lieu. Elle implique aussi une notion de mesure.} [\dots] \textsl{Elle implique l'élimination des barrières limitant les possibilités d'accès, quelle que soit leur nature.} [\dots] \textsl{mais aussi les systèmes de transports et leur intermodalité} [\dots]} \textcolor{blue}{\autocite[11-12]{demailly_accessibilite_2021}}\index{Demailly, Kaduna-Eve|pagebf}\index{Monnet, Jérôme|pagebf}\index{Scapino, Julie|pagebf}\index{Deraëve, Sophie|pagebf}\index{Alauzet, Aline|pagebf}\index{Raton, Gwenaëlle|pagebf}.}
+}}%%Rédigé%%
+
+\newglossaryentry{cartographie}{
+    name={Cartographie~:},
+    text={cartographie},
+description={\scriptsize{\Guillemets{\textsl{La cartographie est un mode de communication, un \Guillemets{langage}, articulant des concepts, des signes graphiques (diagrammes, couleurs, taille de symboles\dots) et un référentiel de formes géographiques parfois schématiques mais généralement construites grâce à des technologies et des mathématiques poussées (géodésie, projection, métrologie\dots).}} \textcolor{blue}{\autocite[55]{demailly_cartographie_2021}}\index{Demailly, Kaduna-Eve|pagebf}\index{Monnet, Jérôme|pagebf}\index{Scapino, Julie|pagebf}\index{Deraëve, Sophie|pagebf}\index{Hubert, Jean-Paul|pagebf}\index{Lefèvre, Quentin|pagebf}.}
+}}%%Rédigé%%
+
+\newglossaryentry{coupure urbaine}{
+    name={Coupures urbaines~:},
+    text={coupure urbaine},
+description={\scriptsize{\Guillemets{\textsl{Une coupure urbaine est une emprise linéaire ou surfacique qui perturbe les relations entre les populations alentour. Ce peut être une discontinuité d'origine naturelle (rivières, pentes abruptes) ou humaine, comme une infrastructure de transport (autoroute, voie ferrée, canal\dots), une grande parcelle ouverte le jour et fermée la nuit (parcs, cimetières\dots) ou un vaste îlot (zone industrielle, centre commercial, lotissement en impasse\dots).} [\dots] \textsl{Quatre formes de coupures simples peuvent être distinguées en fonction de la gêne pour la marche en ville~: les coupures linéaires infranchissables (autoroute, rivière, voie ferrée\dots), les \Guillemets{barrières de trafic} difficiles à traverser (une artère\dots), les voies dangereuses à emprunter (une voirie en périphérie sans trottoir\dots) et les coupures surfaciques (un aéroport, une zone d'activités non traversable\dots).}} \textcolor{blue}{\autocite[89]{demailly_coupures_2021}}\index{Demailly, Kaduna-Eve|pagebf}\index{Monnet, Jérôme|pagebf}\index{Scapino, Julie|pagebf}\index{Deraëve, Sophie|pagebf}\index{Héran, Frédéric|pagebf}.}
+}}%%Rédigé%%
+
+\newglossaryentry{déplacement}{
+    name={Déplacement~:},
+    text={déplacement},
+description={\scriptsize{\Guillemets{\textsl{Le déplacement est l'action de changer de place, qui s'explique par un motif~: le besoin de se rendre dans un autre lieu pour faire une activité impossible sur place. Le déplacement utilise un ou plusieurs modes de transport, qui peuvent être caractérisés dans un calcul économique par le coût financier et le temps de trajet spécifique à chaque mode pour déterminer l'utilité d'un déplacement.}} \textcolor{blue}{\autocite[96]{demailly_deplacement_2021}}\index{Demailly, Kaduna-Eve|pagebf}\index{Monnet, Jérôme|pagebf}\index{Scapino, Julie|pagebf}\index{Deraëve, Sophie|pagebf}. \Guillemets{\textsl{Mouvement d'une personne d'une origine à une destination. On appelle trajet le parcours effectué avec un moyen de transport donné. Un déplacement peut donc nécessiter un seul ou plusieurs trajets.}} \textcolor{blue}{\autocite[243-244]{merlin_deplacement_2023}}\index{Merlin, Pierre|pagebf}\index{Choay, Françoise|pagebf}.}
+}}%%Rédigé%%
+
+\newglossaryentry{détour}{
+    name={Détour~:},
+    text={détour},
+description={\scriptsize{\Guillemets{\textsl{Le détour} [\dots] \textsl{est défini comme tout écart par rapport au chemin le plus direct reliant l'origine à la destination du déplacement. Les réalités observables du détour et du chemin direct sont ici étroitement reliées à la notion abstraite de la ligne droite, qui constitue une référence cognitive pour les déplacements. Dans cette perspective, même le chemin le plus court peut être vu comme étant marqué par une forme de détour, ce qui étend la notion à un rapport de distance entre le chemin réel et l'abstraction de la ligne droite.} [\dots] \textsl{On propose ainsi de définir trois composantes du détour~: une composante incompressible intrinsèque à la mobilité dans l'espace urbain considéré, une composante choisie par le piéton et donc favorable à la pratique de la marche, et enfin une composante imposée au piéton par des aménagements dépassant l'échelle humaine, et défavorable à la marche.}} \textcolor{blue}{\autocite[98]{demailly_detour_2021}}\index{Demailly, Kaduna-Eve|pagebf}\index{Monnet, Jérôme|pagebf}\index{Scapino, Julie|pagebf}\index{Deraëve, Sophie|pagebf}\index{L'Hostis, Alain|pagebf}.}
+}}%%Rédigé%%
+
+\newglossaryentry{espace public}{
+    name={Espace public~:},
+    text={espace public},
+description={\scriptsize{\Guillemets{\textsl{La notion d'espace public recouvre deux acceptations principales, l'une plutôt mobilisée par la philosophie et les sciences humaines et sociales, l'autre qui renvoie plutôt à la réglementation qui s'impose aux voies de circulation et aux lieux accueillant du public.}} \textcolor{blue}{\autocite[128]{demailly_espace_2021}}\index{Demailly, Kaduna-Eve|pagebf}\index{Monnet, Jérôme|pagebf}\index{Scapino, Julie|pagebf}\index{Deraëve, Sophie|pagebf}\index{Monnet, Jérôme|pagebf}.}
+}}%%Rédigé%%
+
+\newglossaryentry{genre}{
+    name={Genre~:},
+    text={genre},
+description={\scriptsize{\Guillemets{\textsl{Le terme de \Guillemets{genre} concerne la signification que les individus donnent aux différentes catégories de sexe (au-delà des caractéristiques biologiques). Il consiste en une large variété d'attributs communément associés à la masculinité ou à la féminité dans une société donnée.} [\dots] \textsl{En intersectionnalité avec l'âge, l'ethnicité, la culture, l'orientation sexuelle et la classe sociale, il crée une asymétrie sociale et cognitive.}} \textcolor{blue}{\autocite[160]{demailly_genre_2021}}\index{Demailly, Kaduna-Eve|pagebf}\index{Monnet, Jérôme|pagebf}\index{Scapino, Julie|pagebf}\index{Deraëve, Sophie|pagebf}\index{Faure, Emmanuelle|pagebf}\index{Granié, Marie-Axelle|pagebf}\index{Hernández González|pagebf}\index{Edna|pagebf}.}
+}}%%Rédigé%%
+
+\newglossaryentry{itinéraire}{
+    name={Itinéraire~:},
+    text={itinéraire},
+description={\scriptsize{\Guillemets{\textsl{L'itinéraire, le plus usité, peut correspondre à une route sélectionnée, empruntée de manière plus ou moins récurrente, donc habituelle, sans être pour autant figée. Sa dimension utilitaire, souvent mise en évidence, tient au fait qu'il permet de rejoindre une destination à laquelle est généralement associé un motif de déplacement. Le cheminement semble plus aléatoire, indécis et évoque une exploration des possibles ouvrant la voie à une forme de sérendipité urbaine.} [\dots] Étudier les itinéraires peut permettre de révéler le lien sensible à l'environnement, notamment les facteurs, potentiellement très nombreux, influençant les choix mis en œuvre dans la définition des parcours de déplacement.} \textcolor{blue}{\autocite[184]{demailly_itineraire_2021}}\index{Demailly, Kaduna-Eve|pagebf}\index{Monnet, Jérôme|pagebf}\index{Scapino, Julie|pagebf}\index{Deraëve, Sophie|pagebf}\index{Piombini, Arnaud|pagebf}\index{Meissonnier, Joël|pagebf}.}
+}}%%Rédigé%%
+
+\newglossaryentry{marchabilité}{
+    name={Marchabilité~:},
+    text={marchabilité},
+description={\scriptsize{\Guillemets{\textsl{La \Guillemets{marchabilité}, néologisme traduisant le terme anglais walkability, est considéré dans la littérature scientifique comme un indicateur permettant de mesurer le potentiel de pratique de la marche selon les caractéristiques et la qualité d'un environnement construit donné. L'expression \Guillemets{potentiel piétonnier} est aussi utilisée.}} \textcolor{blue}{\autocite[216]{demailly_marchabilite_2021}}\index{Demailly, Kaduna-Eve|pagebf}\index{Monnet, Jérôme|pagebf}\index{Scapino, Julie|pagebf}\index{Deraëve, Sophie|pagebf}\index{Huguenin-Richard, Florence|pagebf}\index{Cloutier, Marie-Soleil|pagebf}.}
+}}%%Rédigé%%
+
+\newglossaryentry{métrique}{
+    name={Métrique~:},
+    text={métrique},
+description={\scriptsize{\Guillemets{\textsl{Chaque façon de se déplacer détermine une métrique servant à évaluer la proximité ou l'éloignement dans un territoire, urbain ou non. La métrique dépend de la vitesse permise par un mode de transport mais celle-ci varie selon les lieux, l'heure, creuse ou de pointe, les charges qu'on transporte, et évolue selon les technologies, la forme des réseaux, etc. Une métrique, pédestre, automobile ou ferroviaire, ne produit donc pas une mesure objective anhistorique~: elle mélange des temporalités physiologiques ou sociales et des trames géographiques, locales ou régionales, comme les réseaux de transports en commun, les îlots urbains ou les lotissements de banlieue. C'est une mesure d'usage du territoire, afin de s'y repérer et surtout de s'y projeter.}} \textcolor{blue}{\autocite[231]{demailly_metrique_2021}}\index{Demailly, Kaduna-Eve|pagebf}\index{Monnet, Jérôme|pagebf}\index{Scapino, Julie|pagebf}\index{Deraëve, Sophie|pagebf}\index{Hubert, Jean-Paul|pagebf}\index{|pagebf}\index{|pagebf}\index{|pagebf}.}
+}}%%Rédigé%%
+
+\newglossaryentry{micro-véhicules}{
+    name={Micro-véhicules portatifs~:},
+    text={micro-véhicules},
+description={\scriptsize{\Guillemets{\textsl{Depuis le début des années 2010, on a vu fleurir dans l'espace public des grandes villes du monde entier de nouveaux \Guillemets{objets roulants non identifiés}, de petite dimension et conçus pour transporter une personne. Cette prolifération a coïncidé avec des innovations technologiques concernant la motorisation électrique~: d'une part des moteurs gyroscopiques qui peuvent être logés à l'intérieur des roues, d'autre part des batteries de taille réduite aux performances améliorées en puissance et en durée. Aux côtés de formes anciennes (trottinette, skateboard, rollers et patins à roulette, vélo) dotées de moteurs, de nouveaux engins motorisés (gyropode, monoroue) sont apparus et des hybrides ont été créés (smartboard, gyroskate). Il est probable que l'on ne soit qu'au début d'un cycle d'inventions aux enjeux tant technologiques qu'économiques, sociaux et politiques} [\dots] ils se distinguent de celui-ci [le vélo] par leur caractère \Guillemets{portatif} qui leur donne un grand avantage pour l'intermodalité.} \textcolor{blue}{\autocite[233]{demailly_micro-vehicules_2021}}\index{Demailly, Kaduna-Eve|pagebf}\index{Monnet, Jérôme|pagebf}\index{Scapino, Julie|pagebf}\index{Deraëve, Sophie|pagebf}\index{Monnet, Jérôme|pagebf}.}
+}}%%Rédigé%%
+
+\newglossaryentry{modes actifs}{
+    name={Mobilité active~:},
+    text={modes actifs},
+description={\scriptsize{\Guillemets{\textsl{On préférera donc ne parler, pour subsumer la marche, que de mobilité active, seule à présenter une définition univoque, seule donc à exprimer non pas un jugement mais une description, et qui par ailleurs garantit que l'on ne voit pas revenir par la fenêtre des mobilités que l'on avait chassées par la porte. Une fois posée cette préférabilité terminologique de la mobilité active, il est impératif de se rappeler que cette dernière comprend deux composantes principales, soit à côté de la marche le vélo, deux composantes donc les caractéristiques sont nettement distinctes~–~ainsi le vélo est-il (contrairement à la marche) un mode mécanisé, et la vitesse ainsi que par conséquent la portée moyenne de ces deux modes varient-elles de 1 à 4~; on préférera donc, pour ne pas gommer les contraintes et les opportunités nettement différenciées de ces deux modes, parler de mobilités actives, auxquelles est néanmoins commune leur désirabilité aussi bien urbaine qu'environnementale et sanitaire.}} \textcolor{blue}{\autocite[240-241]{demailly_mobilite_2021}}\index{Demailly, Kaduna-Eve|pagebf}\index{Monnet, Jérôme|pagebf}\index{Scapino, Julie|pagebf}\index{Deraëve, Sophie|pagebf}\index{Demade, Julien|pagebf}.}
+}}%%Rédigé%%
+
+\newglossaryentry{multimodalité}{
+    name={Multimodalité~:},
+    text={multimodalité},
+description={\scriptsize{\Guillemets{\textsl{La multimodalité en tant que pratique désigne l'utilisation de différents modes de transport ou de déplacement en fonction des trajets de circonstances.}} \textcolor{blue}{\autocite[253]{demailly_multimodalite_2021}}\index{Demailly, Kaduna-Eve|pagebf}\index{Monnet, Jérôme|pagebf}\index{Scapino, Julie|pagebf}\index{Deraëve, Sophie|pagebf}\index{Chrétien, Julie|pagebf}. La multimodalité se définit comme \Guillemets{\textsl{la possibilité d’utiliser alternativement plusieurs modes de transport sur une même liaison. Elle est aussi appelée intermodalité alternative. Elle est basée sur la notion de choix et le client multimodal va orienter le choix du mode utilisé différemment selon le jour, l’heure ou le motif de son déplacement. Il cherche à optimiser l’usage de la gamme de transport disponible en jouant sur les avantages de performance intrinsèques à chaque mode.}} \textcolor{blue}{\autocite[7]{souchon_intermodalite_2006}}\index{Souchon, Aurélie|pagebf}.}
+}}%%Rédigé%%
+
+\newglossaryentry{intermodalité}{
+    name={Intermodalité~:},
+    text={intermodalité},
+description={\scriptsize{\Guillemets{\textsl{L'intermodalité désigne} [\dots] \textsl{la possibilité de combiner plusieurs moyens de transport au cours d'un même trajet. Cette pratique permet d'envisager le rabattement des usagers vers les axes de transport en commun structurants et ainsi de rentabiliser ces derniers. Elle est cependant considérée comme une contrainte pour l'usager, à cause des interruptions que constituent les correspondances et les attentes.}} \textcolor{blue}{\autocite[253]{demailly_multimodalite_2021}}\index{Demailly, Kaduna-Eve|pagebf}\index{Monnet, Jérôme|pagebf}\index{Scapino, Julie|pagebf}\index{Deraëve, Sophie|pagebf}\index{Chrétien, Julie|pagebf}. \Guillemets{\textsl{L'intermodalité a tout d'abord été perçue par les décideurs comme un simple rapprochement physique de modes différents en un même lieu. Mais elle est bien plus que cela. Elle consiste à proposer aux usagers des services intermodaux de transport intégrés et performants dans l'espace et le temps afin de concurrencer les chaînes monomodales, notamment routières. La plus ou moins bonne capacité des nœuds à connecter efficacement différents modes et services de transport est un élément central du succès ou de l'échec des solutions intermodales de déplacement.} [\dots] \textsl{L'intermodalité par les gains d'accessibilité qu'elle procure apparaît comme un déterminant majeur de la mobilité. Elle est, de ce fait, au centre des politiques de transport.}} \textcolor{blue}{\autocite[107-108]{chapelon_evaluation_2016}}\index{Chapelon, Laurent|pagebf}.}
+}}%%Rédigé%%
+
+\newglossaryentry{pause}{
+    name={Pause~:},
+    text={pause},
+description={\scriptsize{\Guillemets{\textsl{La pause, définie comme un arrêt pendant une durée limitée au cours d'un déplacement} [\dots] \textsl{fait référence à la \Guillemets{latéralisation}, c'est-à-dire au besoin de sortir de son déplacement pour une pause, une respiration, qui donnera ensuite l'élan nécessaire pour reprendre son trajet.} [\dots] \textsl{Les formes de la pause sont multiples. D'abord, comme tout mouvement, la marche consomme une énergie qu'il est nécessaire de recharger. La pause est un moment adapté pour manger, boire ou reprendre son souffle.} [\dots] \textsl{La pause peut être aussi mentale.} [\dots] \textsl{La pause est aussi permise par la \Guillemets{ludification} de la ville} [\dots] \textsl{À travers cette fonction urbaine de la pause, il existe aussi la possibilité d'une appropriation esthétique de l'espace.}} \textcolor{blue}{\autocite[279]{demailly_pause_2021}}\index{Demailly, Kaduna-Eve|pagebf}\index{Monnet, Jérôme|pagebf}\index{Scapino, Julie|pagebf}\index{Deraëve, Sophie|pagebf}\index{L'Hostis, Alain|pagebf}.}
+}}%%Rédigé%%
+
+\newglossaryentry{perception}{
+    name={Perception~:},
+    text={perception},
+description={\scriptsize{\Guillemets{\textsl{La perception est un processus de réception ou de collecte de stimuli et d'informations de l'environnement, élaboré de manière physiologique, cognitive et émotionnelle. La terminologie est souvent confondue avec celles de représentation et d'évaluation d'un objet, d'une situation ou d'un espace. La perception d'un lieu est le produit du traitement subjectif d'un ensemble d'informations sensorielles et des représentations sociospatiales du lieu.}} \textcolor{blue}{\autocite[285]{demailly_perception_2021}}\index{Demailly, Kaduna-Eve|pagebf}\index{Monnet, Jérôme|pagebf}\index{Scapino, Julie|pagebf}\index{Deraëve, Sophie|pagebf}\index{Marchand, Dorothée|pagebf}\index{Urrutia, Enric Pol|pagebf}.}
+}}%%Rédigé%%
+
+\newglossaryentry{périurbain}{
+    name={Périurbain~:},
+    text={périurbain},
+description={\scriptsize{\Guillemets{\textsl{La vie périurbaine s'organise à l'intérieur d'une mosaïque d'espaces naturels, agricoles ou bâtis, qui forment un système urbain-rural en réseau. Les mobilités entre lieux de résidence, de services, de loisirs et d'emplois dessinent une forme périurbaine complexe et multiple, loin d'être rythmée uniquement par les déplacements pendulaires.}} \textcolor{blue}{\autocite[288]{demailly_periurbain_2021}}\index{Demailly, Kaduna-Eve|pagebf}\index{Monnet, Jérôme|pagebf}\index{Scapino, Julie|pagebf}\index{Deraëve, Sophie|pagebf}\index{Mancebo, François|pagebf}\index{Salles, Sylvie|pagebf}. \Guillemets{\textsl{La périurbanisation correspond à une urbanisation périphérique autour des agglomérations urbaines.} [\dots] \textsl{On la confond souvent à tort avec la rurbanisation qui est le mouvement de pôles urbains vers les espaces à dominante rurale.} [\dots] la périurbanisation correspond d'abord à une nécessité physique et économique.} \textcolor{blue}{\autocite[549]{merlin_periurbanisation_2023}}\index{Merlin, Pierre|pagebf}\index{Choay, Françoise|pagebf}.}
+}}%%Rédigé%%
+
+\newglossaryentry{design}{
+    name={Urban Design~:},
+    text={design},
+description={\scriptsize{\Guillemets{\textsl{L'expression anglaise \Guillemets{urban design} est parfois utilisée telle quelle en français faute d'équivalent satisfaisant pour rendre compte en un seul terme à la fois du \Guillemets{dessein} (la conception d'une solution répondant à un objectif) et du \Guillemets{dessin} (la formalisation, souvent graphique, de cette solution). Des termes proches sont souvent utilisés, \Guillemets{composition urbaine}, \Guillemets{art urbain}, \Guillemets{projet urbain}, sans être de véritables synonymes.} [\dots] \textsl{Il s'agit notamment de travailler sur les relations entre l'espace public et les bâtiments qui le jouxtent, de manière à produire un paysage à échelle humaine par ses dimensions, ses qualités et ses ambiances. Si le Mouvement moderne a pu appréhender le bâtiment architectural comme un objet isolé autonome dans le tissu urbain, à l'inverse l'urban design pense l'implantation des bâtiments de façon à produire une qualité formelle et d'usage de l'espace public.}} \textcolor{blue}{\autocite[386-387]{demailly_urban_2021}}\index{Demailly, Kaduna-Eve|pagebf}\index{Monnet, Jérôme|pagebf}\index{Scapino, Julie|pagebf}\index{Deraëve, Sophie|pagebf}\index{Hernandez, Frédérique|pagebf}\index{Pinson, Daniel|pagebf}.}
+}}%%Rédigé%%
+
+\newglossaryentry{urbanisme tactique}{
+    name={Urbanisme tactique~:},
+    text={urbanisme tactique},
+description={\scriptsize{\Guillemets{\textsl{L'urbanisme tactique est une notion qui couvre un ensemble hétéroclite d'interventions de petite taille, souvent temporaires, réversibles et à vocation expérimentale.} [\dots] \textsl{Leur but principal est de reconquérir les espaces publics au profit d'une plus grande convivialité.} [\dots] \textsl{Cette diversité se traduit sémantiquement par la multiplication de termes (urbanisme do it yourself, makeshift, pop-up, guerrilla, insurgent, everyday\dots). Les différences, parfois subtiles, entre ces notions dépendent des acteurs du projet (initiative citoyenne ou institutionnelle), du rapport des interventions à la norme (démarches autorisées et légales ou non) et au processus de projet (préfiguration ou non) ou encore des objectifs visés (fonctionnel esthétique\dots). Dans son ensemble, l'urbanisme tactique témoigne d'une critique de l'urbanisme fonctionnaliste jugé hostile à un ensemble de pratiques de sociabilité urbaine pour lesquelles le déplacement à pied est une condition essentielle.}} \textcolor{blue}{\autocite[391-392]{demailly_urbanisme_2021}}\index{Demailly, Kaduna-Eve|pagebf}\index{Monnet, Jérôme|pagebf}\index{Scapino, Julie|pagebf}\index{Deraëve, Sophie|pagebf}\index{Gomes, Pedro|pagebf}\index{Demailly, Kaduna-Eve|pagebf}.}
+}}%%Rédigé%%
+
+\newglossaryentry{vélo}{
+    name={Vélo~:},
+    text={vélo},
+description={\scriptsize{\Guillemets{\textsl{Comme pour le déplacement à pied, sa force motrice est humaine, il partage donc avec lui la dénomination de mode actif. Mais le vélo est un véhicule dans le Code de la route. Comme tout véhicule, sa place légitime est sur la chaussée.} [\dots] \textsl{Après-guerre, la pratique du vélo s'effondre en France sous l'effet d'une concurrence acharnée des constructeurs de deux-roues motorisés qui visent explicitement à motoriser les cyclistes.} [\dots] Dans les années 1970-1990, les cyclistes sont devenus rares dans les villes et les piétons ainsi que les automobilistes ont oublié leur existence même.} \textcolor{blue}{\autocite[406]{demailly_velo_2021}}\index{Demailly, Kaduna-Eve|pagebf}\index{Monnet, Jérôme|pagebf}\index{Scapino, Julie|pagebf}\index{Deraëve, Sophie|pagebf}\index{Hiron, Benoît|pagebf}.}
+}}%%Rédigé%%
+
+\newglossaryentry{durable}{
+    name={Ville durable~:},
+    text={durable},
+description={\scriptsize{\Guillemets{\textsl{Le déploiement de la ville durable, d'une ville qui ne soit pas vulnérable aux aléas de la transition énergétique et du changement climatique et qui permettre à ses habitants de limiter leur impact environnemental, est trop souvent associé à l'attribution de labels, normes techniques et écotechnologies de toutes sortes (sobriété énergétique, réseaux intelligents, agriculture verticale, pilotage des flux en temps réel, etc.), mais ces dispositifs conçus selon la logique de l'ingénieur n'intègrent pas l'urbanité, les rugosités de la ville, ses usages réels.} [\dots] \textsl{Une approche urbaine réellement durable consiste ainsi également à aider la construction collective, par les habitants, d'une mémoire des lieux. Celle-ci concerne aussi les relations entre citadins. Comment partager l'espace~? Qu'avons-nous en commun~? À quels enjeux et contraintes devons-nous faire face et nous adapter~?}} \textcolor{blue}{\autocite[411]{demailly_ville_2021}}\index{Demailly, Kaduna-Eve|pagebf}\index{Monnet, Jérôme|pagebf}\index{Scapino, Julie|pagebf}\index{Deraëve, Sophie|pagebf}\index{Mancebo, François|pagebf}\index{Salles, Sylvie|pagebf}.}
+}}%%Rédigé%%
+
+\newglossaryentry{transport en commun}{
+    name={Transports en commun~:},
+    text={transport en commun},
+description={\scriptsize{\Guillemets{\textsl{Un système de transport mis à la disposition du public dans les centres urbains et qui met en œuvre des véhicules adaptés à l'accueil simultané de plusieurs personnes, et dont la tarification, les horaires et les trajets sont planifiés et connus à l'avance. Le transport en commun est habituellement assuré par l'autobus, le métro, le tramway et le train de banlieue.}} \textcolor{blue}{\autocite[8]{boisclair_retisser_2013}}\index{Boisclair, Catherine|pagebf}. Il convient de le différencier du \Guillemets{\textsl{transport collectif [qui représente lui aussi] l'ensemble des modes de transport mettant en œuvre des véhicules adaptés à l'accueil simultané de plusieurs personnes. Il peut [cependant] prendre différentes formes, dont le transport en commun} [\dots]} \textcolor{blue}{\autocite[14]{boucher_lamenagement_2011}}\index{Boucher, Isabelle|pagebf}\index{Fontaine, Nicolas|pagebf}.}
+}}%%Rédigé%%
+
+\newglossaryentry{rabattement}{
+    name={Rabattement~:},
+    text={rabattement},
+description={\scriptsize{\Guillemets{\textsl{Moyen de transport complémentaire qui rassemble des usagers pour utiliser un moyen de transport principal. L'automobile et les cycles sont souvent utilisés en rabattement jusqu'à une gare de chemin de fer ou une station de métro où on aménage un parc de stationnement, dit de dissuasion. C'est le transport mixte, qui concerne surtout les déplacements entre la banlieue et le centre-ville, supposé combiner les avantages du transport individuel} [\dots] \textsl{et du transport en commun} [\dots]} \textcolor{blue}{\autocite[653]{merlin_rabattement_2023}}\index{Merlin, Pierre|pagebf}\index{Choay, Françoise|pagebf}. \Guillemets{\textsl{Le trajet de \Guillemets{rabattement} à la gare correspond au(x) premier(s) mode(s) de déplacement utilisé(s) pour s'y rendre~: il est réalisé entre le lieu d'origine du déplacement (le domicile le plus souvent) et la première gare de montée.}} \textcolor{blue}{\autocites[15]{hasiak_estimation_2018}[24]{hasiak_estimation_2023}}\index{Hasiak, Fabrice|pagebf}\index{Verdier, Laurent|pagebf}\index{Lannoy, Arnaud|pagebf}\index{Bodard, Géraldine|pagebf}\index{Palmier, Patrick|pagebf}.}
+}}%%Rédigé%%
+
+\newglossaryentry{diffusion}{
+    name={Diffusion~:},
+    text={diffusion},
+description={\scriptsize{\Guillemets{\textsl{Le trajet de diffusion correspond au(x) modes(s) de déplacement utilisé(s) après le trajet en train~: il est réalisé entre la gare de descente et le lieu de destination finale.}} \textcolor{blue}{\autocites[15]{hasiak_estimation_2018}[24]{hasiak_estimation_2023}}\index{Hasiak, Fabrice|pagebf}\index{Verdier, Laurent|pagebf}\index{Lannoy, Arnaud|pagebf}\index{Bodard, Géraldine|pagebf}\index{Palmier, Patrick|pagebf}.}
+}}%%Rédigé%%
+
+\newglossaryentry{conurbation}{
+    name={Conurbation~:},
+    text={conurbation},
+description={\scriptsize{\Guillemets{\textsl{Une conurbation naît de la coalescence d'aires urbanisées} [\dots] \textsl{elles se sont agglomérées à cause de l'abondance de certaines ressources (charbon pour la plupart, mais aussi minerai de fer ou force hydraulique dans des cas moins spectaculaires) et par diffusion, de proche en proche, de formes industrielles qui avaient réussi. La conurbation est constituée par une prolifération d'espaces bâtis très peu hiérarchisés et sans aucun plan d'ensemble. Le terme} [\dots] \textsl{s'applique parfaitement aux ensembles industriels nés dans les pays noirs de France, de Belgique ou d'Allemagne au XIX\textsuperscript{e} siècle, ainsi qu'à certaines régions du nord-est des États-Unis. Ailleurs, il ne s'impose pas~: il vaut mieux parler de région urbanisée, de ville régionale, selon les cas.}} \textcolor{blue}{\autocite[201]{merlin_conurbation_2023}}\index{Merlin, Pierre|pagebf}\index{Choay, Françoise|pagebf}\index{Claval, Paul|pagebf}.}
+}}%%Rédigé%%
+
+\newglossaryentry{accessibilité intermodale}{
+    name={Accessibilité intermodale~:},
+    text={accessibilité intermodale},
+description={\scriptsize{\Guillemets{\textsl{L'accessibilité intermodale permet de décrire la façon dont on atteint les lieux en combinant plusieurs modes de transport pour effectuer chaque déplacement, tandis que l’accessibilité multimodale considère globalement l’accès aux lieux par tous les modes ou combinaisons de modes possibles.} [\dots] \textsl{L’accessibilité intermodale pose la question de la mise en correspondance de modes au sein d’une chaîne de transport (intermodalité) donc à l’amélioration d’un système de transport existant. L’accessibilité multimodale permet de poser la question de la performance comparée de chaînes modales différentes et ainsi de s’intéresser au report modal d’un type de chaîne (à dominante voiture particulière) vers un autre (à dominante transport collectif) jugé plus satisfaisant du point de vue du développement durable.}} \textcolor{blue}{\autocite[7]{lhostis_definir_2010}}\index{L'Hostis, Alain|pagebf}\index{Conesa, Alexis|pagebf}.}
+}}%%Rédigé%%
+
+\newglossaryentry{micro-mobilité}{
+    name={Micro-mobilité~:},
+    text={micro-mobilité},
+description={\scriptsize{\Guillemets{\textsl{La micromobilité désigne l'ensemble des formes de mobilités s'articulant autour de véhicules motorisés et fonctionnant à l'énergie électrique. Les véhicules utilisés pour la micromobilité, souvent désignés par le terme \Guillemets{Engins de Déplacement Personnel Motorisés} (EDPm) se distinguent par leur transportabilité comparativement aux autres modes. Les EDPM sont conçus sans place assise pour le déplacement d'une seule personne et équipé d'un moteur non thermique dont la vitesse maximale par construction ne dépasse pas 25 km/h. Ils sont dédiés à des déplacements courts dans des environnements urbains et périurbains. Ces modes de déplacement sont des alternatives innovantes et décarbonées aux véhicules thermiques, et peuvent constituer, en intermodalité avec les transports en commun, une solution aux enjeux de mobilité du \Guillemets{dernier kilomètre} (par exemple, entre une station de transport en commun et le lieu de travail).}} \textcolor{blue}{\autocite{france_mobilites_observation_nodate}}\index{France Mobilités@\textsl{France Mobilités}|pagebf}.}
+}}%%Rédigé%%
+
+    \end{refsegment}

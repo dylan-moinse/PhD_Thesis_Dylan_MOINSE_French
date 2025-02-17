@@ -1,0 +1,109 @@
+% ___________________________________________
+    % Détours angles
+    %\newpage
+    \setcounter{section}{0}
+\chapterheader{Notes complémentaires sur la mesure des angles}
+\chapter{Annexes sur la détermination des angles dans la géométrie des détours}
+    \label{annexes:calcul-detours}
+
+    % Renvoi
+L'\hyperref[annexes:calcul-detours]{annexe~\ref{annexes:calcul-detours}} se réfère à la \hyperref[chap5:detours-pauses-optimisation]{section consacrée aux détours et aux pauses} (page \pageref{chap5:detours-pauses-optimisation}), dans le cadre du \hyperref[chap5:titre]{chapitre~5} (page \pageref{chap5:titre}), et veille à détailler les calculs réalisés afin de déterminer les angles des déplacements intermodaux comportant des détours géométriques.%%Rédigé%%
+
+    % ___________________________________________
+    % Mini-sommaire
+    \setcounter{tocdepth}{2}
+    % Redéfinir le titre de la table des matières locale
+    \renewcommand{\localcontentsname}{Structure de l'annexe~\ref{annexes:calcul-detours}}
+\localtableofcontents
+
+    \newpage
+    % Structure questionnaire
+    \newpage
+    \needspace{1\baselineskip} % Réserve de l'espace
+    \sectionheader{Calcul des angles}
+\section{Calcul des angles}
+    \label{annexes:calcul-detours-angles}
+
+    % Coordonnées cartésiennes
+\subsection{Coordonnées cartésiennes}
+    \label{annexes:calcul-detours-angles-cartesien}
+
+    % Coordonnées cartésiennes
+En nous appuyant sur les coordonnées géographiques de chaque point \(A\), \(B\) et \(C\), exprimées en latitude et longitude en utilisant le système de référence \acrshort{WGS84}, nous les avons converties en coordonnées cartésiennes (\(x\), \(y\), \(z\)) en utilisant les formules de conversion pour une sphère.%%Rédigé%%
+
+    \begin{equation*}
+    \begin{array}{lclclclclcl}
+    \displaystyle x_{(A, B, C)} &=& R* cos(latitude) * cos(longitude)\\\\
+    \displaystyle y_{(A, B, C)} &=& R* cos(latitude) * sin(longitude)\\\\
+    \displaystyle z_{(A, B, C)} &=& R* sin(latitude)\\\\
+    \end{array}
+    \end{equation*}
+
+    \begin{align*}
+    &\text{où~:} \\
+    &R \text{ représente le rayon de la Terre.}
+    \end{align*}
+
+    % Vecteurs AB et BC
+\subsection{Vecteurs}
+    \label{annexes:calcul-detours-angles-vecteurs}
+
+    % Vecteurs AB et BC
+À l'aide des coordonnées cartésiennes déterminées \(x_{(A, B, C)}\), \(y_{(A, B, C)}\) et \(z_{(A, B, C)}\), nous avons ensuite calculé les vecteurs \(AB\) et \(BC\) en soustrayant les coordonnées cartésiennes des points \(A\) et \(B\), puis \(B\) et \(C\).%%Rédigé%%
+
+    \begin{equation*}
+    \begin{array}{lclclclclcl}
+    \displaystyle AB &=& (x_B - x_A, y_B - y_A, z_B - z_A)\\\\
+    \displaystyle BC &=& (x_C - x_B, y_C - y_B, z_C - z_B)\\\\
+    \end{array}
+    \end{equation*}
+
+    % Produit scalaire et norme des vecteurs
+\subsection{Produit scalaire et norme des vecteurs}
+    \label{annexes:calcul-detours-angles-produit-scalaire}
+
+    % Produit scalaire et norme des vecteurs
+À partir des vecteurs \(AB\) et \(BC\) obtenus, nous avons calculé respectivement leur produit scalaire (\(AB \cdot BC\)) et leur norme (\(||{AB}||\)) et (\(||{BC}||\)).%%Rédigé%%
+
+    \begin{equation*}
+    \begin{array}{lclclclclcl}
+    \displaystyle AB \cdot BC &=& (x_{AB} * x_{BC}) + (y_{AB} * y_{BC}) + (z_{AB} * z_{BC})\\
+    \end{array}
+    \end{equation*}
+
+    \begin{align*}
+    &\text{où~:} \\
+    &x/y/z_{AB} \text{ représentent les composantes du vecteur AB ;}\\
+    &x/y/z_{BC} \text{ représentent les composantes du vecteur BC.}
+    \end{align*}
+
+    \begin{equation*}
+    \begin{array}{lclclclclcl}
+    \displaystyle ||AB|| &=& \sqrt{(x_{AB}^2 + y_{AB}^2 + z_{AB}^2)}\\
+    \displaystyle ||BC|| &=& \sqrt{(x_{BC}^2 + y_{BC}^2 + z_{BC}^2)}\\
+    \end{array}
+    \end{equation*}
+
+    % Angle
+\subsection{Détermination des angles en radians et en degrés}
+    \label{annexes:calcul-detours-angles-produit-angle}
+
+    % Angle
+La dernière étape a consisté à mesurer l'angle du point \(B\) entre les vecteurs \(AB\) et \(BC\), exprimé en radians \(\delta\) et en degrés \(\alpha\).%%Rédigé%%
+
+    \begin{equation*}
+    \begin{array}{lclcl}
+    \displaystyle \delta &=& \displaystyle\frac{AB \cdot BC}{||AB|| * ||BC||}\\\\
+    \end{array}
+    \end{equation*}
+
+    \begin{align*}
+    &\text{où~:} \\
+    &acos \text{ représente la fonction $arccosinus$.}\\
+    \end{align*}
+
+    \begin{equation*}
+    \begin{array}{lclclclclcl}
+    \displaystyle \alpha &=& \delta * (\displaystyle\frac{180}{\pi})\\\\
+    \end{array}
+    \end{equation*}

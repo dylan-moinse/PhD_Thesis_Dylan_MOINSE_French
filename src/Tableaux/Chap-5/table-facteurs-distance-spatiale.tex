@@ -1,0 +1,38 @@
+% Tableau corrélation facteurs
+%%Rédigé%%
+    \begin{table}[h!]
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \resizebox{\columnwidth}{!}{
+    \begin{tabular}{p{0.46\columnwidth}p{0.14\columnwidth}p{0.16\columnwidth}p{0.11\columnwidth}p{0.13\columnwidth}}
+        %\hline
+    \rule{0pt}{15pt} \multirow{1.5}{*}{\small{\textbf{\textcolor{blue}{Variables indépendantes}}}} & \small{\textbf{\textcolor{blue}{Élasticité \(\beta\)}}} & \small{\textbf{\textcolor{blue}{Coefficient R\textsuperscript{2}}}} & \small{\textbf{\textcolor{blue}{P-valeur}}} & \multirow{1.5}{*}{\textbf{\textcolor{blue}{$\sigma$}}}\\
+        \hline
+\small{Type de mobilité individuelle légère} & \small{\textbf{1,54~\%}} & \small{1~815,23} & \small{0,13} & \small{1~413,59}\\
+\small{Temps de déplacement**} & \small{\textbf{1,21~\%}} & \small{286,51} & \small{0,00} & \small{8,87}\\
+\small{Fréquence d'utilisation**} & \small{\textbf{0,73~\%}} & \small{652,86} & \small{0,01} & \small{479,09}\\
+\small{Professions (\acrshort{PCS})*} & \small{\multirow{1.5}{*}{\textbf{0,64~\%}}} & \small{\multirow{1.5}{*}{196,93}} & \small{\multirow{1.5}{*}{0,05}} & \small{\multirow{1.5}{*}{994,67}}\\
+\small{Taille du ménage*} & \small{\textbf{0,54~\%}} & \small{2~166,65} & \small{0,05} & \small{1~110,77}\\
+\small{Système de transport en commun**} & \small{\textbf{0,46~\%}} & \small{1~262,87} & \small{0,00} & \small{393,99}\\
+\small{Substitution de la voiture} & \small{\textbf{0,40~\%}} & \small{616,49} & \small{0,23} & \small{516,99}\\
+\small{Motif de déplacement} & \small{\textbf{0,28~\%}} & \small{491,88} & \small{0,25} & \small{430,49}\\
+\small{Genre} & \small{\textbf{0,17~\%}} & \small{-279,85} & \small{0,28} & \small{609,83}\\
+\small{densité de population} & \small{\textbf{-0,01~\%}} & \small{-0,02} & \small{0,16} & \small{0,01}\\
+\small{Sensation de confort} & \small{\textbf{-0,13~\%}} & \small{-40,41} & \small{0,15} & \small{82,90}\\
+\small{Dénivelé du terrain**} & \small{\textbf{-0,13~\%}} & \small{-5,81} & \small{0,04} & \small{2,77}\\
+\small{Expérience intermodale} & \small{\textbf{-0,23~\%}} & \small{-357,81} & \small{0,45} & \small{752,37}\\
+\small{Pratique fréquente de la marche**} & \small{\textbf{-0,32~\%}} & \small{-284,01} & \small{0,01} & \small{109,53}\\
+        \hline
+        \end{tabular}}
+    \caption{Statistiques descriptives du modèle à élasticité constante mesurant les effets proportionnels des variables indépendantes sur la distance spatiale en mobilité individuelle légère.}
+    \label{table-chap5:facteurs-distance-spatiale}
+        \vspace{5pt}
+        \begin{flushleft}\scriptsize{
+        \textcolor{blue}{Lecture~:} toutes choses égales par ailleurs, lorsqu'une variable indépendante augmente de 1~\%, la valeur de la distance augmente à son tour de $X$~\%.
+        \\
+        \textcolor{blue}{Note~:} **$p$~\textless~0,05, *$p$~\textless~0,10, $\sigma$~correspond à l'écart-type.
+        }\end{flushleft}
+        \begin{flushright}\scriptsize
+        Auteur~: \textcolor{blue}{Dylan Moinse (2023)}
+        \end{flushright}
+        \end{table}

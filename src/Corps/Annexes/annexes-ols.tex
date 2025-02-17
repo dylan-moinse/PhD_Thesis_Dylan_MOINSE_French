@@ -1,0 +1,140 @@
+% ___________________________________________
+    % OLS
+    %\newpage
+    \setcounter{section}{0}
+\chapterheader{Annexes sur le modèle de régression des moindres carrés ordinaires}
+\chapter{Annexes sur la préparation et la validation du modèle de régression des moindres carrés ordinaires}
+    \label{annexes:methodologie-ols-cyclabilite-genre}
+
+    % Renvoi
+L'\hyperref[annexes:methodologie-ols-cyclabilite-genre]{annexe~\ref{annexes:methodologie-ols-cyclabilite-genre}} se réfère à la \hyperref[section-chap4:cyclabilite-genre]{section dédiée aux liens entre l'usage genré de la mobilité individuelle légère et l'action par l'urbanisme} (page \pageref{section-chap4:cyclabilite-genre}), dans le cadre du \hyperref[chap4:titre]{chapitre~4} (page \pageref{chap4:titre}), et veille à détailler les étapes de calcul et de validation de la \acrfull{OLS}.%%Rédigé%%
+
+    % ___________________________________________
+    % Mini-sommaire
+    \setcounter{tocdepth}{2}
+    % Redéfinir le titre de la table des matières locale
+    \renewcommand{\localcontentsname}{Structure de l'annexe~\ref{annexes:methodologie-ols-cyclabilite-genre}}
+\localtableofcontents
+
+    \newpage
+    % Structure questionnaire
+    \newpage
+    \needspace{1\baselineskip} % Réserve de l'espace
+    \sectionheader{Étapes de la modélisation}
+\section{Étapes de la modélisation}
+    \label{annexes:methodologie-ols-etapes}
+
+    % Shapiro-Wilk
+\subsection{Standardisation \textsl{Z-score}}
+    \label{annexes:methodologie-ols-z-score}
+
+    \begin{equation}
+    \label{annexes:equation:z-score}
+    \begin{aligned}
+Z_i = \frac{X_i - \bar{X}}{\sigma}
+    \end{aligned}
+    \end{equation}
+\begin{align*}
+    &\text{où~:} \\
+    &Z_i \text{ représente la valeur standardisée du } i\text{-ième point de données~;} \\
+    &X_i \text{ est la valeur originale du } i\text{-ième point de données~;} \\
+    &\bar{X} \text{ est la moyenne de l'ensemble des données~;} \\
+    &\sigma \text{ est l'écart-type de l'ensemble des données.}
+\end{align*}
+
+    % Shapiro-Wilk
+\subsection{Test de Shapiro-Wilk}
+    \label{annexes:methodologie-ols-shapiro-wilk}
+
+    \begin{equation}
+    \label{annexes:equation:shapiro-wilk}
+    \begin{aligned}
+W = \frac{\left( \sum_{i=1}^{n} a_i X_{(i)} \right)^2}{\sum_{i=1}^{n} (X_i - \bar{X})^2}
+    \end{aligned}
+    \end{equation}
+\begin{align*}
+    &\text{où~:} \\
+    &X_{(i)} \text{ correspond aux valeurs échantillonnées ordonnées~;} \\
+    &\bar{X} \text{ est la moyenne de l'échantillon~;} \\
+    &a_i \text{ sont des constantes dérivées de la distribution normale~;} \\
+    &n \text{ représente la taille de l'échantillon.}
+\end{align*}
+
+    % Breusch-Pagan
+\subsection{Test de Breusch-Pagan}
+    \label{annexes:methodologie-ols-breusch-pagan}
+
+    \begin{equation}
+    \label{annexes:equation:breusch-pagan}
+    \begin{aligned}
+g_i = \frac{\hat{\epsilon}_i^2}{\hat{\sigma}^2}, \quad \hat{\sigma}^2 = \frac{\sum \hat{\epsilon}_i^2}{n}\\\\
+g_i = \gamma_1 + \gamma_2 z_{2i} + \cdots + \gamma_p z_{pi} + \eta_i\\\\
+LM = \frac{1}{2} (\text{TSS} - \text{RSS})
+    \end{aligned}
+    \end{equation}
+\begin{align*}
+    &\text{où~:} \\
+    &y_i \text{ est la valeur réelle de la variable dépendante~;} \\
+    &X_i \text{ représente le vecteur des variables indépendantes~;} \\
+    &\beta \text{ est le vecteur des coefficients de régression~;} \\
+    &\epsilon_i \text{ est le terme d'erreur~;} \\
+    &\hat{\epsilon}_i \text{ est le résidu estimé~;} \\
+    &\hat{\sigma}^2 \text{ est la variance estimée des erreurs~;} \\
+    &g_i \text{ est le résidu carré normalisé~;} \\
+    &z_{pi} \text{ sont les variables utilisées dans la régression auxiliaire~;} \\
+    &\gamma_p \text{ sont les coefficients dans la régression auxiliaire~;} \\
+    &\eta_i \text{ est le terme d'erreur dans la régression auxiliaire~;} \\
+    &R^2 \text{ est le R-carré de } \hat{\epsilon}_i^2 \text{ par rapport aux variables indépendantes~;} \\
+    &TSS \text{ est la somme totale des carrés de } g_i \text{ par rapport à leur moyenne~;} \\
+    &RSS \text{ est la somme des carrés résiduels de la régression auxiliaire~;} \\
+    &n \text{ est la taille de l'échantillon.}
+\end{align*}
+
+    % Durbin-Watson
+\subsection{Test de Durbin-Watson}
+    \label{annexes:methodologie-ols-durbin-watson}
+
+    \begin{equation}
+    \label{annexes:equation-durbin-watson}
+    \begin{aligned}
+DW = \frac{\sum_{t=2}^{n} (e_t - e_{t-1})^2}{\sum_{t=1}^{n} e_t^2}
+    \end{aligned}
+    \end{equation}
+\begin{align*}
+    &\text{où~:} \\
+    &e_t \text{ est le résidu pour la période temporelle } t\text{~;} \\
+    &e_{t-1} \text{ est le résidu pour la période temporelle } t-1\text{~;} \\
+    &n \text{ est la taille de l'échantillon.}
+\end{align*}
+
+    % VIF
+\subsection{Facteur d'inflation de la variance}
+    \label{annexes:methodologie-ols-vif}
+
+    \begin{equation}
+    \label{annexes:equation-vif}
+    \begin{aligned}
+VIF(X_i) = \frac{1}{1 - R_i^2}
+    \end{aligned}
+    \end{equation}
+\begin{align*}
+    &\text{où~:} \\
+    &R_i^2 \text{ est le R-carré obtenu en régressant } X_i \text{ sur les autres prédicteurs.}
+\end{align*}
+
+    % MSE
+\subsection{Erreur quadratique moyenne}
+    \label{annexes:methodologie-ols-mse}
+
+    \begin{equation}
+    \label{annexes:equation:mse}
+    \begin{aligned}
+MSE = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2
+    \end{aligned}
+    \end{equation}
+\begin{align*}
+    &\text{où~:} \\
+    &y_i \text{ est la valeur réelle de la variable dépendante pour } i\text{~;} \\
+    &\hat{y}_i \text{ est la valeur prédite par le modèle pour l'observation } i\text{~;}\\
+    &n \text{ est le nombre d'observations.}
+\end{align*}

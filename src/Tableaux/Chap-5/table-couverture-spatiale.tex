@@ -1,0 +1,37 @@
+% Tableau couverture population régionale
+%%Rédigé%%
+    \begin{table}[h!]
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \resizebox{\columnwidth}{!}{
+    \begin{tabular}{p{0.33\columnwidth}p{0.12\columnwidth}p{0.12\columnwidth}p{0.15\columnwidth}p{0.13\columnwidth}p{0.15\columnwidth}}
+        %\hline
+    \rule{0pt}{15pt} \multirow{1.5}{*}{\small{\textbf{\textcolor{blue}{Périmètre géographique}}}} & \small{\textbf{\textcolor{blue}{Distances (km)}}} & \small{\textbf{\textcolor{blue}{Distances (min)}}} & \small{\textbf{\textcolor{blue}{Superficie Région (\%)}}}& \small{\textbf{\textcolor{blue}{Population (\%)}}} & \small{\textbf{\textcolor{blue}{Densité (hab/km\textsuperscript{2})}}}\\
+        \hline
+\small{Isochrones piétonnes} & \small{\textless1} & \small{\textless12} & \small{0,94} & \small{19,52} & \small{3~880,25}\\
+\small{Aires piétonnes} & \small{\textless1} & \small{\textless12} & \small{3,06} & \small{25,27} & \small{1~552,20}\\
+        \hdashline
+\small{Isochrones cyclables} & \small{{[}1~;~4{[}} & \small{\textless12 } & \small{6,61} & \small{36,18} & \small{1~028,07}\\
+\small{Aires cyclables} & \small{{[}1~;~4{[}} & \small{\textless12} & \small{18,48} & \small{40,13} & \small{407,68}\\
+        \hdashline
+\small{Isochrones piétonnes et cyclables} & \multirow{1.5}{*}{\small{\textless4}} & \multirow{1.5}{*}{\small{\textless12}} & \multirow{1.5}{*}{\small{7,55}} & \multirow{1.5}{*}{\small{55,70}} & \multirow{1.5}{*}{\small{1~384,73}}\\
+\small{Aires piétonnes et cyclables} & \small{\textless4} & \small{\textless12} & \small{21,54} & \small{65,40} & \small{570,13}\\
+        \hdashline
+\small{Isochrones non accessibles} & \small{\Geq 4} & \small{\Geq 12} & \small{92,45} & \small{44,30} & \small{89,96}\\
+\small{Aires non accessibles} & \small{\Geq 4} & \small{\Geq 12} & \small{78,46} & \small{34,60} & \small{82,77}\\
+        \hline
+        \end{tabular}}
+    \caption{Couverture de la population régionale par le réseau ferroviaire soutenu par la mobilité individuelle légère.}
+    \label{table-chap5:couverture-spatiale}
+        \vspace{5pt}
+        \begin{flushleft}\scriptsize{
+        \textcolor{blue}{Note~:} la densité moyenne de la population de la région Hauts-de-France était de 189 hab/km\textsuperscript{2} en 2021.
+        \\
+        \textcolor{blue}{Lecture~:} contrairement aux aires d'influence des gares accessibles à pied, les quartiers de gare étendus par la mobilité individuelle légère couvrent une majeure partie de la population des Hauts-de-France. Cependant, un tiers de la population régionale n'a théoriquement pas accès aux gares, malgré l'usage du vélo ou de la micro-mobilité. Par ailleurs, plus des trois quarts du territoire administratif ne peut être couvert, amenant à nous questionner sur l'accès aux destinations telles que les emplois ou certaines aménités.
+        }\end{flushleft}
+        \begin{flushright}\scriptsize
+        Jeux de données~: données carroyées de l'\textcolor{blue}{\textcite{insee_grille_2021}}\index{Insee@\textsl{Insee}|pagebf}
+        \\
+        Auteur~: \textcolor{blue}{Dylan Moinse (2023)}
+        \end{flushright}
+        \end{table}

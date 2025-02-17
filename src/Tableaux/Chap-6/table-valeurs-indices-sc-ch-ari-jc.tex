@@ -1,0 +1,37 @@
+% Tableau indices SC / CH / ARI / JC
+%%Rédigé%%
+    \begin{table}[h!]
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \resizebox{\columnwidth}{!}{
+    \begin{tabular}{p{0.47\columnwidth}p{0.23\columnwidth}p{0.18\columnwidth}p{0.12\columnwidth}}
+        %\hline
+    \rule{0pt}{15pt} \small{\textbf{\textcolor{blue}{Indices}}} & \small{\textbf{\textcolor{blue}{k-moyennes}}} & \small{\textbf{\textcolor{blue}{\acrshort{AGNES}}}} & \small{\textbf{\textcolor{blue}{\acrshort{GMM}}}} \\
+        \hline
+    \multicolumn{4}{l}{\textcolor{blue}{\textbf{Isochrones piétonnes} (\(PI\))}}\\
+\small{Coefficient de silhouette (\(SC\))} & \small{0,41} & \small{0,48} & \small{0,15}\\
+\small{Indice de Calinski-Harabasz (\(CH\))} & \small{248,78} & \small{231,21} & \small{57,51}\\
+\small{Indice de Rand ajusté (\(ARI\))} & \small{0,36} & \small{0,43} & \small{0,16}\\
+\small{Coefficient de Jaccard (\(JC\))} & \small{0,44} & \small{0,67} & \small{0,49}\\
+        \hdashline
+    \multicolumn{4}{l}{\textcolor{blue}{\textbf{Isochrones cyclables} (\(CI\))}}\\
+\small{Coefficient de silhouette (\(SC\))} & \small{0,47} & \small{0,42} & \small{0,16}\\
+\small{Indice de Calinski-Harabasz (\(CH\))} & \small{257,31} & \small{204,44} & \small{64,62}\\
+\small{Indice de Rand ajusté (\(ARI\))} & \small{0,65} & \small{0,74} & \small{0,28}\\
+\small{Coefficient de Jaccard (\(JC\))} & \small{0,74} & \small{0,77} & \small{0,54}\\
+        \hline
+        \end{tabular}}
+    \caption{Revue des performances globales des méthodes de clustérisation.}
+    \label{table-chap6:valeurs-indices-sc-ch-ari-jc}
+        \vspace{5pt}
+        \begin{flushleft}\scriptsize{
+        \textcolor{blue}{Note~:} les valeurs présentées dépendent de la situation où \(k = 3\) avec le segment temporel \(RT_{2}\).
+        \\
+        \textcolor{blue}{Lecture~:} les performances des méthodes de clustérisation varient selon les indices et les isochrones, avec les isochrones cyclables affichant généralement de meilleurs résultats, notamment pour l'indice de silhouette et l'indice de Rand ajusté dans la méthode k-moyennes.
+        }\end{flushleft}
+        \begin{flushright}\scriptsize{
+        Réalisation~: \textcolor{blue}{Dylan Moinse (2024)}
+        \\
+        Auteur·rice·s~: projet de recherche \acrshort{NPART}
+        }\end{flushright}
+        \end{table}

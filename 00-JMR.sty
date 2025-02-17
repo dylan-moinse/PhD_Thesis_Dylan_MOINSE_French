@@ -1,0 +1,395 @@
+%% =====================================
+%% 2023-04-13
+%% Jorge Mariano (Univ. Gustave Eiffel)
+%% jorge.mariano@univ-eiffel.fr
+%% =====================================
+
+%%%% MOTEUR / ENGINE / LUALATEX / PDFLATEX / XETEX
+\RequirePackage{ifluatex}
+%
+%
+\ifluatex
+  \RequirePackage[french]{babel}
+%\RequirePackage[All]{lua-typo}%typo%apres babel%debug%
+\else
+  \usepackage[utf8]{inputenc}
+  \RequirePackage[french]{babel}
+\fi
+
+\addto\captionsfrench{\renewcommand{\listfigurename}{Table des illustrations}}
+
+\frenchsetup{SmallCapsFigTabCaptions=false}
+
+%% MATHS
+%% Paquets «standards» mathématiques
+
+%\RequirePackage{amssymb}
+%
+\RequirePackage{mathtools}% amsmath++
+
+%% CODE
+
+\RequirePackage{xpatch}
+
+% Tableaux et couleurs
+\RequirePackage{colortbl}
+
+%% TABLES
+
+\RequirePackage{longtable}
+
+%% Fractions inclinées
+%> \RequirePackage{xfrac}
+
+%% Unités de mesures
+% >
+\RequirePackage{siunitx}
+
+%% Fractions inclinées
+\RequirePackage{xfrac}
+
+%% GRAPH
+
+\RequirePackage{graphicx}
+
+\RequirePackage{subfigure}
+
+% Gestion des flottants
+\RequirePackage{floatrow}
+
+%% TIKZ Librairies graphiques
+
+\RequirePackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{positioning}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{shapes}
+
+%% TEXTE
+
+%\RequirePackage{blindtext}
+
+%% Macros de texte bidon, plus ou moins long.
+%>
+\RequirePackage{lipsum}
+%% 2, 4, 6, 8 phrases
+
+%% Nombres aléatoires / random
+%% \RequirePackage[first=2,  last=20]{lcg}
+
+\newcommand{\baratinbref}{\lipsum[1][1-2]}
+\newcommand{\baratincourt}{\lipsum[1][1-2]}
+\newcommand{\baratinpetit}{\lipsum[1][1-4]}
+\newcommand{\baratinmoyen}{\lipsum[1][1-6]}
+\newcommand{\baratinlong}{\lipsum[1][1-8]}
+\newcommand{\baratintreslong}{\lipsum[1][1-16]}
+\newcommand{\baratintroplong}{\lipsum[1][1-32]}
+
+% baratin avec compteur
+% \newcommand{\baratin}[1]{
+%   \newcounter{int}
+%   \setcounter{int}{0}
+%   \loop
+%   % \theint
+%   \baratinmoyen{}
+
+%   \addtocounter{int}{1}\ifnum\value{int}<#1
+%     \repeat
+%   }
+
+
+
+
+%% Veuves et orphelines
+% https://github.com/FrankMittelbach/fmitex-widows-and-orphans/
+% ** Détection **
+
+% >\RequirePackage{widows-and-orphans}
+
+%>
+\RequirePackage[all]{nowidow}
+
+%\widowpenalty=10000
+%\clubpenalty=10000
+
+%>\RequirePackage[all]{nowidow}
+
+%
+\RequirePackage{csquotes}
+
+%% Intégration fichier verbatim
+\RequirePackage{verbatim}
+% \verbatiminput{}
+
+%% DRAFT  /Watermark
+\RequirePackage{draftwatermark} %u% https://ctan.org/pkg/draftwatermark % eg%
+\SetWatermarkText{BROUILLON}
+\SetWatermarkText{}
+\SetWatermarkScale{1}
+\SetWatermarkLightness{.9}
+\SetWatermarkAngle{50}
+\SetWatermarkScale{.8}
+
+
+%% FONTES
+
+\ifluatex
+% >
+  \RequirePackage{fontspec}
+% TTF MicroSoft
+% Arial § Courier New / Georgia / Impact / Times New Roman  / Trebuchet MS
+% Comic Sans MS / Bitstream Vera Serif / Arial Black /
+% Ubuntu
+%  \setmainfont{Ubuntu}
+  \setmainfont{FreeMono}
+\else
+  % \RequirePackage{lmodern}
+  \RequirePackage{helvet}
+\fi
+
+%\RequirePackage{fontawesome5}
+
+%% Choix de polices vectorielles
+%> \RequirePackage{times}%{bookman}%{helvet}
+
+%% Fontes / Polices
+% https://faq.gutenberg-asso.fr/3_composition/texte/symboles/polices/changements_relatifs_de_fontes
+%% Spécification de tailles relatives
+%> 
+\RequirePackage{relsize}
+
+%%% Fontes & polices
+
+%% Polices KPfonts (cf doc)
+% \RequirePackage[%
+% nomath,
+% notext,
+% noamsmath,
+% notextcomp,
+% light,
+% lighttext,
+% oldstyle,
+% veryoldstyle,
+% oldstylenumsmath,
+% frenchstyle,
+% fullintlimits,
+% fullsumlimits
+% ]{kpfonts}% !amsmath!
+
+%% Choix de polices vecorielles
+%\RequirePackage{times}
+%\RequirePackage{bookman}
+%\RequirePackage{helvet}
+
+% Police Montserrat
+% \RequirePackage[defaultfam,extralight,tabular,lining]{montserrat}
+
+
+%% A set of symbol fonts, written in METAFONT
+%> \RequirePackage[misc]{ifsym} %u%  https://www.ctan.org/pkg/ifsym
+
+%% Tables de caractères
+% > \RequirePackage{fonttable}
+
+%%%% COULEURS COLORS
+
+% >\RequirePackage{xcolor}
+
+%%%% TYPO
+
+
+\RequirePackage{setspace}
+%\doublespacing  % or
+%\onehalfspacing %for 1.5
+
+
+%% Règles de l'imprimerie nationale
+%  https://www.ctan.org/tex-archive/macros/latex/contrib/impnattypo
+% >
+\RequirePackage[%
+draft% brouillon%debug%
+,hyphenation% césures
+%,lastparline,%
+%,nosingleletter,%
+%,rivers,% rivières d'espaces / jaunes
+,parindent% indentation première ligne paragraphe
+%,frenchchapters% chapitres chiffres romains OK  grandes capitales  KO?
+]{impnattypo}
+
+%\let\frenchchapter\arabic % numérotation en chiffres arabes
+
+
+%\RequirePackage{microtype}%bof%
+
+% Supprimer(?) les césures
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+%% Typographie de touches clavier et autres
+%% https://tex.stackexchange.com/questions/5226/keyboard-font-for-latex
+% >
+\RequirePackage{menukeys}
+
+%%%% SECTIONS  CHAPTER PART
+
+%% Typographie numérotation chapitre (lettres, nombres,...)
+%
+\RequirePackage{fmtcount}
+%
+\makeatletter
+%\patchcmd{\@makechapterhead}{\thechapter}{\NUMBERstring{chapter}}{}{}
+%\patchcmd{\chaptermark}{\thechapter}{\NUMBERstring{chapter}}{}{}
+\patchcmd{\@makechapterhead}{\thechapter}{\numberstring{chapter}}{}{}
+%
+\patchcmd{\chaptermark}{\thechapter}{\numberstring{chapter}}{}{}
+%
+\makeatother
+
+% Espacement plus compact des sectionnements
+% >\RequirePackage[compact]{titlesec} %u% https://ctan.org/pkg/titlesec
+
+%\titlespacing{command}{left spacing}{before spacing}{after spacing}[right]
+% \titlespacing*{\section}{0pt}{2ex plus 0ex minus .0ex}{0ex plus 0ex}
+% \titlespacing*{\subsection}{10pt}{1ex plus 0ex minus .0ex}{0ex plus 0ex}
+% \titlespacing*{\subsubsection}{0pt}{1ex plus 0ex minus .0ex}{0ex plus 0ex}
+
+%\titlespacing{\section}{0pt}{\parskip}{-\parskip}
+%\titlespacing{\subsection}{0pt}{\parskip}{-\parskip}
+%\titlespacing{\subsubsection}{0pt}{\parskip}{-\parskip}
+
+
+%%%% TOC
+
+%\RequirePackage{minitoc}
+
+% \RequirePackage{etoc}%warn% after babel
+
+%% Profondeur de numérotation de section
+% 0 chapter 3 subsubsection
+\setcounter{secnumdepth}{2}
+%% Profondeur de table
+\setcounter{tocdepth}{3}
+
+%% Glossaires
+%% http://blog.dorian-depriester.fr/latex/utilisation-du-package-glossaries
+
+% >\RequirePackage[acronym]{glossaries}
+
+%% NO GLOSS %%
+%\renewcommand{\gls}[1]{\fbox{\ensuremath{#1}}}
+% \renewcommand{\gls}[1]{(glossaire)}
+
+
+%% Index
+% >
+\RequirePackage{makeidx} %u%  https://ctan.org/pkg/makeidx
+
+%%%% BOXES
+
+% >
+\RequirePackage{boxedminipage}
+
+%%%% PAGE
+%\usepackage{geometry}
+%\geometry{top=2cm, bottom=2cm, left=2cm, right=2cm}
+
+\RequirePackage{fancyhdr}
+
+%>\RequirePackage{marginnote}
+
+%%%% REFS
+\RequirePackage{lastpage}
+
+%%%% HYPER REFS
+
+%\RequirePackage{url}
+%% Attention extension parfois problématique
+\RequirePackage{hyperref}
+\hypersetup{%
+  colorlinks=false
+}
+
+% >\hypersetup{hidelinks}% pas de couleu
+% >\hypersetup{pdfpagemode=FullScreen}% PDF plein écran
+% >\hypersetup{linktocpage=true}% TOC page link
+%> \hypersetup{breaklinks=true}%
+% >\hypersetup{frenchlinks=true}% ??
+
+%% BIB %%
+%debug% annulation--remplacement autocite
+%\newcommand{\autocite}[1]{\cite{#1}}
+%\newcommand{\citep}[2]{\cite{#2}}
+
+%\newcommand{\citep}[2]{\cite{#2}}
+
+%>\RequirePackage[backend=biber]{biblatex}
+
+%% BOXES %%%
+
+%\setlength{\fboxsep}{0.1pt}%debug%box%
+
+%%%% DEBUG https://tex.stackexchange.com/questions/538/how-to-best-debug-latex
+
+% >\usepackage{lua-visual-debug}%debug%
+
+%>\RequirePackage{showlabels}%debug% document draft mode
+
+%> \RequirePackage{showkeys}%debug%
+
+% >\RequirePackage{showframe}%debug%
+% >\RequirePackage{showhyphens}%debug%
+
+\newcommand{\JMRScale}[2][\columnwidth]{%
+\noindent{}\fbox{\resizebox{#1}{!}{#2}}
+}
+
+%% Axe X / X1 ... X2
+\newcommand{\AxeX}[2]{        % Axe des abcisses
+  \foreach \x in {#1,...,#2} {\draw[below](\x,0) node{\x};}
+}
+
+%% Axe Y / Y1 ... Y2
+\newcommand{\AxeY}[2]{        % Axe des ordonnées
+        \foreach \y in {#1,...,#2} {\draw[left](0,\y) node{\y};}
+}
+
+%% Grille A(x,y)  B(x,y)
+\newcommand{\Grille}[4]{
+        \draw[thin,lightgray](#1,#2)grid(#3,#4);
+%        \draw (0,0) node[below left]{0};
+}
+
+%% Repere = Grille + AxeX + AxeY
+\newcommand{\Repere}[4]{%
+  \Grille{#1}{#2}{#3}{#4}
+ % \draw (0,0) node[below left]{0};
+  \AxeX{#1}{#3} ; \AxeY{#2}{#4}
+}
+
+
+\newenvironment{Attention}[1]{%
+{\color{red}  \hrulefill{}\hfill{}  \textbf{#1} \hfill{}\hrulefill{}}
+
+
+}{
+
+  {\color{red}\hrulefill{}}
+}
+
+\newcommand{\UGE}{\textsl{UGE}}
+
+%% Git
+
+%\RequirePackage[mark]{gitinfo2}
+
+%\RequirePackage{iexec}
+
+%% JMR IMAGES
+\newcommand{\Image}[2][1.0]{%
+  \fbox{\includegraphics[width=#1\columnwidth]{#2}}%
+}
+
+% Encadrés
+\usepackage{tcolorbox}
