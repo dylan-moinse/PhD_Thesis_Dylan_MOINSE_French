@@ -86,17 +86,17 @@ A selection of examples showcasing the structure and style of this extensive 762
   <tbody>
     <tr>
       <td align="center" valign="top" style="width: 33%;">
-        <img src="readme-pic/01-DM-front-page.jpg" width="300px;" alt="Image 1"/>
+        <img src="readme-pic/01-DM-front-page.jpg" width="250px;" alt="Image 1"/>
         <br />
         <sub><b>Front Page</b></sub>
       </td>
       <td align="center" valign="top" style="width: 33%;">
-        <img src="readme-pic/02-DM-guide.jpg" width="300px;" alt="Image 2"/>
+        <img src="readme-pic/02-DM-guide.jpg" width="250px;" alt="Image 2"/>
         <br />
         <sub><b>Reading Guide</b></sub>
       </td>
       <td align="center" valign="top" style="width: 33%;">
-        <img src="readme-pic/03-DM-acknowledgements.jpg" width="300px;" alt="Image 3"/>
+        <img src="readme-pic/03-DM-acknowledgements.jpg" width="250px;" alt="Image 3"/>
         <br />
         <sub><b>Acknowledgement</b></sub>
       </td>
@@ -108,17 +108,17 @@ A selection of examples showcasing the structure and style of this extensive 762
   <tbody>
     <tr>
       <td align="center" valign="top" style="width: 33%;">
-        <img src="readme-pic/04-DM-table-contents.jpg" width="300px;" alt="Image 4"/>
+        <img src="readme-pic/04-DM-table-contents.jpg" width="250px;" alt="Image 4"/>
         <br />
         <sub><b>Table of Contents</b></sub>
       </td>
       <td align="center" valign="top" style="width: 33%;">
-        <img src="readme-pic/05-DM-table-figures.jpg" width="300px;" alt="Image 5"/>
+        <img src="readme-pic/05-DM-table-figures.jpg" width="250px;" alt="Image 5"/>
         <br />
         <sub><b>Table of Figures</b></sub>
       </td>
       <td align="center" valign="top" style="width: 33%;">
-        <img src="readme-pic/06-DM-table-maps.jpg" width="300px;" alt="Image 6"/>
+        <img src="readme-pic/06-DM-table-maps.jpg" width="250px;" alt="Image 6"/>
         <br />
         <sub><b>Table of Maps</b></sub>
       </td>
@@ -130,17 +130,17 @@ A selection of examples showcasing the structure and style of this extensive 762
   <tbody>
     <tr>
       <td align="center" valign="top" style="width: 33%;">
-        <img src="readme-pic/07-DM-table-tables.jpg" width="300px;" alt="Image 7"/>
+        <img src="readme-pic/07-DM-table-tables.jpg" width="250px;" alt="Image 7"/>
         <br />
         <sub><b>Table of Tables</b></sub>
       </td>
       <td align="center" valign="top" style="width: 33%;">
-        <img src="readme-pic/08-DM-foreword.jpg" width="300px;" alt="Image 8"/>
+        <img src="readme-pic/08-DM-foreword.jpg" width="250px;" alt="Image 8"/>
         <br />
         <sub><b>Foreword</b></sub>
       </td>
       <td align="center" valign="top" style="width: 33%;">
-        <img src="readme-pic/09-DM-captatio-benevolentiae.jpg" width="300px;" alt="Image 9"/>
+        <img src="readme-pic/09-DM-captatio-benevolentiae.jpg" width="250px;" alt="Image 9"/>
         <br />
         <sub><b>Captatio Benevolentiae</b></sub>
       </td>
@@ -152,17 +152,17 @@ A selection of examples showcasing the structure and style of this extensive 762
   <tbody>
     <tr>
       <td align="center" valign="top" style="width: 33%;">
-        <img src="readme-pic/10-DM-introduction.jpg" width="300px;" alt="Image 10"/>
+        <img src="readme-pic/10-DM-introduction.jpg" width="250px;" alt="Image 10"/>
         <br />
         <sub><b>Introduction</b></sub>
       </td>
       <td align="center" valign="top" style="width: 33%;">
-        <img src="readme-pic/11-DM-parts.jpg" width="300px;" alt="Image 11"/>
+        <img src="readme-pic/11-DM-parts.jpg" width="250px;" alt="Image 11"/>
         <br />
         <sub><b>Parts</b></sub>
       </td>
       <td align="center" valign="top" style="width: 33%;">
-        <img src="readme-pic/12-DM-chapters.jpg" width="300px;" alt="Image 12"/>
+        <img src="readme-pic/12-DM-chapters.jpg" width="250px;" alt="Image 12"/>
         <br />
         <sub><b>Chapters</b></sub>
       </td>
@@ -174,17 +174,17 @@ A selection of examples showcasing the structure and style of this extensive 762
   <tbody>
     <tr>
       <td align="center" valign="top" style="width: 33%;">
-        <img src="readme-pic/13-DM-subtoc.jpg" width="300px;" alt="Image 13"/>
+        <img src="readme-pic/13-DM-subtoc.jpg" width="250px;" alt="Image 13"/>
         <br />
         <sub><b>Chapter Table of Contents</b></sub>
       </td>
       <td align="center" valign="top" style="width: 33%;">
-        <img src="readme-pic/14-DM-graphical-abstracts.jpg" width="300px;" alt="Image 14"/>
+        <img src="readme-pic/14-DM-graphical-abstracts.jpg" width="250px;" alt="Image 14"/>
         <br />
         <sub><b>Chapter Graphical Abstract</b></sub>
       </td>
       <td align="center" valign="top" style="width: 33%;">
-        <img src="readme-pic/15-DM-abstracts.jpg" width="300px;" alt="Image 15"/>
+        <img src="readme-pic/15-DM-abstracts.jpg" width="250px;" alt="Image 15"/>
         <br />
         <sub><b>Chapter Abstract</b></sub>
       </td>
@@ -196,17 +196,17 @@ A selection of examples showcasing the structure and style of this extensive 762
   <tbody>
     <tr>
       <td align="center" valign="top" style="width: 33%;">
-        <img src="readme-pic/16-DM-quotes.jpg" width="300px;" alt="Image 16"/>
+        <img src="readme-pic/16-DM-quotes.jpg" width="250px;" alt="Image 16"/>
         <br />
         <sub><b>Chapter Introduction</b></sub>
       </td>
       <td align="center" valign="top" style="width: 33%;">
-        <img src="readme-pic/17-DM-valorization.jpg" width="300px;" alt="Image 17"/>
+        <img src="readme-pic/17-DM-valorization.jpg" width="250px;" alt="Image 17"/>
         <br />
         <sub><b>Chapter Valorization</b></sub>
       </td>
       <td align="center" valign="top" style="width: 33%;">
-        <img src="readme-pic/18-DM-subbibliography.jpg" width="300px;" alt="Image 18"/>
+        <img src="readme-pic/18-DM-subbibliography.jpg" width="250px;" alt="Image 18"/>
         <br />
         <sub><b>Chapter Bibliography</b></sub>
       </td>
@@ -218,17 +218,17 @@ A selection of examples showcasing the structure and style of this extensive 762
   <tbody>
     <tr>
       <td align="center" valign="top" style="width: 33%;">
-        <img src="readme-pic/19-DM-conclusion.jpg" width="300px;" alt="Image 19"/>
+        <img src="readme-pic/19-DM-conclusion.jpg" width="250px;" alt="Image 19"/>
         <br />
         <sub><b>Conclusion</b></sub>
       </td>
       <td align="center" valign="top" style="width: 33%;">
-        <img src="readme-pic/20-DM-index.jpg" width="300px;" alt="Image 20"/>
+        <img src="readme-pic/20-DM-index.jpg" width="250px;" alt="Image 20"/>
         <br />
         <sub><b>Index</b></sub>
       </td>
       <td align="center" valign="top" style="width: 33%;">
-        <img src="readme-pic/21-DM-acronyms.jpg" width="300px;" alt="Image 21"/>
+        <img src="readme-pic/21-DM-acronyms.jpg" width="250px;" alt="Image 21"/>
         <br />
         <sub><b>Acronyms</b></sub>
       </td>
@@ -240,17 +240,17 @@ A selection of examples showcasing the structure and style of this extensive 762
   <tbody>
     <tr>
       <td align="center" valign="top" style="width: 33%;">
-        <img src="readme-pic/22-DM-glossary.jpg" width="300px;" alt="Image 22"/>
+        <img src="readme-pic/22-DM-glossary.jpg" width="250px;" alt="Image 22"/>
         <br />
         <sub><b>Glossary</b></sub>
       </td>
       <td align="center" valign="top" style="width: 33%;">
-        <img src="readme-pic/23-DM-appendices.jpg" width="300px;" alt="Image 23"/>
+        <img src="readme-pic/23-DM-appendices.jpg" width="250px;" alt="Image 23"/>
         <br />
         <sub><b>Appendices</b></sub>
       </td>
       <td align="center" valign="top" style="width: 33%;">
-        <img src="readme-pic/24-DM-back-cover.jpg" width="300px;" alt="Image 24"/>
+        <img src="readme-pic/24-DM-back-cover.jpg" width="250px;" alt="Image 24"/>
         <br />
         <sub><b>Back Cover</b></sub>
       </td>
