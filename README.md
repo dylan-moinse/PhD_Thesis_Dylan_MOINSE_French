@@ -2,28 +2,28 @@
 
 This *GitHub* repository contains the *LaTeX* source files for my submitted PhD thesis (*Version 1*).
 
-## Repository Structure :file_folder:
+## Repository Structure :open_file_folder:
 The repository is organized as follows:
 
-* `main.tex` :arrow_right: The main *LaTeX* file that compiles the full thesis.
+* `main.tex` - The main *LaTeX* file that compiles the full thesis.
 
 ### Style and Formatting Files :art:
-* `JMR.sty`, `main-local.sty`, `UGE/UGE-Thesis.sty`, and `UGE/UGE-Template.sty` :arrow_right: *LaTeX* style files and document structuring settings.
-* `UGE/UGE-Bib.sty`, `UGE/UGE-Col.sty`, and `UGE-Fontes.sty` :arrow_right: Custom *LaTeX* styles for bibliography, colors, and fonts.
+* `JMR.sty`, `main-local.sty`, `UGE/UGE-Thesis.sty`, and `UGE/UGE-Template.sty` - *LaTeX* style files and document structuring settings.
+* `UGE/UGE-Bib.sty`, `UGE/UGE-Col.sty`, and `UGE-Fontes.sty` - Custom *LaTeX* styles for bibliography, colors, and fonts.
 
 ### Bibliography :open_book:
-* `DM.bib` :arrow_right: The bibliography file containing all references.
+* `DM.bib` - The bibliography file containing all references.
 
 ### Thesis Content :black_nib:
-* `body.tex` :arrow_right: The main structure of the thesis body.
-* `src/Corps` :arrow_right: Contains all primary content, including parts, chapters, appendices, and additional sections.
-* `src/Figures` :arrow_right: Stores figures, diagrams, and maps, organized per chapter.
-* `src/Tableaux` :arrow_right: Contains tables, organized per chapter.
+* `body.tex` - The main structure of the thesis body.
+* `src/Corps` - Contains all primary content, including parts, chapters, appendices, and additional sections.
+* `src/Figures` - Stores figures, diagrams, and maps, organized per chapter.
+* `src/Tableaux` - Contains tables, organized per chapter.
 
-## Compilation Instructions :computer:
+## Compilation Instructions :arrows_counterclockwise:
 To compile the manuscript, choose one of the following methods:
 
-### Local compilation with `latexmk` and *LuaLaTeX*
+### Local compilation with `latexmk` and *LuaLaTeX* :computer:
 
 If using a local *LaTeX* editor, run the following command:
 
@@ -33,7 +33,7 @@ latexmk -pvc -quiet main.tex
 
 After five compilation iterations, the final PDF version of the thesis will be generated.
 
-### Using Compilation with *Overleaf*
+### Using Compilation with *Overleaf* :signal_strength:
 
 You can also use *Overleaf* to compile the thesis. However, due to the large size of the document, full compilation may exceed Overleaf's timeout limits.
 To compile specific sections separately, uncomment the relevant line(s) in `main.tex`:
@@ -51,7 +51,7 @@ To compile specific sections separately, uncomment the relevant line(s) in `main
 ```
 This allows you to compile only a selected chapter instead of the entire thesis.
 
-## Dependencies
+## Dependencies :wrench:
 Ensure that the following *LaTeX* packages are installed and updated:
 
 | Page Layout & Structure | Mathematics & Symbols | Content & Indexing | Tables & Figures | Fonts & Formatting |
@@ -78,7 +78,7 @@ Ensure that the following *LaTeX* packages are installed and updated:
 
 If using *TeX Live* or *MiKTeX*, all required packages can be installed via package managers.
 
-## Style :microscope:
+## Examples :scissors:
 
 A selection of examples showcasing the structure and style of this extensive 762-page thesis:
 
@@ -266,10 +266,10 @@ Here is a non-exhaustive list of key improvements that should be prioritized to 
 :x: Enhance custom `\newcommand{}` to avoid code repetition, for example, by customizing author citations or table parameters;  
 :x: Provide a front page directly coded in *LaTeX*.  
 
-## Contact
-:email: For any questions or contributions, feel free to contact me via *GitHub Issues* or email.
+## Contact :speech_balloon:
+For any questions or contributions, feel free to contact me via *GitHub Issues* or email.
 
-## Contributors :busts_in_silhouette:
+## Contributors :handshake:
 <table style="width: 100%;">
   <tbody>
     <tr>
