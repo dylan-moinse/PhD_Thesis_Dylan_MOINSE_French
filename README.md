@@ -39,8 +39,6 @@ You can also use *Overleaf* to compile the thesis. However, due to the large siz
 To compile specific sections separately, uncomment the relevant line(s) in `main.tex`:
 
 ```sh
-% Separated compilation .tex
-
 %\includeonly{src/Corps/0-Introduction-generale}
 %\includeonly{src/Corps/Chap-1-Cadre-theorique}
 %\includeonly{src/Corps/Chap-2-Revue-systematique}
@@ -122,7 +120,187 @@ Ensure that the following *LaTeX* packages are installed and updated:
 `wrapfig`,
 `xcolor`,
 `xfrac`,
-`xpatch`,
+`xpatch`
+
+## Style
+
+A selection of examples showcasing the structure and style of this extensive 762-page thesis:
+
+<table style="width: 100%;">
+  <tbody>
+    <tr>
+      <td align="center" valign="top" style="width: 33%;">
+        <img src="readme-pic/01-DM-front-page.jpg" width="150px;" alt="Image 1"/>
+        <br />
+        <sub><b>Front Page</b></sub>
+      </td>
+      <td align="center" valign="top" style="width: 33%;">
+        <img src="readme-pic/02-DM-guide.jpg" width="150px;" alt="Image 2"/>
+        <br />
+        <sub><b>Reading Guide</b></sub>
+      </td>
+      <td align="center" valign="top" style="width: 33%;">
+        <img src="readme-pic/03-DM-acknowledgements.jpg" width="150px;" alt="Image 3"/>
+        <br />
+        <sub><b>Acknowledgement</b></sub>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table style="width: 100%;">
+  <tbody>
+    <tr>
+      <td align="center" valign="top" style="width: 33%;">
+        <img src="readme-pic/04-DM-table-contents.jpg" width="150px;" alt="Image 4"/>
+        <br />
+        <sub><b>Table of Contents</b></sub>
+      </td>
+      <td align="center" valign="top" style="width: 33%;">
+        <img src="readme-pic/05-DM-table-figures.jpg" width="150px;" alt="Image 5"/>
+        <br />
+        <sub><b>Table of Figures</b></sub>
+      </td>
+      <td align="center" valign="top" style="width: 33%;">
+        <img src="readme-pic/06-DM-table-maps.jpg" width="150px;" alt="Image 6"/>
+        <br />
+        <sub><b>Table of Maps</b></sub>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table style="width: 100%;">
+  <tbody>
+    <tr>
+      <td align="center" valign="top" style="width: 33%;">
+        <img src="readme-pic/07-DM-table-tables.jpg" width="150px;" alt="Image 7"/>
+        <br />
+        <sub><b>Table of Tables</b></sub>
+      </td>
+      <td align="center" valign="top" style="width: 33%;">
+        <img src="readme-pic/08-DM-foreword.jpg" width="150px;" alt="Image 8"/>
+        <br />
+        <sub><b>Foreword</b></sub>
+      </td>
+      <td align="center" valign="top" style="width: 33%;">
+        <img src="readme-pic/09-DM-captatio-benevolentiae.jpg" width="150px;" alt="Image 9"/>
+        <br />
+        <sub><b>Captatio Benevolentiae</b></sub>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table style="width: 100%;">
+  <tbody>
+    <tr>
+      <td align="center" valign="top" style="width: 33%;">
+        <img src="readme-pic/10-DM-introduction.jpg" width="150px;" alt="Image 10"/>
+        <br />
+        <sub><b>Introduction</b></sub>
+      </td>
+      <td align="center" valign="top" style="width: 33%;">
+        <img src="readme-pic/11-DM-parts.jpg" width="150px;" alt="Image 11"/>
+        <br />
+        <sub><b>Parts</b></sub>
+      </td>
+      <td align="center" valign="top" style="width: 33%;">
+        <img src="readme-pic/12-DM-chapters.jpg" width="150px;" alt="Image 12"/>
+        <br />
+        <sub><b>Chapters</b></sub>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table style="width: 100%;">
+  <tbody>
+    <tr>
+      <td align="center" valign="top" style="width: 33%;">
+        <img src="readme-pic/13-DM-subtoc.jpg" width="150px;" alt="Image 13"/>
+        <br />
+        <sub><b>Chapter Table of Contents</b></sub>
+      </td>
+      <td align="center" valign="top" style="width: 33%;">
+        <img src="readme-pic/14-DM-graphical-abstracts.jpg" width="150px;" alt="Image 14"/>
+        <br />
+        <sub><b>Chapter Graphical Abstract</b></sub>
+      </td>
+      <td align="center" valign="top" style="width: 33%;">
+        <img src="readme-pic/15-DM-abstracts.jpg" width="150px;" alt="Image 15"/>
+        <br />
+        <sub><b>Chapter Abstract</b></sub>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table style="width: 100%;">
+  <tbody>
+    <tr>
+      <td align="center" valign="top" style="width: 33%;">
+        <img src="readme-pic/16-DM-quotes.jpg" width="150px;" alt="Image 16"/>
+        <br />
+        <sub><b>Chapter Introduction</b></sub>
+      </td>
+      <td align="center" valign="top" style="width: 33%;">
+        <img src="readme-pic/17-DM-valorization.jpg" width="150px;" alt="Image 17"/>
+        <br />
+        <sub><b>Chapter Valorization</b></sub>
+      </td>
+      <td align="center" valign="top" style="width: 33%;">
+        <img src="readme-pic/18-DM-subbibliography.jpg" width="150px;" alt="Image 18"/>
+        <br />
+        <sub><b>Chapter Bibliography</b></sub>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table style="width: 100%;">
+  <tbody>
+    <tr>
+      <td align="center" valign="top" style="width: 33%;">
+        <img src="readme-pic/19-DM-conclusion.jpg" width="150px;" alt="Image 19"/>
+        <br />
+        <sub><b>Conclusion</b></sub>
+      </td>
+      <td align="center" valign="top" style="width: 33%;">
+        <img src="readme-pic/20-DM-index.jpg" width="150px;" alt="Image 20"/>
+        <br />
+        <sub><b>Index</b></sub>
+      </td>
+      <td align="center" valign="top" style="width: 33%;">
+        <img src="readme-pic/21-DM-acronyms.jpg" width="150px;" alt="Image 21"/>
+        <br />
+        <sub><b>Acronyms</b></sub>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table style="width: 100%;">
+  <tbody>
+    <tr>
+      <td align="center" valign="top" style="width: 33%;">
+        <img src="readme-pic/22-DM-glossary.jpg" width="150px;" alt="Image 22"/>
+        <br />
+        <sub><b>Glossary</b></sub>
+      </td>
+      <td align="center" valign="top" style="width: 33%;">
+        <img src="readme-pic/23-DM-appendices.jpg" width="150px;" alt="Image 23"/>
+        <br />
+        <sub><b>Appendices</b></sub>
+      </td>
+      <td align="center" valign="top" style="width: 33%;">
+        <img src="readme-pic/24-DM-back-cover.jpg" width="150px;" alt="Image 24"/>
+        <br />
+        <sub><b>Back Cover</b></sub>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Contributors
 
@@ -158,6 +336,17 @@ Ensure that the following *LaTeX* packages are installed and updated:
         <br />
         <sub>Original template</sub>
         <br />
+      </td>
+            <td align="center" valign="top" style="width: 25%;">
+        <a href="https://github.com/iaguas">
+          <img src="https://www.lvmt.fr/wp-content/uploads/2020/11/WhatsApp-Image-2021-01-04-at-12.46.27-150x190.jpeg" width="100px;" alt="Iñigo Aguas Ardaiz"/>
+          <br />
+          <sub><b>Iñigo Aguas Ardaiz</b></sub>
+        </a>
+        <br />
+        <sub>Support</sub>
+        <br />
+        <a href="https://github.com/all-contributors/app/commits?author=alainlhostis" title=""></a>
       </td>
     </tr>
   </tbody>
