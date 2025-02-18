@@ -53,74 +53,30 @@ This allows you to compile only a selected chapter instead of the entire thesis.
 
 ## Dependencies
 Ensure that the following *LaTeX* packages are installed and updated:
-`adjustbox`,
-`afterpage`,
-`amsmath`,
-`amssymb`,
-`arydshln`,
-`atbegshi`,
-`biblatex`,
-`booktabs`,
-`boxedminipage`,
-`caption`,
-`chngcntr`,
-`colortbl`,
-`csquotes`,
-`draftwatermark`,
-`enumitem`,
-`eso-pic`,
-`etoc`,
-`etoolbox`,
-`eurosym`,
-`fancyhdr`,
-`float`,
-`floatrow`,
-`fmtcount`,
-`fontspec`,
-`footmisc`,
-`geometry`,
-`glossaries`,
-`graphicx`,
-`helvet`,
-`hyperref`,
-`idxlayout`,
-`imakeidx`,
-`lipsum`,
-`lastpage`,
-`lettrine`,
-`longtable`,
-`makeidx`,
-`mathtools`,
-`menukeys`,
-`multirow`,
-`nameref`,
-`needspace`,
-`newfloat`,
-`nowidow`,
-`parskip`,
-`pdfpages`,
-`pifont`,
-`ragged2e`,
-`refcount`,
-`relsize`,
-`sectsty`,
-`siunitx`,
-`silence`,
-`subcaption`,
-`subfiles`,
-`tabularray`,
-`tabularx`,
-`tcolorbox`,
-`tikz`,
-`titlesec`,
-`tocloft`,
-`truncate`,
-`verse`,
-`vertabim`,
-`wrapfig`,
-`xcolor`,
-`xfrac`,
-`xpatch`
+
+| Page Layout & Structure | Mathematics & Symbols | Content & Indexing | Tables & Figures | Fonts & Formatting |
+|--------------------------|----------------------|---------------------|------------------|--------------------|
+| `adjustbox` | `amsmath` | `biblatex` | `booktabs` | `draftwatermark` |
+| `afterpage` | `amssymb` | `csquotes` | `caption` | `eurosym` |
+| `atbegshi` | `arydshln` | `etoc` | `colortbl` | `fancyhdr` |
+| `boxedminipage` | `mathtools` | `etoolbox` | `eso-pic` | `fontspec` |
+| `chngcntr` | `pifont` | `footmisc` | `float` | `graphicx` |
+| `geometry` | `siunitx` | `glossaries` | `floatrow` | `helvet` |
+| `longtable` | `xfrac` | `idxlayout` | `multirow` | `hyperref` |
+| `newfloat` | | `imakeidx` | `subcaption` | `lipsum` |
+| `parskip` | | `makeidx` | `tabularray` | `lastpage` |
+| `sectsty` | | `nameref` | `tabularx` | `lettrine` |
+| `titlesec` | | `refcount` | `tikz` | `menukeys` |
+| `tocloft` | | | `xcolor` | `nowidow` |
+| `truncate` | | | | `ragged2e` |
+| `wrapfig` | | | | `relsize` |
+| | | | | `silence` |
+| | | | | `subfiles` |
+| | | | | `verse` |
+| | | | | `vertabim` |
+| | | | | `xpatch` |
+
+If using *TeX Live* or *MiKTeX*, all required packages can be installed via package managers.
 
 ## Style
 
@@ -130,17 +86,17 @@ A selection of examples showcasing the structure and style of this extensive 762
   <tbody>
     <tr>
       <td align="center" valign="top" style="width: 33%;">
-        <img src="readme-pic/01-DM-front-page.jpg" width="150px;" alt="Image 1"/>
+        <img src="readme-pic/01-DM-front-page.jpg" width="500px;" alt="Image 1"/>
         <br />
         <sub><b>Front Page</b></sub>
       </td>
       <td align="center" valign="top" style="width: 33%;">
-        <img src="readme-pic/02-DM-guide.jpg" width="150px;" alt="Image 2"/>
+        <img src="readme-pic/02-DM-guide.jpg" width="500px;" alt="Image 2"/>
         <br />
         <sub><b>Reading Guide</b></sub>
       </td>
       <td align="center" valign="top" style="width: 33%;">
-        <img src="readme-pic/03-DM-acknowledgements.jpg" width="150px;" alt="Image 3"/>
+        <img src="readme-pic/03-DM-acknowledgements.jpg" width="500px;" alt="Image 3"/>
         <br />
         <sub><b>Acknowledgement</b></sub>
       </td>
@@ -152,17 +108,17 @@ A selection of examples showcasing the structure and style of this extensive 762
   <tbody>
     <tr>
       <td align="center" valign="top" style="width: 33%;">
-        <img src="readme-pic/04-DM-table-contents.jpg" width="150px;" alt="Image 4"/>
+        <img src="readme-pic/04-DM-table-contents.jpg" width="500px;" alt="Image 4"/>
         <br />
         <sub><b>Table of Contents</b></sub>
       </td>
       <td align="center" valign="top" style="width: 33%;">
-        <img src="readme-pic/05-DM-table-figures.jpg" width="150px;" alt="Image 5"/>
+        <img src="readme-pic/05-DM-table-figures.jpg" width="500px;" alt="Image 5"/>
         <br />
         <sub><b>Table of Figures</b></sub>
       </td>
       <td align="center" valign="top" style="width: 33%;">
-        <img src="readme-pic/06-DM-table-maps.jpg" width="150px;" alt="Image 6"/>
+        <img src="readme-pic/06-DM-table-maps.jpg" width="500px;" alt="Image 6"/>
         <br />
         <sub><b>Table of Maps</b></sub>
       </td>
@@ -174,17 +130,17 @@ A selection of examples showcasing the structure and style of this extensive 762
   <tbody>
     <tr>
       <td align="center" valign="top" style="width: 33%;">
-        <img src="readme-pic/07-DM-table-tables.jpg" width="150px;" alt="Image 7"/>
+        <img src="readme-pic/07-DM-table-tables.jpg" width="500px;" alt="Image 7"/>
         <br />
         <sub><b>Table of Tables</b></sub>
       </td>
       <td align="center" valign="top" style="width: 33%;">
-        <img src="readme-pic/08-DM-foreword.jpg" width="150px;" alt="Image 8"/>
+        <img src="readme-pic/08-DM-foreword.jpg" width="500px;" alt="Image 8"/>
         <br />
         <sub><b>Foreword</b></sub>
       </td>
       <td align="center" valign="top" style="width: 33%;">
-        <img src="readme-pic/09-DM-captatio-benevolentiae.jpg" width="150px;" alt="Image 9"/>
+        <img src="readme-pic/09-DM-captatio-benevolentiae.jpg" width="500px;" alt="Image 9"/>
         <br />
         <sub><b>Captatio Benevolentiae</b></sub>
       </td>
@@ -196,17 +152,17 @@ A selection of examples showcasing the structure and style of this extensive 762
   <tbody>
     <tr>
       <td align="center" valign="top" style="width: 33%;">
-        <img src="readme-pic/10-DM-introduction.jpg" width="150px;" alt="Image 10"/>
+        <img src="readme-pic/10-DM-introduction.jpg" width="500px;" alt="Image 10"/>
         <br />
         <sub><b>Introduction</b></sub>
       </td>
       <td align="center" valign="top" style="width: 33%;">
-        <img src="readme-pic/11-DM-parts.jpg" width="150px;" alt="Image 11"/>
+        <img src="readme-pic/11-DM-parts.jpg" width="500px;" alt="Image 11"/>
         <br />
         <sub><b>Parts</b></sub>
       </td>
       <td align="center" valign="top" style="width: 33%;">
-        <img src="readme-pic/12-DM-chapters.jpg" width="150px;" alt="Image 12"/>
+        <img src="readme-pic/12-DM-chapters.jpg" width="500px;" alt="Image 12"/>
         <br />
         <sub><b>Chapters</b></sub>
       </td>
@@ -218,17 +174,17 @@ A selection of examples showcasing the structure and style of this extensive 762
   <tbody>
     <tr>
       <td align="center" valign="top" style="width: 33%;">
-        <img src="readme-pic/13-DM-subtoc.jpg" width="150px;" alt="Image 13"/>
+        <img src="readme-pic/13-DM-subtoc.jpg" width="500px;" alt="Image 13"/>
         <br />
         <sub><b>Chapter Table of Contents</b></sub>
       </td>
       <td align="center" valign="top" style="width: 33%;">
-        <img src="readme-pic/14-DM-graphical-abstracts.jpg" width="150px;" alt="Image 14"/>
+        <img src="readme-pic/14-DM-graphical-abstracts.jpg" width="500px;" alt="Image 14"/>
         <br />
         <sub><b>Chapter Graphical Abstract</b></sub>
       </td>
       <td align="center" valign="top" style="width: 33%;">
-        <img src="readme-pic/15-DM-abstracts.jpg" width="150px;" alt="Image 15"/>
+        <img src="readme-pic/15-DM-abstracts.jpg" width="500px;" alt="Image 15"/>
         <br />
         <sub><b>Chapter Abstract</b></sub>
       </td>
@@ -240,17 +196,17 @@ A selection of examples showcasing the structure and style of this extensive 762
   <tbody>
     <tr>
       <td align="center" valign="top" style="width: 33%;">
-        <img src="readme-pic/16-DM-quotes.jpg" width="150px;" alt="Image 16"/>
+        <img src="readme-pic/16-DM-quotes.jpg" width="500px;" alt="Image 16"/>
         <br />
         <sub><b>Chapter Introduction</b></sub>
       </td>
       <td align="center" valign="top" style="width: 33%;">
-        <img src="readme-pic/17-DM-valorization.jpg" width="150px;" alt="Image 17"/>
+        <img src="readme-pic/17-DM-valorization.jpg" width="500px;" alt="Image 17"/>
         <br />
         <sub><b>Chapter Valorization</b></sub>
       </td>
       <td align="center" valign="top" style="width: 33%;">
-        <img src="readme-pic/18-DM-subbibliography.jpg" width="150px;" alt="Image 18"/>
+        <img src="readme-pic/18-DM-subbibliography.jpg" width="500px;" alt="Image 18"/>
         <br />
         <sub><b>Chapter Bibliography</b></sub>
       </td>
@@ -262,17 +218,17 @@ A selection of examples showcasing the structure and style of this extensive 762
   <tbody>
     <tr>
       <td align="center" valign="top" style="width: 33%;">
-        <img src="readme-pic/19-DM-conclusion.jpg" width="150px;" alt="Image 19"/>
+        <img src="readme-pic/19-DM-conclusion.jpg" width="500px;" alt="Image 19"/>
         <br />
         <sub><b>Conclusion</b></sub>
       </td>
       <td align="center" valign="top" style="width: 33%;">
-        <img src="readme-pic/20-DM-index.jpg" width="150px;" alt="Image 20"/>
+        <img src="readme-pic/20-DM-index.jpg" width="500px;" alt="Image 20"/>
         <br />
         <sub><b>Index</b></sub>
       </td>
       <td align="center" valign="top" style="width: 33%;">
-        <img src="readme-pic/21-DM-acronyms.jpg" width="150px;" alt="Image 21"/>
+        <img src="readme-pic/21-DM-acronyms.jpg" width="500px;" alt="Image 21"/>
         <br />
         <sub><b>Acronyms</b></sub>
       </td>
@@ -284,17 +240,17 @@ A selection of examples showcasing the structure and style of this extensive 762
   <tbody>
     <tr>
       <td align="center" valign="top" style="width: 33%;">
-        <img src="readme-pic/22-DM-glossary.jpg" width="150px;" alt="Image 22"/>
+        <img src="readme-pic/22-DM-glossary.jpg" width="500px;" alt="Image 22"/>
         <br />
         <sub><b>Glossary</b></sub>
       </td>
       <td align="center" valign="top" style="width: 33%;">
-        <img src="readme-pic/23-DM-appendices.jpg" width="150px;" alt="Image 23"/>
+        <img src="readme-pic/23-DM-appendices.jpg" width="500px;" alt="Image 23"/>
         <br />
         <sub><b>Appendices</b></sub>
       </td>
       <td align="center" valign="top" style="width: 33%;">
-        <img src="readme-pic/24-DM-back-cover.jpg" width="150px;" alt="Image 24"/>
+        <img src="readme-pic/24-DM-back-cover.jpg" width="500px;" alt="Image 24"/>
         <br />
         <sub><b>Back Cover</b></sub>
       </td>
@@ -302,8 +258,18 @@ A selection of examples showcasing the structure and style of this extensive 762
   </tbody>
 </table>
 
-## Contributors
+## Future Improvements
+Here is a non-exhaustive list of key improvements that should be prioritized to make this exploratory code more efficient and cleaner:
 
+:x: Replace `\include{}` with `\subfile{}` to enable optimized compilation with more features;  
+:x: Automate `\index{}` while ensuring that all authors and collaborators for each reference are included;  
+:x: Enhance custom `\newcommand{}` to avoid code repetition, for example, by customizing author citations or table parameters;  
+:x: Provide a front page directly coded in *LaTeX*.  
+
+## Contact
+For any questions or contributions, feel free to contact me via *GitHub Issues* or email.
+
+## Contributors
 <table style="width: 100%;">
   <tbody>
     <tr>
@@ -351,4 +317,3 @@ A selection of examples showcasing the structure and style of this extensive 762
     </tr>
   </tbody>
 </table>
-
