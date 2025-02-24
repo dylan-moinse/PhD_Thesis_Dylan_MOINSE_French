@@ -115,12 +115,12 @@ A selection of examples showcasing the structure and style of this extensive 762
       <td align="center" valign="top" style="width: 33%;">
         <img src="readme-pic/05-DM-table-figures.jpg" width="250px;" alt="Image 5"/>
         <br />
-        <sub><b>Table of Figures</b></sub>
+        <sub><b>List of Figures</b></sub>
       </td>
       <td align="center" valign="top" style="width: 33%;">
         <img src="readme-pic/06-DM-table-maps.jpg" width="250px;" alt="Image 6"/>
         <br />
-        <sub><b>Table of Maps</b></sub>
+        <sub><b>List of Maps</b></sub>
       </td>
     </tr>
   </tbody>
@@ -132,7 +132,7 @@ A selection of examples showcasing the structure and style of this extensive 762
       <td align="center" valign="top" style="width: 33%;">
         <img src="readme-pic/07-DM-table-tables.jpg" width="250px;" alt="Image 7"/>
         <br />
-        <sub><b>Table of Tables</b></sub>
+        <sub><b>List of Tables</b></sub>
       </td>
       <td align="center" valign="top" style="width: 33%;">
         <img src="readme-pic/08-DM-foreword.jpg" width="250px;" alt="Image 8"/>
