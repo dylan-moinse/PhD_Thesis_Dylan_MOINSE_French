@@ -1,0 +1,31 @@
+% Tableau Statistiques descriptives taux de détour E-TVS
+%%Rédigé%%
+    \begin{table}[h!]
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \resizebox{\columnwidth}{!}{
+    \begin{tabular}{p{0.47\columnwidth}p{0.1\columnwidth}p{0.1\columnwidth}p{0.11\columnwidth}p{0.11\columnwidth}p{0.11\columnwidth}}
+        %\hline
+    \rule{0pt}{15pt} \textcolor{blue}{\textbf{Itinéraires}} & \textcolor{blue}{\textbf{Taux}} & \textcolor{blue}{\textbf{$\sigma$}} & \textcolor{blue}{\textbf{Min.}} & \textcolor{blue}{\textbf{Max.}} & \textcolor{blue}{\textbf{Effectif}}\\
+        \hline
+    \multicolumn{6}{l}{\textbf{Déplacement global}}\\
+\small{Déplacement intermodal~($ km_{eff} $/$ km_{alt} $)} & \small{0,97} & \small{0,07} & \small{0,70} & \small{1,21} & \small{129}\\
+        \hdashline
+    \multicolumn{4}{l}{\textbf{Segments du déplacement}}\\
+\small{Trajet en rabattement~($ km^{R}_{eff} $/$ km^{R}_{alt} $)} & \small{5,75} & \small{7,30} & \small{1,05} & \small{46,73} & \small{89}\\
+\small{Trajet en diffusion~($ km^{D}_{eff} $/$ km^{D}_{alt} $)} & \small{7,73} & \small{14,23} & \small{1,09} & \small{115,22} & \small{81}\\
+\small{Trajet en TC~($ km^{TC}_{eff} $/$ km^{TC}_{alt} $)} & \small{0,90} & \small{0,12} & \small{0,45} & \small{1,15} & \small{129}\\
+        \hline
+        \end{tabular}}
+    \caption{Taux de détour des déplacements pendulaires, impliquant un détour.}
+    \label{table-chap5:taux-detours}
+        \vspace{5pt}
+        \begin{flushleft}\scriptsize{
+        \textcolor{blue}{Note~:} $\sigma$~correspond à l'écart-type.
+        \\
+        \textcolor{blue}{Lecture~:} les taux de détour des déplacements pendulaires montrent que les segments de rabattement et de diffusion affichent des détours très élevés, mais que ceux-ci sont compensés par un déplacement global proche de l'itinéraire optimal.
+        }\end{flushleft}
+        \begin{flushright}\scriptsize{
+        Auteur~: \textcolor{blue}{Dylan Moinse (2023)}
+        }\end{flushright}
+        \end{table}

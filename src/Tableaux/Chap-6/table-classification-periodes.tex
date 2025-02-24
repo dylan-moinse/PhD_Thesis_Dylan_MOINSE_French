@@ -1,0 +1,43 @@
+% Tableau Classes par Ridership
+%%Rédigé%%
+    \begin{table}[h!]
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \resizebox{\columnwidth}{!}{
+    \begin{tabular}{p{0.22\columnwidth}p{0.13\columnwidth}p{0.13\columnwidth}p{0.13\columnwidth}p{0.13\columnwidth}p{0.13\columnwidth}p{0.13\columnwidth}}
+        %\hline
+    \rule{0pt}{15pt} \small{\textbf{\textcolor{blue}{Classes}}} & \small{\textbf{\textcolor{blue}{\(RT_{1}\)}}} & \small{\textbf{\textcolor{blue}{\(RT_{2}\)}}} & \small{\textbf{\textcolor{blue}{\(RT_{3}\)}}} & \small{\textbf{\textcolor{blue}{\(RT_{4}\)}}} & \small{\textbf{\textcolor{blue}{\(RT_{5}\)}}} & \small{\textbf{\textcolor{blue}{\(RT_{6}\)}}}\\
+        \hline
+    \multicolumn{7}{l}{\textbf{Isochrones piétonnes} (\(PI\))}\\
+\multirow{2}{*}{\small{Classe 1 (\(C1\))}} & \small{6,92~\%} & \textbf{\small{5,66~\%}} & \small{5,97~\%} & \textbf{\small{5,97~\%}} & \small{6,29~\%} & \small{5,97~\%}\\
+& \small{22} & \textbf{\small{18}} & \small{19} & \textbf{\small{19}} & \small{20} & \small{19}\\
+        \hdashline
+\multirow{2}{*}{\small{Classe 2 (\(C2\))}} & \small{30,19~\%} & \textbf{\small{46,86~\%}} & \small{45,91~\%} & \textbf{\small{42,14~\%}} & \small{37,11~\%} & \small{33,65~\%}\\
+& \small{96} & \textbf{\small{149}} & \small{146} & \textbf{\small{134}} & \small{118} & \small{107}\\
+        \hdashline
+\multirow{2}{*}{\small{Classe 3 (\(C3\))}} & \small{62,89~\%} & \textbf{\small{47,48~\%}} & \small{48,11~\%} & \textbf{\small{51,89~\%}} & \small{56,60~\%} & \small{60,38~\%}\\
+& \small{200} & \textbf{\small{151}} & \small{153} & \textbf{\small{165}} & \small{180} & \small{192}\\
+        \hline
+    \multicolumn{7}{l}{\textbf{Isochrones cyclables} (\(CI\))}\\
+\multirow{2}{*}{\small{Classe 1 (\(C1\))}} & \small{11,32~\%} & \textbf{\small{10,69~\%}} & \small{11,01~\%} & \textbf{\small{12,89~\%}} & \small{5,97~\%} & \small{6,29~\%}\\
+& \small{36} & \textbf{\small{34}} & \small{35} & \textbf{\small{41}} & \small{19} & \small{20}\\
+        \hdashline
+\multirow{2}{*}{\small{Classe 2 (\(C2\))}} & \small{26,42~\%} & \textbf{\small{41,82~\%}} & \small{34,91~\%} & \textbf{\small{36,16~\%}} & \small{32,08~\%} & \small{42,14~\%}\\
+& \small{84} & \textbf{\small{133}} & \small{111} & \textbf{\small{115}} & \small{102} & \small{134}\\
+        \hdashline
+\multirow{2}{*}{\small{Classe 3 (\(C3\))}} & \small{62,26~\%} & \textbf{\small{47,48~\%}} & \small{54,09~\%} & \textbf{\small{50,94~\%}} & \small{61,95~\%} & \small{51,57~\%}\\
+& \small{198} & \textbf{\small{151}} & \small{172} & \textbf{\small{162}} & \small{197} & \small{164}\\
+        \hline
+        \end{tabular}}
+    \caption{Composition des trois classes de gares (\(C1\) à \(C3\)) en fonction de la temporalité et de la taille des quartiers de gare.}
+    \label{table-chap6:classification-periodes}
+        \vspace{5pt}
+        \begin{flushleft}\scriptsize{
+        \textcolor{blue}{Lecture~:} en jour de semaine de 6h00 à 10h00 (\(RT_{2}\)), la première classe \(C1\) regroupe 18 quartiers de gare accessibles à pied (\(PI\)), soit 5,66~\% du réseau ferroviaire régional. Cette proportion atteint 34 quartiers de gare accessibles en cycle (\(CI\)), soit 10,69~\% de l'échantillon total.
+        }\end{flushleft}
+        \begin{flushright}\scriptsize{
+        Réalisation~: \textcolor{blue}{Dylan Moinse (2024)}
+        \\
+        Auteur·rice·s~: projet de recherche \acrshort{NPART}
+        }\end{flushright}
+        \end{table}

@@ -1,0 +1,417 @@
+\newcommand{\CTAN}[1]{\textsl{#1}}
+
+\chapter{Mode d'emploi}
+%\localtableofcontents{}
+
+\section{Avertissements}
+
+{\huge\color{red}
+\begin{enumerate}
+\item Élaboration en cours
+  \begin{itemize}
+  \item Temporairement, des incompatibilité de packages peuvent être présentes
+  \end{itemize}
+\item Pas de rétro-compatibilité assurée!
+  \begin{itemize}
+  \item Faire une sauvegarde ou copie avant de procéder à une mise à jour de la fourniture \UGE.
+  \end{itemize}
+\end{enumerate}
+}
+
+\section{En cas de problèmes}
+
+\begin{Attention}{Conflit avec installation locale}
+  \begin{itemize}
+  \item Bien vérifier qu'il n'y pas conflit avec des installations locales la/tex  (\~/texmf)!
+  \item Les fichiers chargés sont effectivement les fichiers prévus et non pas des copies résiduelles enregistrées localement (et potentiellement obsolètes).
+  \end{itemize}
+\end{Attention}
+
+
+\begin{itemize}
+\item Recompiler plusieurs fois si nécessaire!
+\end{itemize}
+
+\subsection{Overleaf}
+\begin{itemize}
+\item \url{}
+\end{itemize}
+
+\subsection{Chat univ-eiffel.fr}
+
+\begin{itemize}
+\item \url{https://chat.univ-eiffel.fr} / \verb|LaTeX&Overleaf@UGE|
+
+\item \url{https://go.rocket.chat/invite?host=chat.univ-eiffel.fr\&path=invite\%2Fkc6eCm}
+\end{itemize}
+\subsection{Messagerie}
+
+\begin{itemize}
+\item \url{mailto://jorge.mariano@univ-eiffel.fr}
+\end{itemize}
+
+\section{Structuration}
+\label{sec:structuration}
+
+
+\paragraph{NB}
+
+\begin{itemize}
+\item Le document est «déposé» dans le sous-répertoire .src.
+
+\item Les éléments dont le nom est préfixé par UGE ne sont pas destinés à être modifiés par l'utilisateur. Cela reste évidemment techniquement possible...
+\end{itemize}
+
+Pour faciliter la maintenance, la mise au point, la structuration proposée permet de décomposer facilement le travail selon divers usages :
+\begin{itemize}
+\item génération totale ou partielle, avec ou sans le modèle UGE.
+\end{itemize}
+
+
+
+\subsection{Éléments du modèle UGE}
+
+Les différents éléments constituifs du modèle glonal sont actuellement séparés, pour faciliter la mise au point et la réutilisation partielle.
+
+\newcommand{\UGEtext}[1]{%
+  {\color{#1} \textbf{Couleur #1}}
+}
+
+\paragraph{UGE-Col.sty}
+
+\begin{itemize}
+\item Les 11 couleurs spécifiées dans la charte UGE sont définies en valeurs (R,G,B)
+\item Les couleurs standard LaTeX bleu, noir, cyan, pink, purple, orange, green, et red sont redéfinies via les couleurs UGE. Il n'est pas nécessaire d'utiliser les noms UGE pour les couleurs de cette liste.
+\end{itemize}
+
+  \begin{minipage}[t]{.45\linewidth}  
+    \begin{enumerate}
+    \item \UGEtext{UGEcolBlue}
+    \item \UGEtext{UGEcolBlueLight}
+    \item \UGEtext{UGEcolBlack}
+    \item \UGEtext{UGEcolCyan}
+    \item \UGEtext{UGEcolPink}
+    \item \UGEtext{UGEcolPurple}
+    \item \UGEtext{UGEcolOrange}
+    \item \UGEtext{UGEcolOrangeLight}
+    \item \UGEtext{UGEcolGreen}
+    \item \UGEtext{UGEcolGreenLight}
+    \item \UGEtext{UGEcolRed}
+    \end{enumerate}
+  \end{minipage}
+  \begin{minipage}[t]{.45\linewidth}  
+    \begin{enumerate}
+    \item \UGEtext{blue} 
+    \item 
+    \item \UGEtext{black} 
+    \item \UGEtext{cyan} 
+    \item \UGEtext{pink} 
+    \item \UGEtext{purple}
+    \item \UGEtext{orange}
+    \item 
+    \item 
+    \item \UGEtext{green} 
+    \item \UGEtext{red} 
+    \end{enumerate}
+  \end{minipage}
+
+
+  \paragraph{UGE-Fontes.sty}
+  \begin{itemize}
+  \item Sélection des polices de caractère, notamment TT-Norms (charte UGE) si disponible, sinon une autre police plus courante (à définir) est sélectionnée.
+  \end{itemize}
+  
+  \paragraph{UGE-Thesis-FP.sty}
+\begin{itemize}
+\item Première page de thèse UGE (logos, identification de la thèse, du doctorant)
+\end{itemize}
+
+  \paragraph{UGE-Bib.sty}
+\begin{itemize}
+\item Paramétrage biblatex
+\end{itemize}
+
+\paragraph{UGE-Template.sty}
+\begin{itemize}
+\item Ensemble des packages et macros spécifique à la restitution graphique UGE
+\end{itemize}
+
+\paragraph{doc-form.tex}
+\begin{itemize}
+\item Informations caractéristiques du document (auteur, titre, \ldots{})
+\end{itemize}
+
+\paragraph{jury.tex}
+\begin{itemize}
+\item Pour une thèse, constitution du jury. Intégré dans la première page.
+\end{itemize}
+
+\paragraph{UGE-Notes.tex}
+\begin{itemize}
+\item Documentation (en cours) d'utilisation et technique du modèle UGE.
+\end{itemize}
+
+\subsection{Éléments du document}
+
+\paragraph{.src/}
+
+\begin{itemize}
+\item Sous-dossier contenant l'intégralité du document utilisateur à générer
+\end{itemize}
+
+\paragraph{.src/body.tex}
+
+\begin{itemize}
+\item Fichier maître pour le document utilisateur. Il intègre les autres fichiers nécessaires.
+\end{itemize}
+
+\paragraph{Ch-NN.tex}
+
+\begin{itemize}
+\item les différents chapitres
+\item intégrés via include pour profiter de la compilation conditionnelle (includeonly)
+\end{itemize}
+
+\subsection{Auxiliaires}
+
+\paragraph{JMR.sty}
+
+\begin{itemize}
+\item Sélection de packages et macros généralement utiles et/ou recommandés pour la production de documents LaTeX
+\end{itemize}
+
+\paragraph{local.sty}
+
+\begin{itemize}
+\item Packages et macros strictement nécessaires à la compilation du document sans utilisation du modèle \UGE.
+  Permet d'identifier les besoins techniques du document indépendamment du contexte \UGE.
+\end{itemize}
+
+\paragraph{latexmkrc.00}
+
+\begin{itemize}
+\item Modèle pour le fichier de configuration latexmkrc
+\end{itemize}
+
+
+\paragraph{minimal.tex}
+
+\begin{itemize}
+\item Pour compiler le document (.src/body.tex) SANS activer le modèle UGE.
+\end{itemize}
+
+
+\subsection{Organisation générale}
+
+\begin{figure}
+  \centering
+  \fbox{\includegraphics[width=\columnwidth]{UGE-Template.drawio.png}}
+  \caption{Organisation générale des fichiers}
+\end{figure}
+
+\section{Usage}
+
+\subsection{Includeonly}
+
+
+\centering\begin{boxedminipage}{.5\columnwidth}\small
+\begin{verbatim}
+\documentclass{book}
+
+%% PREAMBLE!
+\includeonly{file-01}
+...
+%\includeonly{file-0n}
+%%
+\begin{document}
+\include{file-01}
+...
+\include{file-0n}
+\end{document}
+
+\end{verbatim}
+    
+  \end{boxedminipage}
+
+\subsection{Première page}
+
+\begin{itemize}
+\item La première page est spécifiée dans UGE-Thesis-FP
+\end{itemize}
+\subsection{LaTeXmk}
+
+\begin{itemize}
+\item Contrôle du processus de compilation du document
+\item C'est le même outil que celui utilisé par Overleaf
+  \begin{itemize}
+  \item Le template UGE doit/peut donc être complètement compatible Overleaf
+  \end{itemize}
+\end{itemize}
+
+\paragraph{Commandes usuelles}
+
+\begin{itemize}
+\item \texttt{latexmk main}, compilation générale avec modèle UGE
+\item \texttt{latexmk minimal} compilation générale sans modèle
+\item \texttt{latexmk -C minimal} nettoyage des fichiers intermédiaires facultatifs
+\end{itemize}
+
+
+\paragraph{NB}
+
+Si latexmkrc est correctement configuré, (le fichier par défaut est alors défini comme \texttt{main.tex})
+\begin{itemize}
+\item la génération du document se fait simplement via \texttt{latexmk}
+\item le nettoyage du dossier se fait simplement via \texttt{latexmk -C}
+\item donc pour une compilation «totale» (plus longue) : \texttt{latexmk -C ; latexmk}
+\end{itemize}
+
+
+\subsection{LuaLaTeX}
+
+\begin{itemize}
+\item
+\end{itemize}
+
+
+
+\section{Technique}
+
+\subsection{Fonctionnalités}
+
+Intégrées dans la proposition actuelle de  «template»
+
+\begin{description}
+\item[Charte UGE]
+  \begin{itemize}
+  \item Définition des couleurs via \CTAN{xcolor}
+  \end{itemize}
+\item[Bibliographie]
+  \begin{itemize}
+  \item \CTAN{Biblatex}/\CTAN{biber}
+  \end{itemize}
+\item[Fontes et polices]
+  \begin{itemize}
+ \item Fonte de caractère charte  UGE
+\item Ligatures artistiques facultatives
+\item Chargement local des fontes TTF
+  \end{itemize}
+\item[Structuration, génération]
+  \begin{itemize}
+ \item Utilisation latexmkrc / cf Overleaf
+  \item Compilation partielle includeonly
+  \end{itemize}
+\item[Sectionnements]
+  \begin{itemize}
+  \item Parties / Numérotation littérale française (première, deuxième,...)
+  \item Troncature des entêtes via \CTAN{troncate}
+  \end{itemize}
+\item[Table des matières]
+  \begin{itemize}
+  \item Tables locales par chapitre
+  \item Saut de page avant le corps du chapitre
+  \end{itemize}
+\item[Divers/Debug]
+  \begin{itemize}
+  \item \item Watermark
+  \item Debug labels \CTAN{showlabels}
+  \item Affichage coloré des lignes avec défauts typographiques (lualatex/\CTAN{lua-typo})
+  \end{itemize}
+\end{description}
+
+Le modèle UGE met en oeuvre les techniques disponibles les plus récentes et recommandées.
+
+Ainsi, plusieurs remplacements sont nécessaires :
+
+\begin{enumerate}
+\item LuaLaTeX remplace LaTeX
+\item BibLaTeX remplace BibTeX
+\item etoc remplace minitoc
+\end{enumerate}
+
+Ou des choix de solutions techniques sont effectués :
+\begin{itemize}
+\item latexmk (.latexmkrc), pour le processus de compilation, génération du document
+\item fontspec pour la sélection simple des polices/fontes (TTF, OTF)
+\end{itemize}
+
+\subsection{Sur la pile }
+
+Extensions probablement utiles à intégrer :
+
+\begin{itemize}
+\item \CTAN{microtype}
+\end{itemize}
+
+\section{Notes sur le codage}
+
+\begin{itemize}
+\item Ne pas utiliser le double slash pour marquer un changement de paragraph
+\item Ne pas utiliser bigskip pour corriger les espacements verticaux de sections
+  \begin{itemize}
+  \item Adapter le style de sections
+  \end{itemize}
+\item Ne pas donner de label numériques (1.2.3)
+  \begin{itemize}
+  \item Les labels sont symboliques (intro-section, probleme-annexe, ...)
+  \end{itemize}
+\item Attention à l'encodage des fichers .tex (doit être UTF8)
+\item Ne pas spécifier les extensions de type pour les fichiers graphiques (sauf besoin spécifique identifié)
+\end{itemize}
+
+\paragraph{Test}
+
+Passer le document
+
+\begin{itemize}
+\item Orientation paysage (landscape) et non portrait
+\item Misen forme sur deux colonnes
+\end{itemize}
+
+\begin{verbatim}
+\documentclass[...,landscape,twocolumn]{book}
+\begin{document}
+\twocolumn
+.
+\input{src/body}
+\end{document}
+\end{verbatim}
+
+
+\clearpage{}
+
+
+
+\section{Encore du boulot}
+
+\begin{itemize}
+\item Dimensions des marges, entêtes et pieds de page (geometry)?
+\item Typographie des entêtes et pieds de page
+\end{itemize}
+
+\section{Revues de documents antérieurs}
+
+\begin{itemize}
+\item Commencer par une compilation de \texttt{minimal.tex}!
+\end{itemize}
+
+\subsection{Thèse 2016 Diego}
+
+\begin{itemize}
+\item Entrée de glossaire avec underscore
+\item Pas de séparation totale macros / body
+\item Annulation d'environnement
+\item Ajout liste des figures
+\item Ajout liste des tables
+\item Pas d'utilisation des légendes courtes (figures et tables)
+\end{itemize}
+
+\subsection{Thèse 2016 Legrand}
+
+\begin{itemize}
+\item Recompilation sans le préambule local, avec JMR.sty et \UGE
+  \begin{itemize}
+  \item Utilisation de pages styles locaux (définir des pages styles \UGE\ldots{}?)
+  \item Annulation bibliographie / passage biblatex
+  \end{itemize}
+\end{itemize}

@@ -1,0 +1,40 @@
+% Tableau Influence des indicateurs Node
+%%Rédigé%%
+    \begin{table}[h!]
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \resizebox{\columnwidth}{!}{
+    \begin{tabular}{p{0.08\columnwidth}p{0.5\columnwidth}p{0.21\columnwidth}p{0.21\columnwidth}}
+        %\hline
+    \rule{0pt}{15pt} \small{\textbf{\textcolor{blue}{ID}}} & \small{\textbf{\textcolor{blue}{Indicateur}}} & \small{\textbf{\textcolor{blue}{Statistiques}}} & \small{\textbf{\textcolor{blue}{Perception}}}\\
+        \hline
+\small{\(N_{1}\)} & \small{Fréquence du réseau \acrshort{TGV}, en semaine} & \underline{\small{\textbf{0,264}} (2\textsuperscript{e})} & \underline{\small{\textbf{0,375}} (1-4\textsuperscript{e})}\\
+\small{\(N_{2}\)} & \small{Fréquence du réseau \acrshort{TGV}, le week-end} & \underline{\small{\textbf{0,266}} (1\textsuperscript{er})} & \underline{\small{\textbf{0,375}} (1-4\textsuperscript{e})}\\
+\small{\(N_{3}\)} & \small{Fréquence du réseau \acrshort{TER}, en semaine} & \small{\textbf{0,034} (7\textsuperscript{e})} & \underline{\small{\textbf{0,375}} (1-4\textsuperscript{e})}\\
+\small{\(N_{4}\)} & \small{Fréquence du réseau \acrshort{TER}, le week-end} & \small{\textbf{0,039} (6\textsuperscript{e})} & \underline{\small{\textbf{0,375}} (1-4\textsuperscript{e})}\\
+\small{\(N_{5}\)} & \small{Amplitude horaire, en semaine} & \small{\textbf{0,001} (16\textsuperscript{e})} & \small{\textbf{0,082} (11-12\textsuperscript{e})}\\
+\small{\(N_{6}\)} & \small{Amplitude horaire, le week-end} & \small{\textbf{0,009} (14\textsuperscript{e})} & \small{\textbf{0,082} (11-12\textsuperscript{e})}\\
+\small{\(N_{7}\)} & \small{Vitesse commerciale} & \small{\textbf{0,015} (9\textsuperscript{e})} & \small{\textbf{0,067} (14\textsuperscript{e})}\\
+\small{\(N_{8}\)} & \small{Nombre de directions} & \small{\textbf{0,068} (5\textsuperscript{e})} & \small{\textbf{0,035} (16\textsuperscript{e})}\\
+\small{\(N_{9}\)} & \small{Degré de centralité} & \underline{\small{\textbf{0,077}} (4\textsuperscript{e})} & \small{\textbf{0,057} (15\textsuperscript{e})}\\
+\small{\(N_{10}\)} & \small{Centralité d'intermédiarité} & \small{\textbf{0,011} (12\textsuperscript{e})} & \small{\textbf{0,134} (5\textsuperscript{e})}\\
+\small{\(N_{11}\)} & \small{Centralité de proximité} & \underline{\small{\textbf{0,152}} (3\textsuperscript{e})} & \small{\textbf{0,093} (6\textsuperscript{e})}\\
+\small{\(N_{12}\)} & \small{Nombre de stations accessibles en une heure} & \small{\textbf{0,019} (8\textsuperscript{e})} & \small{\textbf{0,067} (13\textsuperscript{e})}\\
+\small{\(N_{13}\)} & \small{Nombre de stations pour accéder à Euralille} & \small{\textbf{0,010} (13\textsuperscript{e})} & \small{\textbf{0,090} (7-10\textsuperscript{e})}\\
+\small{\(N_{14}\)} & \small{Temps de trajet pour accéder à Euralille} & \small{\textbf{0,014} (10\textsuperscript{e})} & \small{\textbf{0,090} (7-10\textsuperscript{e})}\\
+\small{\(N_{15}\)} & \small{Nombre de stations pour accéder à Châtelet} & \small{\textbf{0,014} (11\textsuperscript{e})} & \small{\textbf{0,090} (7-10\textsuperscript{e})}\\
+\small{\(N_{16}\)} & \small{Temps de trajet pour accéder à Châtelet} & \small{\textbf{0,007} (15\textsuperscript{e})} & \small{\textbf{0,090} (7-10\textsuperscript{e})}\\
+        \hline
+        \end{tabular}}
+    \caption{Influence relative, par entropie, des indicateurs indépendants, liés au niveau de service (\(N\)), sur la fréquentation des gares.}
+    \label{table-chap6:influence-indicateurs-node}
+        \vspace{5pt}
+        \begin{flushleft}\scriptsize{
+        \textcolor{blue}{Lecture~:} la fréquence du réseau \acrshort{TGV}, le week-end, (\(N_{2}\)) explique statistiquement 20,6~\% de la fréquentation des gares, contre 37,5~\% selon les aménageur·se·s.
+        }\end{flushleft}
+        \begin{flushright}\scriptsize{
+        Réalisation~: \textcolor{blue}{Dylan Moinse (2024)}
+        \\
+        Auteur·rice·s~: projet de recherche \acrshort{NPART}
+        }\end{flushright}
+        \end{table}

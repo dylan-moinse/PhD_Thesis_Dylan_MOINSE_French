@@ -1,0 +1,12 @@
+
+.latexmkrc
+main.bcf
+main.pdf
+*.lof
+*.lot
+JMR.sty.00
+.gitmodules
+*.synctex
+minimal.pdf
+src/\#00-figure.tex\#
+src/.\#00-figure.tex

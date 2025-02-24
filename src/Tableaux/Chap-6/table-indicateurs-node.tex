@@ -1,0 +1,43 @@
+% Tableau grille d'indicateurs (node)
+%%Rédigé%%
+    \begin{table}[h!]
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \resizebox{\columnwidth}{!}{
+    \begin{tabular}{p{0.43\columnwidth}p{0.08\columnwidth}p{0.49\columnwidth}}
+        %\hline
+    \rule{0pt}{15pt} \small{\textbf{\textcolor{blue}{Catégorie}}} & \small{\textbf{\textcolor{blue}{ID}}} & \small{\textbf{\textcolor{blue}{Indicateur}}}\\
+        \hline
+    \multirow{8.5}{*}{\textbf{Niveau de service}} & \small{\multirow{1.5}{*}{\(N_{1}\)}} & \small{Fréquence quotidienne des lignes \acrshort{TGV}, en semaine}\\
+& \small{\multirow{1.5}{*}{\(N_{2}\)}} & \small{Fréquence quotidienne des lignes \acrshort{TGV}, un samedi et dimanche}\\
+& \small{\multirow{1.5}{*}{\(N_{3}\)}} & \small{Fréquence quotidienne des lignes \acrshort{TER}, en semaine}\\
+& \small{\multirow{1.5}{*}{\(N_{4}\)}} & \small{Fréquence quotidienne des lignes \acrshort{TER}, un samedi et dimanche}\\
+& \small{\(N_{5}\)} & \small{Amplitude horaire, en semaine}\\
+& \small{\(N_{6}\)} & \small{Amplitude horaire, un samedi et dimanche}\\
+        \hdashline
+    \multirow{2}{*}{\textbf{Performance du système}} & \small{\(N_{7}\)} & \small{Vitesse commerciale}\\
+& \small{\(N_{8}\)} & \small{Nombre de directions desservies}\\
+        \hdashline
+    \multirow{3}{*}{\textbf{Métrique du réseau}} & \small{\(N_{9}\)} & \small{Degré de centralité}\\
+& \small{\(N_{10}\)} & \small{Centralité d'intermédiarité}\\
+& \small{\(N_{11}\)} & \small{Centralité de proximité}\\
+        \hdashline
+    \multirow{8}{*}{\textbf{Accessibilité aux centralités}} & \small{\multirow{1.5}{*}{\(N_{12}\)}} & \small{Nombre de stations accessibles en une heure}\\
+& \small{\multirow{1.5}{*}{\(N_{13}\)}} & \small{Nombre de stations pour accéder au centre urbain de Lille (pôle Euralille)}\\
+& \small{\multirow{1.5}{*}{\(N_{14}\)}} & \small{Temps de trajet pour accéder au centre urbain de Lille (pôle Euralille)}\\
+& \small{\multirow{1.5}{*}{\(N_{15}\)}} & \small{Nombre de stations pour accéder au centre urbain de Paris (pôle Châtelet)}\\
+& \small{\multirow{1.5}{*}{\(N_{16}\)}} & \small{Nombre de stations pour accéder au centre urbain de Paris (pôle Châtelet)}\\
+        \hline
+        \end{tabular}}
+    \caption{Grille d'indicateurs regroupés dans la dimension associée à la \Guillemets{qualité du service ferroviaire} (nœud).}
+    \label{table-chap6:indicateurs-node}
+        \vspace{5pt}
+        \begin{flushleft}\scriptsize{
+        \textcolor{blue}{Lecture~:} seize indicateurs sont regroupés dans la dimension \(N\). 
+        }\end{flushleft}
+        \begin{flushright}\scriptsize{
+        Réalisation~: \textcolor{blue}{Dylan Moinse (2024)}
+        \\
+        Auteur·rice·s~: projet de recherche \acrshort{NPART}
+        }\end{flushright}
+        \end{table}

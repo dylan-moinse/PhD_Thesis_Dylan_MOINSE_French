@@ -1,0 +1,30 @@
+% Tableau distances selon TC
+%%Rédigé%%
+        \begin{table}[h!]
+        \centering
+        \renewcommand{\arraystretch}{1.5}
+        \resizebox{\columnwidth}{!}{
+        \begin{tabular}{p{0.38\columnwidth}p{0.1\columnwidth}p{0.12\columnwidth}p{0.1\columnwidth}p{0.1\columnwidth}p{0.1\columnwidth}p{0.1\columnwidth}}
+        %\hline
+    \rule{0pt}{15pt} \multirow{1.5}{*}{\small{\textbf{\textcolor{blue}{Typologie}}}} & \small{\textbf{\textcolor{blue}{25\textsuperscript{e} centile}}} & \multirow{1.5}{*}{\small{\textbf{\textcolor{blue}{Médiane}}}} & \small{\textbf{\textcolor{blue}{85\textsuperscript{e} centile}}} & \multirow{1.5}{*}{\small{\textbf{\textcolor{blue}{Min.}}}} &  \multirow{1.5}{*}{\small{\textbf{\textcolor{blue}{Max.}}}} &  \multirow{1.5}{*}{\textbf{\textcolor{blue}{$\sigma$}}}\\
+        \hline
+    \small{Tous types de réseau confondus} & \multirow{1.5}{*}{\small{1,30}} & \multirow{1.5}{*}{\small{2,00}} & \multirow{1.5}{*}{\small{\textbf{3,80}}} & \multirow{1.5}{*}{\small{0,20}} & \multirow{1.5}{*}{\small{54,60}} & \multirow{1.5}{*}{\small{15,12}}\\
+        \hdashline
+    \small{Gares de catégorie~\(a\)} & \small{1,70} & \small{2,40} & \small{\textbf{4,80}} & \small{0,37} & \small{54,60} & \small{24,38}\\
+    \small{Gares de catégorie~\(b\)} & \small{1,42} & \small{1,94} & \small{\textbf{4,26}} & \small{0,21} & \small{39,90} & \small{4,90}\\
+    \small{Gares de catégorie~\(c\)} & \small{1,33} & \small{1,66} & \small{\textbf{3,80}} & \small{0,78} & \small{46,10} & \small{10,23}\\
+    \small{Arrêts de métro et de tramway} & \multirow{1.5}{*}{\small{0,67}} & \multirow{1.5}{*}{\small{1,05}} & \multirow{1.5}{*}{\small{\textbf{2,37}}} & \multirow{1.5}{*}{\small{0,20}} & \multirow{1.5}{*}{\small{9,10}} & \multirow{1.5}{*}{\small{1,84}}\\
+        \hline
+        \end{tabular}}
+    \caption{Distribution des distances spatiales franchies en rabattement ou en diffusion, dans le cadre de déplacements pendulaires, en fonction de la nature du système de transport en commun et du type de gare.}
+    \label{table-chap5:distances-type-tc}
+        \vspace{5pt}
+        \begin{flushleft}\scriptsize{
+        \textcolor{blue}{Note~:} $\sigma$~correspond à l'écart-type.
+        \\
+        \textcolor{blue}{Lecture~:} les distances spatiales franchies en rabattement ou en diffusion varient significativement selon le type de gare et de réseau~: les gares de classe~\(a\) enregistrent les distances les plus élevées, tandis que les arrêts de transport urbain sur rail affichent des distances nettement inférieures.
+        }\end{flushleft}
+        \begin{flushright}\scriptsize
+        Auteur~: \textcolor{blue}{Dylan Moinse (2023)}
+        \end{flushright}
+        \end{table}

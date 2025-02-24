@@ -1,0 +1,808 @@
+%% Jorge Mariano (Univ. Gustave Eiffel)
+%% jorge.mariano@univ-eiffel.fr
+%% Fichier de style pour collecter toutes les aides/astuces techniques LaTeX
+%% Par défaut, tout est / doit pouvoir etre / commenté.
+
+%% 2024-11 Police Overlock Lettre GUT 54 
+%- https://publications.gutenberg-asso.fr/lettre/article/view/191/209
+
+% \usepackage[
+% debug
+%,uge%
+%,overlock%
+%,misc
+%,baratin%,
+%]
+%{JMR}
+
+% --- LWARP 
+%\usepackage[
+% HomeHTMLFilename=index, % Filename of the homepage.
+% HTMLFilename={node-}, % Filename prefix of other pages.
+% IndexLanguage=english, % Language for xindy index, glossary.
+% latexmk, % Use latexmk to compile.
+% OSWindows, % Force Windows. (Usually automatic.)
+% mathjax, % Use MathJax to display math.
+%]{lwarp}
+
+%% 2024-10-11
+%- Option de chargement 'titles' / conflit titlesec
+
+\newif\ifusetitles
+\DeclareOption{titles}{\usetitlestrue}
+
+\newif\ifusetypo
+\DeclareOption{typo}{\usetypotrue}
+
+%% 2024-10-10
+%- Macros Commandbox
+
+%- Option de chargement 'uge'
+\newif\ifuseuge
+\DeclareOption{uge}{\useugetrue}
+
+%- Option de chargement 'misc'
+\newif\ifusemisc
+\DeclareOption{misc}{\usemisctrue}
+
+%% 2024-10-04
+%- Option de chargement 'baratin'
+\newif\ifusebiblatex
+\DeclareOption{biblatex}{\usebiblatextrue}
+
+%- Option de chargement 'biblatex'
+\newif\ifusebaratin
+\DeclareOption{baratin}{\usebaratintrue}
+
+\newif\ifusedebug
+\DeclareOption{debug}{\usedebugtrue}
+
+%- Option de chargement 'plex'
+\newif\ifuseplex
+\DeclareOption{plex}{\useplextrue}
+
+%- Option de chargement 'montserrat'
+\newif\ifusemontserrat
+\DeclareOption{montserrat}{\usemontserrattrue}
+
+%% 2024-10-07
+%- Option de chargement 'geometry' (maj/false)
+
+\newif\ifusegeometry
+\DeclareOption{geometry}{\usegeometrytrue}
+
+%% ------------------
+\ProcessOptions\relax
+%% ------------------
+
+%% grep ^'%%%% ' 
+
+%%%% 01 MOTEUR / ENGINE / LUALATEX / PDFLATEX / XETEX
+
+\RequirePackage[french]{babel}
+
+%
+\RequirePackage{ifluatex}
+\ifluatex
+\usepackage{fontspec}   % Pour la gestion des polices avec LuaLaTeX
+%\usepackage{polyglossia} % Pour la gestion des langues avec LuaLaTeX
+%\setmainlanguage{french} % Définir la langue principale comme le français
+
+% Gestion de la typographie française
+\usepackage{csquotes}   % Pour les guillemets et la ponctuation française
+
+% Choix de la police principale
+\setmainfont{Ubuntu} 
+
+%  lualatex et debug
+  \ifusetypo
+    \RequirePackage[All]{lua-typo}                           %debug%
+    \usepackage{microtype}
+  \fi
+  %
+\else
+  \usepackage[utf8]{inputenc}
+
+  
+%\setmainlanguage{french} 
+  %% PDF 
+% (pdfLaTeX) Paramètres de sortie du fichier pdf.
+\pdfminorversion=5
+\pdfcompresslevel=9
+\pdfobjcompresslevel=3
+
+\fi
+
+
+
+%%%% 02 PAGE
+%%%% 02.01 Base géométrie
+
+
+\ifusegeometry
+\usepackage{geometry}% Chargement simple pour éviter les conflits d'options
+  \geometry{a4paper}
+  \geometry{portrait}
+  \geometry{twoside}    
+  \geometry{top=2cm,bottom=2cm,left=2cm,right=2cm}
+   \geometry{bindingoffset=1cm}% inside margin / marge intérieure
+   \savegeometry{plain}
+   
+\fi
+
+\ifuseuge
+\usepackage{UGE/UGE-Template}
+\fi
+
+%\geometry{top=2cm,bottom=2cm,left=2cm,right=2cm}%local%
+%\geometry{bindingoffset=1cm}%local%
+%\savegeometry{plain}
+%% Debug dimensions de mise en page
+% Visualisation de la structure de page
+
+\ifusedebug
+\RequirePackage{showframe}%debug%
+\RequirePackage{showkeys}%debug%
+%\else
+
+\fi
+
+%% Traits de coupe %>
+%\RequirePackage[cam,a4,center]{crop}                        %debug% 
+
+%%%% 02.02 Colonnes
+
+%
+\RequirePackage{paracol}
+%\normalcolumncolor[2]
+%\backgroundcolor{t}[rgb]{0.7,0,0}
+%\backgroundcolor{g}[rgb]{0.8,1,1}
+%\backgroundcolor{b}[rgb]{0.8,0.6,0} % dark orange for bottom margin
+%\backgroundcolor{p}[rgb]{0.8,1,0.6} % pale green for pre/post-environment
+%\backgroundcolor{s}[rgb]{0.8,0.8,0.8} % light gray for spanning texts
+%\backgroundcolor{l}[rgb]{0,0,0.7} % dark blue for left margin
+%\backgroundcolor{r}[rgb]{0,0.7,0} % dark green for right margin
+%\backgroundcolor{c[0]}[rgb]{1,0.8,1} % pink for colunmn-0
+%\backgroundcolor{c[1]}[rgb]{1,1,0.8} % cream yellow for column-1
+
+%%%% 03 Couleurs
+\RequirePackage{xcolor}
+% \usepackage{colortbl} % Couleurs dans les tables
+%\usepackage[%usenames,dvipsnames,svgnames,table]{xcolor}
+
+%%%% 03 Fontes / Polices
+
+%% 2024-10-25
+%- Détection explicite des caractères perdus (\tracinglostchars)
+
+% https://tex.stackexchange.com/questions/41230/getting-xetex-to-complain-when-a-character-is-missing
+\tracinglostchars=2
+
+%%%% 03.01 setmainfont 
+%
+\ifluatex
+  \RequirePackage{fontspec}
+  %JMR% Marquage %O% si ok dans Overleaf
+  %
+  %  \defaultfontfeatures{RawFeature={+hlig,+clig,+dlig,+cv11,+cv90,+calt,+ccmp,+swsh},Numbers={Proportional,OldStyle}}
+  %
+  \setmainfont%Liste non exhaustive
+  %      
+  {Ubuntu}%O% **
+  %   {Utopia}%% KO
+  %    {Noto Serif}%*
+  %  {Noto Sans}%*
+  %  {FreeMono}
+    % {Arial}%
+    % Arial_Black
+    %  {Trebuchet_MS} % ...
+    %          {FreeSerif}%O%
+    %    {FreeSans}%*%
+    % {EBGaramond12-Regular}[% https://tex.stackexchange.com/questions/398163/how-do-i-use-eb-garamond-08
+  % UprightFeatures = {
+  %SizeFeatures = {%
+  %  {Size=-10,  Font=EBGaramond08-Regular},%
+  %  {Size=10-, Font=EBGaramond12-Regular},%
+  %}
+%}%
+%]
+    % Times_New_Roman
+    %      {DejaVu_Serif}%***
+    %  {Nimbus_Sans}%ok
+    %       {Nimbus_Roman}%ok   
+    %     {Georgia}%***
+    %      {TTNorms}
+    %      {Verdana}%O%
+%
+\else
+%% Choix de polices vectorielles    
+%
+  \RequirePackage{lmodern}
+%>\RequirePackage%{times}%{bookman}%{helvet}
+\fi
+% Charger TeX Gyre Termes comme police principale
+\setmainfont{TeX Gyre Termes}[
+    SmallCapsFeatures={Letters=SmallCaps}, % Activer les petites capitales
+    ItalicFeatures={Letters=SmallCaps}     % Assurer les petites capitales en italique
+]
+\ifuseplex
+  %% Police Plex Lettre GUT 48 12-2022
+  \usepackage[
+  RM={
+    , SmallCapsFont= {KpRoman-Regular}
+    , SmallCapsFeatures= {
+      , Letters= SmallCaps, Scale= MatchUppercase
+    }
+    , BoldFeatures= {  SmallCapsFont= KpRoman-Regular}
+    , ItalicFeatures= {  SmallCapsFont= KpRoman-Italic}
+    , BoldItalicFeatures= {
+      SmallCapsFont= KpRoman-BoldItalic
+    }
+  }]{plex-otf}
+\fi
+
+%% Police Overlock Lettre GUT 54 11-2024
+% - https://publications.gutenberg-asso.fr/lettre/article/view/191/209
+%\usepackage{unicode-math}% math
+%\setmathfont{Garamond-Math.otf}[StylisticSet={7,9}]
+\usepackage[sfdefault]{overlock}
+%\usepackage[italic,LGRgreek]{mathastext}
+%\usepackage{noto-mono}% \texttt / non-proportionnel
+
+%% Police Montserrat
+%
+\ifusemontserrat
+\RequirePackage[%
+defaultfam,%extralight, tabular,lining
+]{montserrat}
+\fi
+
+%\RequirePackage{fontawesome5}
+
+%% Fontes / Polices
+% https://faq.gutenberg-asso.fr/3_composition/texte/symboles/polices/changements_relatifs_de_fontes
+%% Spécification de tailles relatives
+%> \RequirePackage{relsize}
+
+%% Polices KPfonts (cf doc)
+% \RequirePackage[%
+% nomath,
+% notext,
+% noamsmath,
+% notextcomp,
+% light,
+% lighttext,
+% oldstyle,
+% veryoldstyle,
+% oldstylenumsmath,
+% frenchstyle,
+% fullintlimits,
+% fullsumlimits
+% ]{kpfonts}% !amsmath!
+
+
+% A set of symbol fonts, written in METAFONT
+%> \RequirePackage[misc]{ifsym} %u%  https://www.ctan.org/pkg/ifsym
+
+% Tables de caractères
+% > \RequirePackage{fonttable}
+
+
+%%%% 04 Maths
+% JMR-xx-math.sty
+%% Paquets «standards» mathématiques
+
+%old%\RequirePackage{amsmath}
+%old%\RequirePackage{amssymb}
+%old%\RequirePackage{amsfonts}
+
+%
+\RequirePackage{mathtools}% amsmath++
+
+%% Fractions inclinées
+%> \RequirePackage{xfrac}
+
+%>\RequirePackage{nicefrac}% Meilleur affichage des fractions dans le texte
+%\everymath{\color{red}}
+
+\newlength{\myeqskip} \setlength{\myeqskip}{3ex}
+\AtBeginDocument{%
+    \setlength\abovedisplayskip{\myeqskip}%
+    \setlength\belowdisplayskip{\myeqskip}%
+    \setlength\abovedisplayshortskip{\myeqskip-\baselineskip}%
+    \setlength\belowdisplayshortskip{\myeqskip}
+    }
+
+%% Unités de mesures
+% >
+%\RequirePackage{siunitx} \sisetup{detect-all = true}
+
+%% CODE
+% JMR-xx-codetex.sty
+
+\RequirePackage{etoolbox}
+%\RequirePackage{xpatch}
+
+%% TYPO
+%% Effets sur caractères 
+%% raturage / surlignage / souslignage
+%
+\RequirePackage[normalem]{ulem}
+
+\newcommand{\rature}[1]{%
+  {\color{orange}\sout{#1}{}}
+}
+
+
+%% TABLES
+% JMR-xx-tables.sty
+
+%% Tableaux et couleurs
+% \RequirePackage{colortbl}
+
+
+% \RequirePackage{longtable}
+%%%% 05 BibLaTeX
+%
+
+\ifusebiblatex
+\RequirePackage[%
+backend=biber%
+]{biblatex}
+\fi
+
+%%%% 06 Figures 
+
+%% Multifigures et une légende
+%\RequirePackage{subfig}
+%\setcounter{lofdepth}{2} %local%
+
+% JMR-xx-figures.sty
+
+% Les lignes suivantes améliorent le placement des figures sur la page.
+% (Source : http://dcwww.camd.dtu.dk/~schiotz/comp/LatexTips/LatexTips.html#captfont)
+%\renewcommand{\topfraction}{0.85}                           %local%
+%\renewcommand{\textfraction}{0.1}                           %local%
+%\renewcommand{\floatpagefraction}{0.75}                     %local%
+
+% Espace flexible après une figure pour améliorer la mise en page.
+\setlength{\textfloatsep}{20pt plus15pt minus4pt}%local%
+
+%% GRAPH
+
+%
+\RequirePackage{graphicx}
+%_% Graphicx : Paramétrer graphicspath après le préambule
+
+% \RequirePackage{subfigure}
+
+% Gestion des flottants
+
+% \RequirePackage{floatrow}
+
+% JMR-xx-tikz.sty
+%% TIKZ Librairies graphiques
+
+%\RequirePackage{tikz}
+% \usetikzlibrary{calc}%local%
+% \usetikzlibrary{positioning}%local%
+% \usetikzlibrary{backgrounds}%local%
+% \usetikzlibrary{shapes}%local%
+
+
+
+%% TEXTE
+
+%%%%%%%%%%%%%
+\ifusebaratin
+%%%%%%%%%%%%%
+
+\RequirePackage{blindtext}
+
+\RequirePackage{lipsum} 
+
+\newcommand{\baratinbref}{\lipsum[1][1-2]}
+\newcommand{\baratincourt}{\lipsum[1][1-2]}
+\newcommand{\baratinpetit}{\lipsum[1][1-4]}
+\newcommand{\baratinmoyen}{\lipsum[1][1-6]}
+\newcommand{\baratinlong}{\lipsum[1][1-8]}
+\newcommand{\baratintreslong}{\lipsum[1][1-16]}
+\newcommand{\baratintroplong}{\lipsum[1][1-32]}
+
+% baratin avec compteur
+% \newcommand{\baratin}[1]{
+%   \newcounter{int}
+%   \setcounter{int}{0}
+%   \loop
+%   % \theint
+%   \baratinmoyen{}
+
+%   \addtocounter{int}{1}\ifnum\value{int}<#1
+%     \repeat
+%   }
+
+\fi
+
+%% Veuves et orphelines
+
+%\widowpenalty=10000
+%\clubpenalty=10000
+
+%>\RequirePackage[all]{nowidow}
+
+% https://github.com/FrankMittelbach/fmitex-widows-and-orphans/
+% ** Détection **
+
+% >\RequirePackage{widows-and-orphans}
+% >\RequirePackage[all]{nowidow}
+
+%\RequirePackage{csquotes}
+
+
+%%%% 07 Sectionnements
+
+%% Typographie numérotation chapitre (lettres, nombres,...)
+%\RequirePackage{fmtcount}
+%\makeatletter
+%\patchcmd{\@makechapterhead}{\thechapter}{\NUMBERstring{chapter}}{}{}
+%\patchcmd{\chaptermark}{\thechapter}{\NUMBERstring{chapter}}{}{}
+%\patchcmd{\@makechapterhead}{\thechapter}{\numberstring{chapter}}{}{}
+%\patchcmd{\chaptermark}{\thechapter}{\numberstring{chapter}}{}{}
+%\makeatother
+
+\ifusetitles
+
+%% Espacement plus compact des sectionnements
+%! https://www.physicsread.com/add-space-before-and-after-of-subheadings-in-latex/
+\RequirePackage[compact]{titlesec} %u% https://ctan.org/pkg/titlesec
+
+%% Espacement compact personnalisé
+%\titlespacing{command}{left spacing}{before spacing}{after spacing}[right]
+% \titlespacing*{\section}{0pt}{2ex plus 0ex minus .0ex}{0ex plus 0ex}
+% \titlespacing*{\subsection}{10pt}{1ex plus 0ex minus .0ex}{0ex plus 0ex}
+% \titlespacing*{\subsubsection}{0pt}{1ex plus 0ex minus .0ex}{0ex plus 0ex}
+
+%\titlespacing{\section}{0pt}{\parskip}{-\parskip}
+%\titlespacing{\subsection}{0pt}{\parskip}{-\parskip}
+%\titlespacing{\subsubsection}{0pt}{\parskip}{-\parskip}
+
+\fi
+
+%%%% 08 Table des matières 
+% JMR-xxx-tocs.sty
+
+%\RequirePackage{minitoc}
+
+%\RequirePackage{etoc}%warn% after babel
+
+%% Profondeur de numérotation de section
+% 0 chapter 3 subsubsection
+% \setcounter{secnumdepth}{2}                               %local%
+%% Profondeur de toc
+%\setcounter{tocdepth}{4}                                    %local%
+
+
+%% Dates et heures
+\RequirePackage{datetime}
+
+%%%% 06 Entêtes / Pieds de page
+%% Fancy/ Twoside / Symétrique
+% >
+
+
+%
+\RequirePackage{fancyhdr}
+%\RequirePackage{autofancyhdr}
+
+%_% Fancyhdr : Pas oublier \pagestyle{fancy} pour activer les entêtes
+% Annulation / Reset
+\fancyfoot[C]{}\fancyfoot[L]{}\fancyfoot[R]{}
+\fancyhead[C]{}\fancyhead[L]{}\fancyhead[R]{}
+
+%
+\RequirePackage{lastpage}
+\newcommand{\NumPage}{\thepage/\pageref{LastPage}}%% page / total page
+
+\fancypagestyle{fancy}{% 
+\fancyhead[LE]{\slshape \rightmark}
+\fancyhead[RO]{\slshape \leftmark}
+%\fancyfoot[RE,LO]{Paire droit Impair gauche}
+%\fancyfoot[RO,LE]{Impair droit Paire gauche}
+\fancyfoot[L]{\jobname}
+\fancyfoot[C]{\slshape p.\NumPage{}}
+\fancyfoot[R]{\textbf{\today -- \currenttime}} 
+}
+
+% Epaisseur lignes de séparation
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+%%  Verbatim
+
+%% Intégration fichier verbatim
+%
+\RequirePackage{verbatim}
+% \verbatiminput{}
+
+%% TYPO
+
+%\RequirePackage{setspace}
+%\doublespacing  % or
+%\onehalfspacing %for 1.5
+
+
+%% Règles de l'imprimerie nationale
+%  https://www.ctan.org/tex-archive/macros/latex/contrib/impnattypo
+\ifusetypo
+\RequirePackage[%
+draft% brouillon
+,hyphenation% césures
+%,lastparline,%
+%,nosingleletter,%
+%,rivers,% rivières d'espaces / jaunes
+,parindent% indentation première ligne paragraphe
+%,frenchchapters% chapitres chiffres romains OK  grandes capitales  KO?
+]{impnattypo}
+
+\let\frenchchapter\arabic % numérotation en chiffres arabes
+\fi
+
+%% Amélioration typographie
+%\RequirePackage[protrusion=true,expansion=true]{microtype}%bof ?% 
+
+% JMR-xx-cesures.sty
+%% Gestion des césures
+% Supprimer(?) les césures
+% \tolerance=1
+% \emergencystretch=\maxdimen
+% \hyphenpenalty=10000
+% \hbadness=10000
+
+
+%%%% 09  Glossaires & Index
+%% https://www.overleaf.com/learn/latex/Glossaries
+%% https://blog.dorian-depriester.fr/latex/utilisation-du-package-glossaries
+
+\RequirePackage{csquotes}
+% >
+\RequirePackage[acronym,
+% >toc,%Activation entrée dans la tdm/toc
+%nopostdot,%
+%ucmark,% correctif pour titre glossaire et fancyhdr
+%xindy,% si utilisation de xindy
+nonumberlist
+]{glossaries}
+
+%\makeglossaries%local%
+
+%_%  \glossarystyle{list}
+
+% NO GLOSS %
+%\renewcommand{\gls}[1]{\fbox{\ensuremath{#1}}}
+% \renewcommand{\gls}[1]{(glossaire)}
+
+
+%% Index
+% >
+\RequirePackage{makeidx} %u%  https://ctan.org/pkg/makeidx
+%\makeindex{}%local%
+
+
+%% BOXES
+
+% >\RequirePackage{boxedminipage}
+
+%>\RequirePackage{marginnote}
+
+%% REFS
+
+%% HYPER REFS
+% https://texdoc.org/serve/hyperref/0
+%\RequirePackage{url}
+% Attention extension parfois problématique
+%\RequirePackage{hyperref}
+
+% >\hypersetup{hidelinks}% pas de couleur                   %local%
+% >\hypersetup{pdfpagemode=FullScreen}% PDF plein écran     %local%
+% >\hypersetup{linktocpage=true}% TOC page link             %local%
+%> \hypersetup{breaklinks=true}%                            %local%
+% >\hypersetup{frenchlinks=true}% ??
+
+
+%% BOXES %%%
+
+%\setlength{\fboxsep}{0.1pt}                                %debug%
+
+%%%% 11.01 Filigrane  / Watermark  %local%
+% >
+\RequirePackage{draftwatermark} %u% https://ctan.org/pkg/draftwatermark % eg%
+%% Configuration possible dans local.sty
+%
+\SetWatermarkText{Draft}% local%
+\SetWatermarkLightness{0.85}%local% Contraste noir:0 blanc:1
+%
+\SetWatermarkAngle{56}% Angle diagonale A4                  %local%
+%
+\SetWatermarkScale{.8}                                      %local%
+
+
+%%%% 11 Divers
+
+%%%% 11.02 Debug et brouillons
+
+%debug%  https://tex.stackexchange.com/questions/538/how-to-best-debug-latex 
+
+% >\usepackage{lua-visual-debug}                            %debug%
+
+
+% >\RequirePackage{showlabels}% document draft mode % debug%
+
+% >\RequirePackage[%notref,notcite,color,%
+%draft,%final
+%]{showkeys}                                %debug%
+%?\definecolor{refkey}{gray}{.2}
+%?\definecolor{refkey}{red}%{.8}
+%?\definecolor{labelkey}{gray}{.2}
+
+%KO debug% >\RequirePackage{showhyphens}% KO fichier sty non trouvé (phyllopteryx)
+
+%%%% 11.03 QR-codes
+
+%
+\RequirePackage{qrcode}
+
+%%%% 99 Divers
+\ifusemisc
+
+%% Typographie de touches clavier et autres
+%% https://tex.stackexchange.com/questions/5226/keyboard-font-for-latex
+% >\RequirePackage{menukeys}
+
+%% 
+\newcommand{\JMRScale}[2][\columnwidth]{%
+\noindent{}\fbox{\resizebox{#1}{!}{#2}}
+}
+
+
+%% Axe X / X1 ... X2
+\newcommand{\AxeX}[2]{        % Axe des abcisses
+  \foreach \x in {#1,...,#2} {\draw[below](\x,0) node{\x};}
+}
+
+%% Axe Y / Y1 ... Y2
+\newcommand{\AxeY}[2]{        % Axe des ordonnées
+        \foreach \y in {#1,...,#2} {\draw[left](0,\y) node{\y};}
+}
+
+%% Grille A(x,y)  B(x,y)
+\newcommand{\Grille}[4]{%tikz
+        \draw[thin,lightgray](#1,#2)grid(#3,#4);
+%        \draw (0,0) node[below left]{0};
+}
+
+%% Repere = Grille + AxeX + AxeY
+\newcommand{\Repere}[4]{%
+  \Grille{#1}{#2}{#3}{#4}
+ % \draw (0,0) node[below left]{0};
+  \AxeX{#1}{#3} ; \AxeY{#2}{#4}
+}
+
+\RequirePackage{tcolorbox}
+
+\newenvironment{Astuce}{
+  \begin{tcolorbox}
+}{
+\end{tcolorbox}
+}
+
+\newenvironment{Attention}[1]{
+  \begin{tcolorbox}
+}{
+\end{tcolorbox}
+}
+
+\newenvironment{Info}[1]{
+  \begin{tcolorbox}
+}{
+\end{tcolorbox}
+}
+
+\newcommand{\UGE}{\textsl{UGE}}
+
+\RequirePackage{ifdraft}
+\newcommand{\Drule}{% Ligne uniquement en mode draft
+\ifoptiondraft{\hrule}{\relax} 
+}
+
+\RequirePackage{boxedminipage}
+
+% Redéfinition de l'environnement minipage
+\let\oldminipage\minipage
+
+
+
+%% Figure
+% [#1] ratio largeur (facultatif)
+% #2 fichier image
+% #3 légende/caption
+% #4 étiquette/label
+\newcommand{\Figure}[4][1]{%
+\begin{figure}[htbp]
+  \begin{boxedminipage}{\columnwidth}
+    \centering
+    \Drule{}    
+    \includegraphics[width=#1\columnwidth]{#2}
+    \Drule{}
+    \caption{#3}
+    \label{fig:#4}
+    \Drule{}
+  \end{boxedminipage}
+\end{figure}
+}
+
+%% \Image[2] / Sans environnement figure
+\newcommand{\Image}[2][1.0]{%
+  \fbox{\includegraphics[width=#1\columnwidth]{#2}}%
+}
+
+
+%% Macros Liens hypertexte / via hyperref
+
+\newcommand{\Lien}[2]{%
+\href{#1}{\textsl{#2}}%
+}
+
+\newcommand{\Link}[2]{% UK rename
+\Lien{#1}{#2}%
+}
+
+\newcommand{\PreChapter}{%
+  \textbf{Début chapitre (macros \texttt{PreChapter})}
+  \vspace{1cm}
+}
+
+\newcommand{\PostChapter}{
+  \vfill{}
+  \textbf{Fin chapitre (cf \texttt{PostChapter})}
+   \vfill{}
+}
+
+\newenvironment{Chapter}{%
+  \PreChapter{}
+  \begin{refsection}
+}{%
+  \PostChapter{}
+  \printbibliography[title=Bibliographie du chapitre]{}
+\end{refsection}
+
+}
+
+%%  CTAN   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Identification d'une extension LaTeX par sa page CTAN
+%% Indexation et citation bibliographie automatique
+\newcommand{\CTAN}[1]{%https://ctan.org/pkg/titlesec
+  \texttt{#1} \cite{ctan:#1}\index{CTAN!#1}
+}
+
+
+%% Cf documentation tcolorbox
+
+\usepackage{tcolorbox}
+% \usepackage{listings} or 
+\tcbuselibrary{listings}
+\NewTotalTCBox{\Commandbox}{ s v }
+{verbatim,
+colupper=black,%white,
+colback=gray,%black!75!white,
+colframe=blue
+}
+{\IfBooleanT{#1}{\textcolor{red}{\ttfamily\bfseries > }}%
+\lstinline[language=command.com,
+keywordstyle=\color{purple}\bfseries]^#2^}
+
+
+
+
+
+\fi%misc

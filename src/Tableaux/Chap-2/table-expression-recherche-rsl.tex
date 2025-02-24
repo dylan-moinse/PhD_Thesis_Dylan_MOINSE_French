@@ -1,0 +1,38 @@
+% Tableau expression
+%%Rédigé%%
+        \begin{table}[h!]
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \resizebox{\columnwidth}{!}{
+    \begin{tabular}{p{0.5\columnwidth}p{0.5\columnwidth}}
+        %\hline
+    \rule{0pt}{15pt} \small{\textbf{\textcolor{blue}{\acrshort{Recherche EN}}}} & \small{\textbf{\textcolor{blue}{\acrshort{Recherche FR}}}}\\
+        \hline
+    \multicolumn{2}{l}{\small{\textbf{\textcolor{blue}{Dimension relative aux transports en commun}}}}\\
+\small{all=(\textbf{\Guillemets{\textsl{Transit-Oriented Development}}} or \textbf{\Guillemets{\textsl{Public Transport}}} or \textbf{\Guillemets{\textsl{Transit}}} or \textbf{\Guillemets{\textsl{Rail}}} or \textbf{\Guillemets{\textsl{Train}}} or \textbf{\Guillemets{\textsl{Metro}}} or \textbf{\Guillemets{\textsl{Tram}}} or \textbf{\Guillemets{\textsl{Bus}}})} & \small{all=(\textbf{\Guillemets{\textsl{Transit-Oriented Development}}} or \textbf{\Guillemets{\textsl{Urbanisme orienté}}} or \textbf{\Guillemets{\textsl{Transport en commun}}} or \textbf{\Guillemets{\textsl{Transport collectif}}} or \textbf{\Guillemets{\textsl{Rail}}} or \textbf{\Guillemets{\textsl{Train}}} or \textbf{\Guillemets{\textsl{Ferroviaire}}} or \textbf{\Guillemets{\textsl{Métro}}} or \textbf{\Guillemets{\textsl{Tram}}} or \textbf{\Guillemets{\textsl{BHNS}}} or \textbf{\Guillemets{\textsl{Bus}}})}\\
+        \hdashline
+    \multicolumn{2}{l}{\small{\textbf{\textcolor{blue}{Opérateur booléen}}}}\\
+ \multicolumn{2}{l}{\small{and}}\\
+        \hdashline
+    \multicolumn{2}{l}{\small{\textbf{\textcolor{blue}{Dimension relative à la mobilité individuelle légère}}}}\\
+\small{all=(\textbf{\Guillemets{\textsl{Micromobility}}} or \textbf{\Guillemets{\textsl{Micro-Mobility}}} or \textbf{\Guillemets{\textsl{Bicycle*}}} or \textbf{\Guillemets{\textsl{Bike*}}} or \textbf{\Guillemets{\textsl{Bike-And-Ride}}} or \textbf{\Guillemets{\textsl{Cycling}}} or \textbf{\Guillemets{\textsl{E-Scooter*}}} or \textbf{\Guillemets{\textsl{Scooter*}}} or \textbf{\Guillemets{\textsl{Device*}}})} & \small{all=(\textbf{\Guillemets{\textsl{Micro-mobilité*}}} or \textbf{\Guillemets{\textsl{Micromobilité*}}} or \textbf{\Guillemets{\textsl{Vélo*}}} or \textbf{\Guillemets{\textsl{Bicyclette*}}} or \textbf{\Guillemets{\textsl{Mode* actif*}}} or \textbf{\Guillemets{\textsl{Mode* doux}}} or \textbf{\Guillemets{\textsl{Cycle*}}} or \textbf{\Guillemets{\textsl{Cyclable}}} or \textbf{\Guillemets{\textsl{Trottinette*}}} or \textbf{\Guillemets{\textsl{Micro-véhicule*}}})}\\
+        \hdashline
+    \multicolumn{2}{l}{\small{\textbf{\textcolor{blue}{Opérateur booléen}}}}\\
+\multicolumn{2}{l}{\small{and}}\\
+        \hdashline
+    \multicolumn{2}{l}{\small{\textbf{\textcolor{blue}{Dimension relative à l'intermodalité-voyageur·se·s}}}}\\
+\small{all=(\textbf{\Guillemets{\textsl{Intermodal*}}} or \textbf{\Guillemets{\textsl{Combination}}} or \textbf{\Guillemets{\textsl{*Last Mile}}} or \textbf{\Guillemets{\textsl{First Mile*}}} or \textbf{\Guillemets{\textsl{FLM}}} or \textbf{\Guillemets{\textsl{Feeder}}} or \textbf{\Guillemets{\textsl{Transfer}}} or \textbf{\Guillemets{\textsl{Relation*}}} or \textbf{\Guillemets{\textsl{Integration}}} or \textbf{\Guillemets{\textsl{Catchment}}} or \textbf{\Guillemets{\textsl{Isochrone*}}} or \textbf{\Guillemets{\textsl{Buffer}}} or \textbf{\Guillemets{\textsl{Service Coverage}}} or \textbf{\Guillemets{\textsl{Shed*}}} or \textbf{\Guillemets{\textsl{Station Area*}}} or \textbf{\Guillemets{\textsl{Access}}} or \textbf{\Guillemets{\textsl{Egress}}})} & \small{all=(\textbf{\Guillemets{\textsl{Intermodal*}}} or \textbf{\Guillemets{\textsl{Combinaison}}} or \textbf{\Guillemets{\textsl{Premier* kilomètre*}}} or \textbf{\Guillemets{\textsl{Dernier* kilomètre*}}} or \textbf{\Guillemets{\textsl{Rabattement}}} or \textbf{\Guillemets{\textsl{Pré-acheminement}}} or \textbf{\Guillemets{\textsl{Diffusion}}} or \textbf{\Guillemets{\textsl{Post-acheminement}}} or \textbf{\Guillemets{\textsl{Interaction*}}} or \textbf{\Guillemets{\textsl{Intégration}}} or \textbf{\Guillemets{\textsl{Zone* de chalandise}}} or \textbf{\Guillemets{\textsl{Aire* De chalandise}}} or \textbf{\Guillemets{\textsl{Isochrone*}}} or \textbf{\Guillemets{\textsl{Zone* d'influence}}} or \textbf{\Guillemets{\textsl{Aire* d'influence}}} or \textbf{\Guillemets{\textsl{Quartier* de gare}}})}\\
+        \hline
+        \end{tabular}}
+    \caption{Expression de recherche de mots-clés en anglais et en français, comprenant trois catégories thématiques, dans le cadre de la revue systématique de la littérature.}
+    \label{table-chap2:expression-recherche-rsl}
+        \vspace{5pt}
+        \begin{flushleft}\scriptsize{
+        \textcolor{blue}{Note~:} l'astérisque (*) offre une souplesse accrue aux termes en fournissant une plus grande latitude dans la recherche avancée, vis-à-vis de caractères supplémentaires précédant ou suivant le mot. Par conséquent, ce symbole permet d'inclure des formes plurielles ou des variantes des termes, parmi d'autres possibilités.
+        \\
+        \textcolor{blue}{Lecture~:} la formule de recherche bibliographique s'appuie sur trois conditions~: la présence lexicale se référant aux transports en commun, à la mobilité individuelle légère et à l'intermodalité.
+        }\end{flushleft}
+        \begin{flushright}\scriptsize{
+        Auteur~: \textcolor{blue}{Dylan Moinse (2023)}
+        }\end{flushright}
+        \end{table}

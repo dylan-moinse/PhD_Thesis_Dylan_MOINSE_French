@@ -1,0 +1,29 @@
+% Tableau analyse bivariée
+%%Rédigé%%
+        \begin{table}[h!]
+        \centering
+        \renewcommand{\arraystretch}{1.5}
+        \resizebox{\columnwidth}{!}{
+        \begin{tabular}{p{0.25\columnwidth}p{0.11\columnwidth}p{0.18\columnwidth}p{0.18\columnwidth}p{0.18\columnwidth}p{0.1\columnwidth}}
+        %\hline
+    \rule{0pt}{15pt} \multirow{1.5}{*}{\small{\textbf{\textcolor{blue}{Niveaux}}}} & \multirow{1.5}{*}{\small{\textbf{\textcolor{blue}{Carreaux}}}} & \small{\textbf{\textcolor{blue}{\(Q1\)* (hab/km\textsuperscript{2})}}} & \small{\textbf{\textcolor{blue}{\(Q2\)* (hab/km\textsuperscript{2})}}} & \small{\textbf{\textcolor{blue}{\(Q3\)* (hab/km\textsuperscript{2})}}} & \multirow{1.5}{*}{\textbf{\textcolor{blue}{$\sigma$}}}\\
+        \hline
+\small{Carreaux piétonniers} & \small{12~550} & \small{575} & \small{1~925} & \small{4~138} & \small{3~373,87}\\
+\small{Carreaux cyclables} & \small{39~519} & \small{150} & \small{625} & \small{1~913} & \small{2~163,59}\\
+\small{Carreaux automobiles} & \small{90~424} & \small{100} & \small{275} & \small{700} & \small{842,99}\\
+        \hline
+        \end{tabular}}
+    \caption{Distribution de la densité de population en fonction des niveaux d'accessibilité autour des gares de la région Hauts-de-France.}
+    \label{table-chap5:analyse-bivariee-densite-accessibilite}
+        \vspace{5pt}
+        \begin{flushleft}\scriptsize{
+        \textcolor{blue}{Note~:} \(Q1\)~correspond au premier quartile (25~\%)~; \(Q2\)~à la médiane (50~\%)~; \(Q3\)~au troisième quartile (75~\%) de la distribution de la densité de population et $\sigma$~correspond à l'écart-type.
+        \\
+        \textcolor{blue}{Lecture~:} la distribution de la densité de population autour des gares des Hauts-de-France est croisée avec trois niveaux d'accessibilité~: piétonnier, cyclable et motorisé. La densité décroît avec l'accessibilité, les carreaux accessibles à pied concentrant les territoires les plus denses, suivis des carreaux accessibles en mobilité individuelel légère et en automobile.
+        }\end{flushleft}
+        \begin{flushright}\scriptsize
+        Jeux de données~: données carroyées de l'\textcolor{blue}{\textcite{insee_grille_2021}}\index{Insee@\textsl{Insee}|pagebf}
+        \\
+        Auteur~: \textcolor{blue}{Dylan Moinse (2023)}
+        \end{flushright}
+        \end{table}
