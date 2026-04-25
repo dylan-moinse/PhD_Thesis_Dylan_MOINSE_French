@@ -1,5 +1,9 @@
 # Improved Gustave Eiffel University (French) PhD Thesis Template - *LaTeX*
 
+> ⚠️ Important : **The final version of the PhD Thesis *LaTeX* Template is available [here](https://github.com/dylan-moinse/phd-thesis-latex-template).**
+
+---
+
 This *GitHub* repository contains the *LaTeX* source files for my submitted PhD thesis ([see the document here](https://hal.science/tel-05160113)). 
 The English version of the thesis is available through the *GitHub* repository [here](https://github.com/dylan-moinse/PhD_Thesis_Dylan_MOINSE_English).
 
